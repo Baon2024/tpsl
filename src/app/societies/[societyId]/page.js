@@ -17,7 +17,9 @@ import { Textarea } from "@/components/ui/textarea"
 import { useState, useEffect } from "react"
 import { Building2, GraduationCap, Mail, MapPin, Phone } from 'lucide-react'
 import EnquireButton from '@/app/components/enquireButton';
-import { Separator } from "@/components/ui/separator"
+import { Separator } from "@/components/ui/separator";
+import SchoolMap from '@/app/components/schoolMap';
+import 'leaflet/dist/leaflet.css';
 
 
 console.log("these are the schools: ", schoolsSampleData);
@@ -108,6 +110,12 @@ useEffect(() => {
   let latitude;
   let longitude;
 
+  const schoolData = {
+    latitude: 52.48159562701197, //52.48159562701197, -0.4688750335594431
+    longitude: -0.4688750335594431,
+    name: "Example School",
+  };
+
   return (
     <div className="min-h-screen bg-gray-50/50 pb-12">
       {/* Hero Section */}
@@ -133,27 +141,44 @@ useEffect(() => {
         <div className="mt-8 grid gap-8 lg:grid-cols-3">
           {/* School Information */}
           <div className="lg:col-span-2">
-            <Card>
-              <CardContent className="p-6">
-                <h2 className="text-2xl font-bold">About Our School</h2>
-                <p className="mt-4 text-gray-600">empty right now</p>
+          <Card>
+        <CardContent className="p-6">
+        <div id="school-details" className="flex flex-col lg:flex-row gap-6">
+            {/* School Details */}
+            <div className="flex-1 space-y-4">
+              <h2 className="text-2xl font-bold">About Our School</h2>
+              <p className="mt-4 text-gray-600">empty right now</p>
 
-                <div className="mt-6 space-y-4">
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <MapPin className="h-5 w-5" />
-                    {schoolLocation}
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <Phone className="h-5 w-5" />
-                    N/A
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <Mail className="h-5 w-5" />
-                    N/A
-                  </div>
+              <div className="mt-6 space-y-4">
+                <div className="flex items-center gap-2 text-gray-600">
+                  <MapPin className="h-5 w-5" />
+                  {schoolLocation}
                 </div>
-              </CardContent>
-            </Card>
+                <div className="flex items-center gap-2 text-gray-600">
+                  <Phone className="h-5 w-5" />
+                  N/A
+                </div>
+                <div className="flex items-center gap-2 text-gray-600">
+                  <Mail className="h-5 w-5" />
+                  N/A
+                </div>
+              </div>
+            </div>
+
+            {/* Map Section */}
+            <div className="flex-1">
+              
+                <SchoolMap
+                  latitude={schoolData.latitude}
+                  longitude={schoolData.longitude}
+                  schoolName={schoolData.name}
+                />
+             
+            </div>
+            </div>
+        </CardContent>
+      </Card>
+
 
             {/* Bursaries & Scholarships */}
               {/*<Card className="mt-8">
