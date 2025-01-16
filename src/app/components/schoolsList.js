@@ -38,7 +38,7 @@ const schoolsSampleData = [
       scholarshipsDetail: "Scholarships available for outstanding students in music and academics.",
       percentageOfFees: 20,
     },
-    schoolImage: null,
+    schoolImage: "/images/Harrow.jpg",
     documentId: 49392849,
     ranking: 2,
     Bursaries: {
@@ -61,7 +61,7 @@ const schoolsSampleData = [
       scholarshipsDetail: "Academic scholarships offered for top-performing candidates.",
       percentageOfFees: 30,
     },
-    schoolImage: null,
+    schoolImage: "/images/Winchester-College.jpeg",
     documentId: 57483920,
     ranking: 3,
     Bursaries: {
@@ -84,7 +84,7 @@ const schoolsSampleData = [
       scholarshipsDetail: "N/A",
       percentageOfFees: "N/A",
     },
-    schoolImage: null,
+    schoolImage: "/images/Charterhouse.jpg",
     documentId: 64820394,
     ranking: 4,
     Bursaries: {
@@ -107,13 +107,13 @@ const schoolsSampleData = [
       scholarshipsDetail: "Sports scholarships available for talented athletes.",
       percentageOfFees: 20,
     },
-    schoolImage: null,
+    schoolImage: "/images/Rugby.jpeg",
     documentId: 74839283,
     ranking: 5,
     Bursaries: {
       BursariesAvailable: true,
       BursariesDetail: "Means-tested bursaries for students with financial needs.",
-      percentageOfFees: 50,
+      percentageOfFees: "???",
     },
     established: 1567,
     enquireUrl: "https://rugbyschool.net/admissions",
@@ -130,13 +130,13 @@ const schoolsSampleData = [
       scholarshipsDetail: "Academic scholarships for high-achieving students.",
       percentageOfFees: 25,
     },
-    schoolImage: null,
+    schoolImage: "/images/Westminster-School.jpg",
     documentId: 84572013,
     ranking: 6,
     Bursaries: {
       BursariesAvailable: false,
-      BursariesDetail: "N/A",
-      percentageOfFees: "N/A",
+      BursariesDetail: null,
+      percentageOfFees: null,
     },
     established: 1179,
     enquireUrl: "https://westminster.org.uk/admissions",
@@ -172,17 +172,17 @@ const schoolsSampleData = [
     coeducation: "co-ed",
     totalSchoolFees: 41000,
     scholarships: {
-      scholarshipsAvailable: false,
-      scholarshipsDetail: "N/A",
-      percentageOfFees: "N/A",
+      scholarshipsAvailable: true,
+      scholarshipsDetail: "One of the main vehicles for such encouragement is the offer of College Awards in the form of Scholarships and Exhibitions, awarded at Third Form (Year 9) entry and Sixth Form (Year 12) entry. Scholarships are awarded for outstanding performance and ability in a chosen field and Exhibitions for excellent talent and potential. Scholars are presented with a cerise tie and Exhibitioners are presented with a black and cerise tie, so they are visible throughout College. All awards are entirely merit-based and are based on an exam, audition or other appropriate assessment. Pupils can apply for more than one award if they wish. ",
+      percentageOfFees: "???",
     },
     schoolImage: null,
     documentId: 10293847,
     ranking: 8,
     Bursaries: {
-      BursariesAvailable: true,
-      BursariesDetail: "Bursaries for talented but financially constrained students.",
-      percentageOfFees: 40,
+      BursariesAvailable: false,
+      BursariesDetail: null,
+      percentageOfFees: null,
     },
     established: 1841,
     enquireUrl: "https://cheltenhamcollege.org/admissions",
@@ -286,11 +286,11 @@ const schoolsSampleData = [
     stages: ["secondary", "sixth form"],
     schoolType: ["boarding", "day"],
     coeducation: "co-ed",
-    totalSchoolFees: 43320,
+    totalSchoolFees: 47440,
     scholarships: {
-      scholarshipsAvailable: false,
+      scholarshipsAvailable: true,
       scholarshipsDetail: "N/A",
-      percentageOfFees: "N/A",
+      percentageOfFees: 5,
     },
     schoolImage: null,
     documentId: 91837465,
@@ -315,13 +315,13 @@ const schoolsSampleData = [
       scholarshipsDetail: "Scholarships available in music, sports, and academics.",
       percentageOfFees: 20,
     },
-    schoolImage: null,
+    schoolImage: "/images/Oundle-School.jpg",
     documentId: 11293847,
     ranking: 14,
     Bursaries: {
       BursariesAvailable: true,
       BursariesDetail: "Means-tested bursaries for eligible families.",
-      percentageOfFees: 50,
+      percentageOfFees: [10, 100],
     },
     established: 1556,
     enquireUrl: "https://oundleschool.org.uk/admissions",
@@ -374,6 +374,9 @@ const schoolsSampleData = [
   },
   {
     schoolName: "Fyling Hall",
+    //schoolDescription: "Fyling Hal is ------",
+    //schoolEmail: "Fyling-----@---.co.uk",
+    //schoolPhoneNumber: 02728 272 826,
     schoolLocation: "Fylingdales, Scarborough, North Yorkshire",
     stages: [
       "reception", "primary", "secondary", "sixth form"
@@ -384,7 +387,7 @@ const schoolsSampleData = [
     scholarships: {
       scholarshipsAvailable: true,
       scholarshipsDetail: "for xxx",
-      percentageOfFees: 10 //use this to calculate potential worth of savings, cost of fees overall
+      percentageOfFees: [10, 100] //use this to calculate potential worth of savings, cost of fees overall
     },
     schoolImage: "/images/Fyling-Hall-main.jpg",
     documentId: 18502939,
@@ -392,26 +395,79 @@ const schoolsSampleData = [
     Bursaries: {
       BursariesAvailable: true,
       BursariesDetail: "Parents wishing to apply for a bursary should write to the Headmaster outlining the reasons why financial support is necessary. As a general rule, it is unlikely that a bursary will be awarded when family income is greater than four times the school fees. It is possible, indeed not unusual, for a bursary holder to have a scholarship",
-      percentageOfFees: "unknown",
+      percentageOfFees: "???",
     },
     established: 1552,
     enquireUrl: 'https://fylinghall.org/admissions/scholarships-and-bursaries/'
   },
+  {
+    schoolName: "",
+    schoolLocation: "",
+    stages: [""],
+    schoolType: [""],
+    coeducation: "",
+    totalSchoolFees: 0,
+    scholarships: {
+      scholarshipsAvailable: true,
+      scholarshipsDetail: "Academic scholarships for high-achieving students.",
+      percentageOfFees: 25,
+    },
+    schoolImage: "/images/Westminster-School.jpg",
+    documentId: 84572013,
+    ranking: 6,
+    Bursaries: {
+      BursariesAvailable: false,
+      BursariesDetail: null,
+      percentageOfFees: null,
+    },
+    established: 1179,
+    enquireUrl: "https://westminster.org.uk/admissions",
+  },
 ];
   
-export default function SchoolsList() {
+export default function SchoolsList({searchTerm}) {
+
+
+    //const schoolsToShow = schoolsSampleData.filter(school => school.schoolLocation || school.schoolName || school.schoolType)
+
+    const normalizedSearchTerm = searchTerm.toLowerCase();
+
+    const schoolsToShow = schoolsSampleData.filter((school) => {
+      return (
+        school.schoolName.toLowerCase().includes(normalizedSearchTerm) ||
+        school.schoolLocation.toLowerCase().includes(normalizedSearchTerm) ||
+        school.coeducation.toLowerCase().includes(normalizedSearchTerm) ||
+        school.stages.some((stage) =>
+          stage.toLowerCase().includes(normalizedSearchTerm)
+        ) ||
+        school.schoolType.some((type) =>
+          type.toLowerCase().includes(normalizedSearchTerm)
+        ) ||
+        school.scholarships.scholarshipsDetail
+          .toLowerCase()
+          .includes(normalizedSearchTerm) ||
+        school.Bursaries.BursariesDetail
+          .toLowerCase()
+          .includes(normalizedSearchTerm)
+      );
+    });
+
+
   return (
     <div className="w-full px-6 pt-10 pb-8">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 w-full">
-        {schoolsSampleData.map((school) => (
+        {schoolsToShow.map((school) => (
           <SchoolCard
             key={school.schoolName}
             schoolName={school.schoolName}
             schoolLocation={school.schoolLocation}
             Bursaries={school.Bursaries.BursariesAvailable}
-            scholarships={school.scholarships}
+            scholarships={school.scholarships.scholarshipsAvailable}
             schoolImage={school.schoolImage}
             documentId={school.documentId}
+            stages={school.stages}
+            coeducation={school.coeducation}
+            schoolType={school.schoolType}
             /*onClickHandler={onClickHandler}*/ 
           />
         ))}

@@ -198,7 +198,7 @@ export default function Home() {
     <Hero />
     <LandingPainPoints painPoints={painPoints} title={`76% of parents miss out on financial aid opportunities due to lack of information`} />
     <SearchBar2 searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-    <SchoolsList />
+    <SchoolsList searchTerm={searchTerm} />
     { schools && schools.map((school) => (
       <p>{school.name}</p>
     ))}  

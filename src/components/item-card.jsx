@@ -1,18 +1,15 @@
 import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
-import { Card } from "@/components/ui/card"
-import { Coins, GraduationCap, MapPin, School, Users, BookOpen } from 'lucide-react'
+import { Card } from "@/components/ui/card";
+import { Coins, GraduationCap, MapPin } from 'lucide-react'
 
-export function SchoolCard({
+export default function ItemCard({
+  documentId,
   schoolName,
   schoolLocation,
-  Bursaries,
-  scholarships,
   schoolImage,
-  documentId,
-  stages,
-  schoolType,
-  coeducation
+  Bursaries,
+  scholarships
 }) {
   return (
     (<Link
@@ -31,7 +28,6 @@ export function SchoolCard({
           <div className="flex flex-col items-center gap-2">
             <h3 className="text-xl font-bold leading-tight text-white text-center">{schoolName}</h3>
             <div className="flex flex-wrap gap-2 justify-center">
-              {/* Financial Badges */}
               {Bursaries && (
                 <Badge
                   variant="secondary"
@@ -48,38 +44,6 @@ export function SchoolCard({
                   Scholarships
                 </Badge>
               )}
-              
-              {/* School Type Badges */}
-              {schoolType && schoolType.map((type, index) => (
-                <Badge
-                  key={index}
-                  variant="secondary"
-                  className="flex items-center gap-1 bg-white/20 text-white">
-                  <School className="w-3 h-3" />
-                  {type}
-                </Badge>
-              ))}
-              
-              {/* Coeducation Badge */}
-              {coeducation && (
-                <Badge
-                  variant="secondary"
-                  className="flex items-center gap-1 bg-white/20 text-white">
-                  <Users className="w-3 h-3" />
-                  {coeducation}
-                </Badge>
-              )}
-              
-              {/* Stages Badges */}
-              {stages && stages.map((stage, index) => (
-                <Badge
-                  key={index}
-                  variant="secondary"
-                  className="flex items-center gap-1 bg-white/20 text-white">
-                  <BookOpen className="w-3 h-3" />
-                  {stage}
-                </Badge>
-              ))}
             </div>
           </div>
         </div>
