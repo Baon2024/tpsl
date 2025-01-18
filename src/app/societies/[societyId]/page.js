@@ -36,11 +36,15 @@ export default function societyPage()  {
 
     const selectedSchool = selectedSchoolArray[0];
 
-    const { schoolImage, Bursaries, scholarships, schoolLocation, schoolName, enquireUrl, totalSchoolFees } = selectedSchool;
+    const { schoolImage, latitude, established, schoolDescription, longitude, feesSchemes, Bursaries, scholarships, schoolLocation, schoolName, enquireUrl, totalSchoolFees } = selectedSchool;
     console.log("scholarships on schoolPage is:", scholarships);
+
+    console.log("fees scheme is:", feesSchemes);
 
     console.log("societyId type:", typeof societyId);  // Should be string or number
 console.log("documentId type:", typeof schoolsSampleData[0].documentId);  // Should be string or number
+
+console.log("latitude, longitude are:", latitude, longitude);
 
 //need to format totalSchoolFees;
 
@@ -48,10 +52,22 @@ function formatToGBP(number) {
     return new Intl.NumberFormat('en-GB').format(number);
   }
 
+  console.log("totalSchoolFees are:", totalSchoolFees);
+
   const formattedTotalSchoolFees = formatToGBP(totalSchoolFees);
 
   const feePaymemtScheme = true; //just creating local fake version, whilst testing
-  const feePaymemtSchemeDetail = "just some filler stuff";
+  const feePaymemtSchemeDetailFiller = "just some filler stuff";
+
+  let feePaymemtSchemeDetail;
+
+  if (feesSchemes) {
+    feePaymemtSchemeDetail = feesSchemes;
+  } else {
+    feePaymemtSchemeDetail = feePaymemtSchemeDetailFiller;
+  }
+
+  console.log("feepaymentschemedetails is:", feePaymemtSchemeDetail);
 
   const siblingDiscount = true;
   const siblingDiscountDetail = "filler stuff"
@@ -107,8 +123,8 @@ useEffect(() => {
 },[scholarshipSavings])*/
 
 
-  let latitude;
-  let longitude;
+  //let latitude;
+  //let longitude;
 
   const schoolData = {
     latitude: 52.48159562701197, //52.48159562701197, -0.4688750335594431
@@ -129,7 +145,7 @@ useEffect(() => {
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white lg:text-6xl">{schoolName}</h1>
             <Badge variant="secondary" className="mt-4 text-lg">
-              Est. 1875
+              {established}
             </Badge>
           </div>
         </div>
@@ -146,8 +162,8 @@ useEffect(() => {
         <div id="school-details" className="flex flex-col lg:flex-row gap-6">
             {/* School Details */}
             <div className="flex-1 space-y-4">
-              <h2 className="text-2xl font-bold">About Our School</h2>
-              <p className="mt-4 text-gray-600">empty right now</p>
+              <h2 className="text-2xl font-bold">About {schoolName}</h2>
+              <p className="mt-4 text-gray-600">{schoolDescription}</p>
 
               <div className="mt-6 space-y-4">
                 <div className="flex items-center gap-2 text-gray-600">
@@ -169,9 +185,9 @@ useEffect(() => {
             <div className="flex-1">
               
                 <SchoolMap
-                  latitude={schoolData.latitude}
-                  longitude={schoolData.longitude}
-                  schoolName={schoolData.name}
+                  latitude={latitude || 52.48159562701197}
+                  longitude={longitude || -0.4688750335594431}
+                  schoolName={schoolName}
                 />
              
             </div>
@@ -282,7 +298,7 @@ useEffect(() => {
                         Bursaries.percentageOfFees.length === 2
                           ? `${(
                               ((Bursaries.percentageOfFees[0])
-                            ).toLocaleString())} - ${(
+                            ).toLocaleString())}% - ${(
                               ((Bursaries.percentageOfFees[1])
                             ).toLocaleString())}%`
                           : typeof Bursaries.percentageOfFees === "number"
