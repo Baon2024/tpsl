@@ -17,7 +17,9 @@ export function SchoolCard({
   documentId,
   stages,
   schoolType,
-  coeducation
+  coeducation,
+  forceScheme,
+  feesScheme
 }) {
 
   //const [isMounted, setIsMounted] = useState(false);
@@ -99,6 +101,23 @@ export function SchoolCard({
                   {stage}
                 </Badge>
               ))}
+
+
+{feesScheme && (
+                <Badge variant="secondary" className="flex items-center gap-0.5 bg-white/20 text-white text-xs py-0.5">
+                  <GraduationCap className="w-2 h-2" />
+                  feesScheme
+                </Badge>
+              )}
+
+{forceScheme && (
+                <Badge variant="secondary" className="flex items-center gap-0.5 bg-white/20 text-white text-xs py-0.5">
+                  <GraduationCap className="w-2 h-2" />
+                  forceScheme
+                </Badge>
+              )}
+
+
             </div>
           </div>
         </div>

@@ -531,7 +531,10 @@ const schoolsSampleData = [
       BursariesDetail: "The Silk Award celebrates and rewards boys with outstanding all-round ability whose families need some support with our fees. successful candidates will be academically strong and have a wide range of co-curricular interests. The Silk Award is not dependent on scholarship success, but boys will be expected to make a significant contribution to Radley life. The financial award is means-tested and can range from 10% to 100% of our fees. We welcome applications for entry at 13+ (Year 9) and 16+ (Sixth Form). The Armed Forces Fund provides financial support for the independent education of children of UK Service personnel killed or wounded while serving their country. The Fund is means-tested and can range from 10% to more than 100% of fees",
       percentageOfFees: [10, 100]
     },
-    feesSchemes: "It is also possible to spread the cost of fees over 12 months through our partner company, School Fee Plan.",
+    feesScheme: {
+      feesSchemeAvailability: true,
+      feesSchemeDetails: "It is also possible to spread the cost of fees over 12 months through our partner company, School Fee Plan.",
+    },
     established: 1847,
     enquireUrl: "https://www.radley.org.uk/apply/funding/"
   },
@@ -559,6 +562,10 @@ const schoolsSampleData = [
       BursariesAvailable: true,
       BursariesDetail: "We offer Help With Fees bursaries to children whose families cannot otherwise fund a place. Please arrange to visit us a few months before applying. Please note that we cannot consider a bursary application if you have not visited us prior to applying. The following questions are typically considered by the Head Master, Bursar and Governors when deciding on the level of award Does your family have the ability to improve its financial position? For example, if there are two partners, we would expect both to be working in paid employment unless one is prevented from doing so through illness, or because one partner needs to care for very young children or for other dependants. Could you use funds that you already have? If you have significant savings or investments, or have a lot of equity in your house, we would expect you to use this before we could give help with fees. Do you have other sources of household income? We may need to take this into account. Are you paying fees to other schools or universities? If so, our level of support will need to take this into account.  ",
       percentageOfFees: "depends on the extent of your family's financial need"
+    },
+    feesScheme: {
+      feesSchemeAvailability: false,
+      feesSchemeDetails: null,
     },
     established: 627,
     enquireUrl: "https://www.stpetersyork.org.uk/admissions/bursaries-scholarships/bursaries-scholarships"
@@ -588,8 +595,133 @@ const schoolsSampleData = [
       BursariesDetail: "Around a third of our pupils receive financial support. We fund this extensive scholarship programme with our own resources and through fundraising. This programme is managed through our designated bursary fund ''The Prince Philip Gordonstoun Foundation''. Parents or guardians who need to apply for a means-tested bursary should request the appropriate form from the Fees Administrator, Alison More, by emailing fees@gordonstoun.org.uk or by telephoning 01343 837914.  ",
       percentageOfFees: "???",
     },
+    feesScheme: {
+      feesSchemeAvailability: false,
+      feesSchemeDetails: null,
+    },
     established: 1934,
-    enquireUrl: "https://www.stpetersyork.org.uk/admissions/bursaries-scholarships/bursaries-scholarships"
+    enquireUrl: "https://www.gordonstoun.org.uk/admissions/scholarships-bursaries"
+  },
+  {
+    schoolName: "Shrewsbury School",
+    schoolDescription: `Shrewsbury School is a prestigious independent co-educational boarding and day school located in Shrewsbury, Shropshire, England. Founded in 1552 by Edward VI, it is one of the original nine "great public schools" defined by the Public Schools Act 1868. The school combines a rich tradition of academic excellence with strong extracurricular programs, including music, drama, sports, and outdoor activities. Its scenic campus overlooks the River Severn and provides modern facilities alongside historic architecture. Known for its strong sense of community, the school offers a well-rounded education emphasizing personal growth, leadership, and preparation for university and beyond.`,
+    schoolEmail: "reception@shrewsbury.org.uk", 
+    schoolPhoneNumber: "+ 44 01743 280 500", 
+    latitude: 52.702397099804806, //52.702397099804806, -2.7645012970941125
+    longitude:  -2.7645012970941125,  // 53.966374704438394, -1.0933498907256507
+    schoolLocation: "Shrewsbury, Shropshire, Midlands",
+    stages: ["secondary", "sixth form"],
+    schoolType: ["boarding", "day"],
+    coeducation: "mixed-sex",
+    totalSchoolFees: 142932, //
+    scholarships: {
+      scholarshipsAvailable: true,
+      scholarshipsDetail: "Shrewsbury School has a long tradition, since its founding Charter in 1552, of making generous Scholarship awards recognising outstanding ability. These are an important part of our policy to ensure that the benefits of a Shrewsbury education are accessible to those who do not have the means to pay the full fee. Scholarships fall into various categories - Academic, Music, Art, Drama, Design Technology, Sport and All-Rounder. Awards are made either to pupils under the age of 14 who join the School in the Third Form, or to those entering the School at Sixth Form level. Contact Admissions to discuss available options and arrange a bespoke visit. Alternatively, book one of our forthcoming Open Days.",
+      percentageOfFees: [10, 100],
+    },
+    schoolImage: "/images/shrewsbury.png",
+    documentId: 1850295324,
+    ranking: 8,
+    Bursaries: {
+      BursariesAvailable: true,
+      BursariesDetail: "Each year Shrewsbury awards scholarships and bursaries to help fund the fees of talented pupils who will benefit from the educational opportunities offered by the School.  The provision of education is the primary charitable object of the School and our grant-making policy aims to improve access to the School for those who would not otherwise be able to enjoy a Shrewsbury education. The School's policy is to make awards on the basis of the applicant's educational ability and his or her family's ability to pay, subject to the particular conditions imposed by the original donor, where the award is taken from restricted funds. Individual awards will be dependent on the level of financial need identified. Where the demand exceeds the number of bursaries available, bursary funds will be directed to those pupils who are identified as having potential to benefit most from the opportunities Shrewsbury has to offer, and will be able to contribute to the life of the School with reference to performance in the Entrance Assessments.",
+      percentageOfFees: "???",
+    },
+    feesScheme: {
+      feesSchemeAvailability: true,
+      feesSchemeDetails: "The School is able to offer discounted fees for parents who choose to pay their fees in advance. If you wish to discuss the School's fees in advance scheme further, please contact Tom Young (tyoung@shrewsbury.org.uk). "
+    },
+    forceScheme: {
+      forceSchemeAvailable: true,
+      forcesSchemeDescription: ["Shrewsbury School is extremely proud of its military heritage, which dates back over 470 years. To this day, we continue to be home to a vibrant community of pupils from families of serving military personnel who thrive at Shrewsbury.", "Shrewsbury is pleased to support the Continuity of Education Allowance Scheme provided by the Ministry of Defence through a highly generous Forces' Bursary. This arrangement ensures that military parents are responsible for no more than 10% of the gross full boarding fees, with the remaining amount being covered by Shrewsbury as part of the Forces’ Bursary, supplemented by the financial assistance received from the Continuity of Education Allowance.", "Shrewsbury is a school with a rich heritage that instils in all Salopians the values of service, leadership and valour. "],
+      percentageOfFees: 90,
+    },
+    established: 1552,
+    enquireUrl: "https://www.shrewsbury.org.uk/admissions/admissions"
+  },
+  {
+    schoolName: "Ampleforth College",
+    schoolDescription: `Ampleforth College is a renowned independent co-educational boarding and day school located in North Yorkshire, England. Founded in 1802 by the Benedictine monks of Ampleforth Abbey, it is one of the country's leading Catholic schools. The college emphasizes a holistic education rooted in Benedictine values, offering a strong academic curriculum alongside exceptional opportunities in sports, music, drama, and outdoor activities. Its picturesque campus, set in a tranquil valley, provides modern facilities and a nurturing environment that fosters personal growth, leadership, and spiritual development. Ampleforth College is known for its commitment to faith, community, and preparing students for successful futures.`,
+    schoolEmail: "admissions@ampleforth.org.uk", 
+    schoolPhoneNumber: "+ 44 01439 766 000", 
+    latitude: 54.20237464429836, //
+    longitude:  -1.0822328160473165,  // 
+    schoolLocation: "Ampleforth, North Yorkshire, Yorkshire & the Humber",
+    stages: ["secondary", "sixth form"],
+    schoolType: ["boarding", "day"],
+    coeducation: "mixed-sex",
+    totalSchoolFees: 127080, //
+    scholarships: {
+      scholarshipsAvailable: true,
+      scholarshipsDetail: ["Scholarships at Ampleforth are awarded in recognition of academic ability or particular talent in the disciplines of Art, Design & Technology, Drama, Dance, Music (Instrumental & Choral), and Sport.", "Ampleforth Scholarships are highly prestigious, recognising existing skills and talents, together with potential. Our scholars provide leadership to their peers and in return, we offer dedicated, tailored programmes to nurture and develop their talents. Scholars are expected to demonstrate a strong contribution and leadership in their field of interest. They are also expected to make the most of the many opportunities on offer to further their talents and each scholar is assigned a personal Scholarship Mentor to monitor and support their progress.", "In Years 7 and 8, to encourage junior pupils to further their interests, Academic and Sports Development Awards carry a 10% fee remission, whilst Music, Dance, and Drama Development Awards cover tuition in an instrument, LAMDA, or dance.", "From Year 9 onwards, scholarships are honorary and bring no fee remission (although in the case of Music Scholarships, music tuition is covered). However, scholarships can be extremely helpful in supporting a bursary application as a strong indication of a child likely to flourish at Ampleforth."],
+      percentageOfFees: [0, 10],
+    },
+    schoolImage: "/images/ampleforth.jpg",
+    documentId: 18502953247,
+    ranking: 8,
+    Bursaries: {
+      BursariesAvailable: true,
+      BursariesDetail: ["Many families would like their children to have an Ampleforth education but, for some, this is beyond their financial means so bursaries are in demand. All bursary applications have to show that financial assistance with the payment of fees is needed", "Once awarded, each bursary is reviewed on an annual basis and parents are notified of the value of the award for the next academic year.", "To discuss applying for a bursary in more detail, please contact us on admissions@ampleforth.org.uk or call 01439 741081."],
+      percentageOfFees: "???",
+    },
+    feesScheme: {
+      feesSchemeAvailability: true,
+      feesSchemeDetails: ["Parents wishing to make a lump sum fee payment in advance may like to consider our Fees in Advance scheme. Please contact our Fees Officer for details on fees@ampleforth.org.uk or 01439 766869. "],
+    },
+    forceScheme: {
+      forceSchemeAvailable: true,
+      forcesSchemeDescription: ["A 20% discount is offered to the children of HM Armed forces and HM Diplomatic Service who are in receipt of the Continuity of Education Allowance (CEA). This is not in addition to the sibling discounts listed. Means-tested bursary assistance may also be available dependent upon individual circumstances"],
+      percentageOfFees: 20,
+    },
+    siblingsDiscount: {
+      siblingsDiscountAvailable: true,
+      siblingsDiscountDetails: ["discounts for second up to fourth child, for both boarding and day"],
+      percentageOfFees: [10, 30],
+    },
+    established: 1802,
+    enquireUrl: "https://www.ampleforthcollege.org.uk/private-boarding-school-admissions-yorkshire"
+  },
+  {
+    schoolName: "King's College School Cambridge",
+    schoolDescription: `Ampleforth College is a renowned independent co-educational boarding and day school located in North Yorkshire, England. Founded in 1802 by the Benedictine monks of Ampleforth Abbey, it is one of the country's leading Catholic schools. The college emphasizes a holistic education rooted in Benedictine values, offering a strong academic curriculum alongside exceptional opportunities in sports, music, drama, and outdoor activities. Its picturesque campus, set in a tranquil valley, provides modern facilities and a nurturing environment that fosters personal growth, leadership, and spiritual development. Ampleforth College is known for its commitment to faith, community, and preparing students for successful futures.`,
+    schoolEmail: "office@kcs.cambs.sch.uk", 
+    schoolPhoneNumber: "+ 44 01223 365 814", 
+    latitude: 54.20237464429836, //
+    longitude:  -1.0822328160473165,  // 
+    schoolLocation: "Ampleforth, North Yorkshire, Yorkshire & the Humber",
+    stages: ["secondary", "sixth form"],
+    schoolType: ["boarding", "day"],
+    coeducation: "mixed-sex",
+    totalSchoolFees: 127080, //
+    scholarships: {
+      scholarshipsAvailable: true,
+      scholarshipsDetail: ["Scholarships at Ampleforth are awarded in recognition of academic ability or particular talent in the disciplines of Art, Design & Technology, Drama, Dance, Music (Instrumental & Choral), and Sport.", "Ampleforth Scholarships are highly prestigious, recognising existing skills and talents, together with potential. Our scholars provide leadership to their peers and in return, we offer dedicated, tailored programmes to nurture and develop their talents. Scholars are expected to demonstrate a strong contribution and leadership in their field of interest. They are also expected to make the most of the many opportunities on offer to further their talents and each scholar is assigned a personal Scholarship Mentor to monitor and support their progress.", "In Years 7 and 8, to encourage junior pupils to further their interests, Academic and Sports Development Awards carry a 10% fee remission, whilst Music, Dance, and Drama Development Awards cover tuition in an instrument, LAMDA, or dance.", "From Year 9 onwards, scholarships are honorary and bring no fee remission (although in the case of Music Scholarships, music tuition is covered). However, scholarships can be extremely helpful in supporting a bursary application as a strong indication of a child likely to flourish at Ampleforth."],
+      percentageOfFees: [0, 10],
+    },
+    schoolImage: "/images/ampleforth.jpg",
+    documentId: 185029532479,
+    ranking: 8,
+    Bursaries: {
+      BursariesAvailable: true,
+      BursariesDetail: ["Many families would like their children to have an Ampleforth education but, for some, this is beyond their financial means so bursaries are in demand. All bursary applications have to show that financial assistance with the payment of fees is needed", "Once awarded, each bursary is reviewed on an annual basis and parents are notified of the value of the award for the next academic year.", "To discuss applying for a bursary in more detail, please contact us on admissions@ampleforth.org.uk or call 01439 741081."],
+      percentageOfFees: "???",
+    },
+    feesScheme: {
+      feesSchemeAvailability: true,
+      feesSchemeDetails: ["Parents wishing to make a lump sum fee payment in advance may like to consider our Fees in Advance scheme. Please contact our Fees Officer for details on fees@ampleforth.org.uk or 01439 766869. "],
+    },
+    forceScheme: {
+      forceSchemeAvailable: true,
+      forcesSchemeDescription: ["A 20% discount is offered to the children of HM Armed forces and HM Diplomatic Service who are in receipt of the Continuity of Education Allowance (CEA). This is not in addition to the sibling discounts listed. Means-tested bursary assistance may also be available dependent upon individual circumstances"],
+      percentageOfFees: 20,
+    },
+    siblingsDiscount: {
+      siblingsDiscountAvailable: true,
+      siblingsDiscountDetails: ["discounts for second up to fourth child, for both boarding and day"],
+      percentageOfFees: [10, 30],
+    },
+    established: 1802,
+    enquireUrl: "https://www.ampleforthcollege.org.uk/private-boarding-school-admissions-yorkshire"
   }
 
   
@@ -640,9 +772,10 @@ export default function SchoolsList({searchTerm}) {
             schoolType={school.schoolType}
             latitude={school?.latitude}
             longitude={school?.longitude}
-            feesSchemes={school?.feesSchemes}
             schoolDescription={school?.schoolDescription}
             established={school.established}
+            forceScheme={school?.forceScheme}
+            feesScheme={school?.feesScheme}
             /*onClickHandler={onClickHandler}*/ 
           />
         ))}

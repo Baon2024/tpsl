@@ -36,10 +36,10 @@ export default function societyPage()  {
 
     const selectedSchool = selectedSchoolArray[0];
 
-    const { schoolImage, latitude, established, schoolDescription, longitude, feesSchemes, Bursaries, scholarships, schoolLocation, schoolName, enquireUrl, totalSchoolFees } = selectedSchool;
+    const { schoolImage, latitude, forceScheme, established, schoolDescription, longitude, feesScheme, Bursaries, scholarships, schoolLocation, schoolName, enquireUrl, totalSchoolFees } = selectedSchool;
     console.log("scholarships on schoolPage is:", scholarships);
 
-    console.log("fees scheme is:", feesSchemes);
+    console.log("fees scheme is:", feesScheme);
 
     console.log("societyId type:", typeof societyId);  // Should be string or number
 console.log("documentId type:", typeof schoolsSampleData[0].documentId);  // Should be string or number
@@ -61,8 +61,8 @@ function formatToGBP(number) {
 
   let feePaymemtSchemeDetail;
 
-  if (feesSchemes) {
-    feePaymemtSchemeDetail = feesSchemes;
+  if (feesScheme) {
+    feePaymemtSchemeDetail = feesScheme;
   } else {
     feePaymemtSchemeDetail = feePaymemtSchemeDetailFiller;
   }
@@ -87,6 +87,8 @@ const [ scholarshipSavings, setScholarshipSavings ] = useState(null);
 
 console.log("scholarship.percentageOfFees is:", scholarships.percentageOfFees.length);
 console.log(scholarships.percentageOfFees[0], scholarships.percentageOfFees[1]);
+
+console.log("feesScheme is:", forceScheme);
 
 
   const handleEnquirySubmit = async (e) => {
@@ -273,7 +275,7 @@ useEffect(() => {
                       <Separator />
                       <p className="text-gray-600">{scholarships.scholarshipsDetail}</p>
                       <div className="mt-4 p-4 bg-primary/5 rounded-lg">
-                        <p className="text-sm text-gray-600">Value range:</p>
+                        <p className="text-sm text-gray-600">Value:</p>
                         <p className="text-2xl font-bold text-primary">
                           {Array.isArray(scholarships.percentageOfFees) &&
                           scholarships.percentageOfFees.length === 2
@@ -292,7 +294,7 @@ useEffect(() => {
                       <Separator />
                       <p className="text-gray-600">{Bursaries.BursariesDetail}</p>
                       <div className="mt-4 p-4 bg-primary/5 rounded-lg">
-                        <p className="text-sm text-gray-600">Maximum value:</p>
+                        <p className="text-sm text-gray-600">Value:</p>
                         <p className="text-2xl font-bold text-primary">
                         {Array.isArray(Bursaries.percentageOfFees) &&
                         Bursaries.percentageOfFees.length === 2
@@ -311,13 +313,14 @@ useEffect(() => {
                     </div>
                   )}
 
-                   {feePaymemtScheme && (
+                   {feesScheme.feesSchemeAvailability && (
               
                 
                 <div className="space-y-4">
                   <h3 className="text-xl font-bold">Fee Payment Scheme</h3>
                   <Separator />
-                  <p className="mt-2 text-gray-600">{feePaymemtSchemeDetail}</p>
+                
+                  <p className="mt-2 text-gray-600">{feesScheme.feesSchemeDetails}</p>
                 </div>
                
              
@@ -332,6 +335,38 @@ useEffect(() => {
                 </div>
                 
             )}
+
+            {forceScheme?.forceSchemeAvailable && (
+              
+                
+              <div className="space-y-4">
+                <h3 className="text-xl font-bold">Armed Forces scheme</h3>
+                <Separator />
+                {forceScheme?.forcesSchemeDescription.map((sentence) => (
+                  <p className="mt-2 text-gray-600">{sentence}</p>
+                ))}
+                { forceScheme.percentageOfFees && (
+                  <div className="mt-4 p-4 bg-primary/5 rounded-lg">
+                  <p className="text-sm text-gray-600">Value:</p>
+                  <p className="text-2xl font-bold text-primary">
+                  {Array.isArray(forceScheme?.percentageOfFees) &&
+                    forceScheme.percentageOfFees.length === 2
+                      ? `${(
+                          ((forceScheme?.percentageOfFees[0])
+                        ).toLocaleString())}% - ${(
+                          ((forceScheme?.percentageOfFees[1])
+                        ).toLocaleString())}%`
+                      : typeof forceScheme?.percentageOfFees === "number"
+                      ? `${
+                          (((forceScheme?.percentageOfFees)
+                        ).toLocaleString())}%`
+                      : forceScheme?.percentageOfFees}
+                    </p>
+                    </div>
+                )}
+              </div>
+              
+          )}
                 </div>
               </CardContent>
             </Card>
@@ -405,6 +440,26 @@ useEffect(() => {
                               (((totalSchoolFees / 100) * Bursaries.percentageOfFees)
                             ).toLocaleString())}`
                           : Bursaries.percentageOfFees}
+                      </p>
+                    </div>
+                  )}
+
+                  {scholarships?.scholarshipsAvailable && (
+                    <div className="rounded-lg border bg-card p-4">
+                      <h3 className="font-semibold">Potential Armed Forces Savings</h3>
+                      <p className="mt-2 text-xl font-semibold text-green-600">
+                        {Array.isArray(forceScheme?.percentageOfFees) &&
+                        forceScheme?.percentageOfFees.length === 2
+                          ? `From £${(
+                              ((totalSchoolFees / 100 * forceScheme?.percentageOfFees[0])
+                            ).toLocaleString())} - £${(
+                              ((totalSchoolFees / 100 * forceScheme.percentageOfFees[1])
+                            ).toLocaleString())}`
+                          : typeof forceScheme?.percentageOfFees === "number"
+                          ? `From £${(
+                              (((totalSchoolFees / 100) * forceScheme?.percentageOfFees)
+                            ).toLocaleString())}`
+                          : `From ${forceScheme?.percentageOfFees}`}
                       </p>
                     </div>
                   )}

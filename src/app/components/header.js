@@ -5,6 +5,8 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { User } from 'lucide-react'
 import styles from './header.module.css';
+import ContactButton from './contactButton';
+import EnquireButton from './enquireButton';
 
 export default function Header() {
   const pathname = usePathname()
@@ -16,6 +18,7 @@ export default function Header() {
           <Link href="/" className="text-xl font-bold"/*{styles.header}*/>
             thePublicSchoolList
           </Link>
+          <ContactButton />
           {/*
           <div className="flex items-center space-x-4">
             <Link 

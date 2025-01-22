@@ -9,11 +9,17 @@ import SearchBar2 from "./components/searchBar2";
 import SchoolCard from "./components/schoolCard";
 import SchoolsList from "./components/schoolsList";
 import supabase from "@/lib/supabase";
+import EmptyContainer from "./components/emptyContainer";
 //import { useRouter } from "next/router";
 
 export default function Home() {
 
   const [ schools, setSchools ] = useState([]);
+  const [ modalBox, setModalBox ] = useState(false);
+  const [ message, setMessage ] = useState('');
+  const [ subject, setSubject ] = useState('');
+
+
 
   //const [isMounted, setIsMounted] = useState(false);
   //const router = useRouter();
@@ -201,7 +207,8 @@ export default function Home() {
     <SchoolsList searchTerm={searchTerm} />
     { schools && schools.map((school) => (
       <p>{school.name}</p>
-    ))}  
+    ))}
+    <EmptyContainer modalBox={modalBox} setModalBox={setModalBox} message={message} setMessage={setMessage} subject={subject} setSubject={setSubject} />
   </>
   );
 }
