@@ -85,10 +85,10 @@ function formatToGBP(number) {
 const [isSubmitting, setIsSubmitting] = useState(false)
 const [ scholarshipSavings, setScholarshipSavings ] = useState(null);
 
-console.log("scholarship.percentageOfFees is:", scholarships.percentageOfFees.length);
-console.log(scholarships.percentageOfFees[0], scholarships.percentageOfFees[1]);
+console.log("scholarship.percentageOfFees is:", scholarships?.percentageOfFees?.length);
+console.log(scholarships?.percentageOfFees);
 
-console.log("feesScheme is:", forceScheme);
+console.log("forceScheme is:", forceScheme);
 
 
   const handleEnquirySubmit = async (e) => {
@@ -282,7 +282,7 @@ useEffect(() => {
                             ? `${scholarships.percentageOfFees[0]}% - ${scholarships.percentageOfFees[1]}%`
                             : typeof scholarships.percentageOfFees === "number"
                             ? `${scholarships.percentageOfFees}%`
-                            : scholarships.percentageOfFees}
+                            : `${scholarships.percentageOfFees}`}
                         </p>
                       </div>
                     </div>
@@ -307,13 +307,13 @@ useEffect(() => {
                           ? `${
                               (((Bursaries.percentageOfFees)
                             ).toLocaleString())}%`
-                          : Bursaries.percentageOfFees}
+                          : `${Bursaries.percentageOfFees}`}
                         </p>
                       </div>
                     </div>
                   )}
 
-                   {feesScheme.feesSchemeAvailability && (
+                   {feesScheme?.feesSchemeAvailability && (
               
                 
                 <div className="space-y-4">
@@ -395,7 +395,7 @@ useEffect(() => {
                     Fees and Potential Savings
                   </h2>
                   <div className="rounded-lg border bg-card p-4">
-                    <h3 className="font-semibold">Total School Fees</h3>
+                    <h3 className="font-semibold">Annual School Fees</h3>
                     <p className="mt-2 text-2xl font-bold text-primary">
                       {`from £${formattedTotalSchoolFees}`}
                     </p>
@@ -404,14 +404,14 @@ useEffect(() => {
                   
                   {scholarships.scholarshipsAvailable && (
                     <div className="rounded-lg border bg-card p-4">
-                      <h3 className="font-semibold">Potential Scholarship Savings</h3>
+                      <h3 className="font-semibold">Potential Annual Scholarship Savings</h3>
                       <p className="mt-2 text-xl font-semibold text-green-600">
                         {Array.isArray(scholarships.percentageOfFees) &&
                         scholarships.percentageOfFees.length === 2
                           ? `£${(
-                              ((totalSchoolFees / 100 * scholarships.percentageOfFees[0])
+                              ((totalSchoolFees[0] / 100 * scholarships.percentageOfFees[0])
                             ).toLocaleString())} - £${(
-                              ((totalSchoolFees / 100 * scholarships.percentageOfFees[1])
+                              ((totalSchoolFees[1] / 100 * scholarships.percentageOfFees[1])
                             ).toLocaleString())}`
                           : typeof scholarships.percentageOfFees === "number"
                           ? `£${(
@@ -426,14 +426,14 @@ useEffect(() => {
 
                 {Bursaries.BursariesAvailable && (
                     <div className="rounded-lg border bg-card p-4">
-                      <h3 className="font-semibold">Potential Bursary Savings</h3>
+                      <h3 className="font-semibold">Potential Annual Bursary Savings</h3>
                       <p className="mt-2 text-xl font-semibold text-green-600">
                       {Array.isArray(Bursaries.percentageOfFees) &&
                         Bursaries.percentageOfFees.length === 2
                           ? `£${(
-                              ((totalSchoolFees / 100 * Bursaries.percentageOfFees[0])
+                              ((totalSchoolFees[0] / 100 * Bursaries.percentageOfFees[0])
                             ).toLocaleString())} - £${(
-                              ((totalSchoolFees / 100 * Bursaries.percentageOfFees[1])
+                              ((totalSchoolFees[1] / 100 * Bursaries.percentageOfFees[1])
                             ).toLocaleString())}`
                           : typeof Bursaries.percentageOfFees === "number"
                           ? `£${(
@@ -444,7 +444,7 @@ useEffect(() => {
                     </div>
                   )}
 
-                  {scholarships?.scholarshipsAvailable && (
+                  {forceScheme?.scholarshipsAvailable && (
                     <div className="rounded-lg border bg-card p-4">
                       <h3 className="font-semibold">Potential Armed Forces Savings</h3>
                       <p className="mt-2 text-xl font-semibold text-green-600">
