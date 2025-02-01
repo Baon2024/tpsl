@@ -151,7 +151,7 @@ console.log('Clicked School documentId:', school.documentId);
     <Link
       href={`/societies/${documentId}`}
       className="relative h-[calc(19.5em-28px)] sm:h-[275px] lg:h-[calc(25vw-28px-28px)] w-full text-left hover:outline-none focus:outline-none hover:ring-0 focus:ring-0 active:ring-0 hover:transform hover:scale-110 transition-transform duration-300 group"
-      onClick={(e) => e.preventDefault()}
+      
     >
       <Card className="h-full overflow-hidden rounded-xl transition-colors hover:bg-accent relative">
         {/* Checkbox in the top-left corner, visible on hover */}
@@ -159,8 +159,9 @@ console.log('Clicked School documentId:', school.documentId);
           <input
             type="checkbox"
             checked={isChecked}
-            className="w-5 h-5 rounded-md border-gray-300 text-accent focus:ring-accent focus:ring-2"
+            className="w-5 h-5 rounded-full text-accent "
             onChange={handleCheckBoxToggle}
+            onClick={(e) => e.preventDefault()}
           />
         </div>
   

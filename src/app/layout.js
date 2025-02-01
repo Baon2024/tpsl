@@ -1,5 +1,5 @@
 "use client"
-import localFont from "next/font/local";
+//import localFont from "next/font/local";
 import "./globals.css";
 import Header from './components/header'
 import { useState, createContext } from "react";
@@ -7,7 +7,7 @@ import { SchoolCompareProvider } from "./schoolCompareContext";
 import { useSchoolCompare } from "./schoolCompareContext";
 
 
-const geistSans = localFont({
+/*const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
@@ -16,7 +16,7 @@ const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
-});
+});*/
 
 /*export const metadata = {
   title: "Create Next App",

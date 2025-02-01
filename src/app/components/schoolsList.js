@@ -1016,6 +1016,182 @@ const schoolsSampleData = [
     },
     established: 2011,
     enquireUrl: "https://www.radnor-twickenham.org/admissions/admissions-process"
+  },
+  {
+    schoolName: "Epsom College",
+    schoolDescription: `Epsom College is a prestigious independent co-educational day and boarding school located in Surrey, England. Founded in 1855, the school has a long-standing reputation for academic excellence, strong pastoral care, and a commitment to developing well-rounded individuals. Epsom College offers a rigorous curriculum alongside outstanding opportunities in sports, music, drama, and leadership, fostering intellectual curiosity and personal growth. Set within a stunning 85-acre campus, the school provides a supportive and inspiring environment where students are encouraged to achieve their full potential. With a strong sense of community and values rooted in service and integrity, Epsom College prepares students for success at university and beyond.`,
+    studentNumbers: 1143,
+    faithSchool: "Church of England",
+    schoolEmail: "admissions@epsomcollege.org.uk", 
+    schoolPhoneNumber: "+44 01372 821 234", 
+    latitude: 51.32599803243023, // //52.1972419211202, 0.12726669307427999
+    longitude:  -0.24532391621510422,  //51.32599803243023, -0.24532391621510422
+    schoolLocation: "Epsom, Surrey, South-East",
+    stages: ["secondary","sixth form"],
+    schoolType: ["day","boarding"],
+    coeducation: "mixed-sex",
+    totalSchoolFees: [28443, 55158], //per annual school year
+    scholarships: {
+      scholarshipsAvailable: true,
+      scholarshipsDetail: ["Scholarships are our way of recognising and rewarding those pupils who demonstrate particular promise in academic study, Drama, Music or Sport. ","A number of Academic Awards are available at every entry point in the College – 11+, 13+ and 16+ – and range in value from £750 to £6,000 per year.","We award two Performing Arts Scholarships and two Performing Arts Exhibitions at each entry point into the College (11+, 13+, and 16+). A Scholarship is worth £1,000 a year, and an Exhibition is worth £750 a year. We award scholarships for talent and prowess in acting and directing as well as technical aspects of production such as set and sound design.","We award two Performing Arts Scholarships and two Performing Arts Exhibitions at each entry point into the College (11+, 13+, and 16+). A Scholarship is worth £1,000 a year, and an Exhibition is worth £750 a year. Music scholars will lead by example and become immersed in all aspects of music-making and performance at the College. Many scholars leave Epsom to study and perform at the highest level internationally.","We welcome applications for Sports scholarships at all entry points into the College. The value of our Sports scholarships vary each year, depending on the number and quality of scholars – but each will access the full benefit of our specialised Talented and Gifted programme."],
+      percentageOfFees: "???",
+    },
+    schoolImage: "/images/epsom.jpg",
+    documentId: 185053247323891,
+    ranking: 8,
+    Bursaries: {
+      BursariesAvailable: true,
+      BursariesDetail: ["Last year, we offered just under £2m of support to families. 76 pupils benefited from bursaries, with more than half receiving support of 75% or more of their fees.","If you feel your circumstances qualify you for financial support, we would encourage you to read our guidance for means-tested bursaries. Funds are limited, therefore we advise you to apply 6-12 months before your child enrols at Epsom. "],
+      percentageOfFees: "means-tested",
+    },
+    feesScheme: {
+      feesSchemeAvailability: true,
+      feesSchemeDetails: ["It is possible to pay all your child’s school fees in advance, as a single lump sum. The fee can be paid by anyone (not only the child’s parents) and brings with it significant savings."],
+    },
+    forceScheme: {
+      forceSchemeAvailable: false,
+      forcesSchemeDescription: null,
+      percentageOfFees: null,
+    },
+    siblingsDiscount: {
+      siblingsDiscountAvailable: false,
+      siblingsDiscountDetails: null,
+      percentageOfFees: null,
+    },
+    established: 1855,
+    enquireUrl: "https://www.epsomcollege.org.uk/admissions/"
+  },
+  {
+    schoolName: "Royal Grammar School Guildford",
+    schoolDescription: `The Royal Grammar School, Guildford (RGS Guildford), is a prestigious independent boys’ day school located in Surrey, England. Founded in 1509, the school has a rich history of academic excellence and a reputation for nurturing intellectual curiosity, leadership, and personal development. RGS Guildford offers a challenging and dynamic curriculum, complemented by outstanding opportunities in sports, music, drama, and extracurricular activities. Set within a historic yet modern campus, the school fosters a supportive and ambitious environment where students are encouraged to reach their full potential. With a strong tradition of scholarship and innovation, RGS Guildford prepares its students for top universities and successful futures.`,
+    studentNumbers: 1312,
+    faithSchool: "non-denominational",
+    schoolEmail: "RGS-Admissions@rgsg.co.uk", 
+    schoolPhoneNumber: "+44 01483 880 600", 
+    latitude: 51.23732846566378, // //52.1972419211202, 0.12726669307427999
+    longitude:  -0.569051683801031,  //51.23732846566378, -0.569051683801031
+    schoolLocation: "Guildford, Surrey, South-East",
+    stages: ["prep", "secondary","sixth form"],
+    schoolType: ["day"],
+    coeducation: "boys",
+    totalSchoolFees: [16098, 24174], //per annual school year
+    scholarships: {
+      scholarshipsAvailable: true,
+      scholarshipsDetail: ["We offer a number of scholarships at various entry points: 11+, 13+ and 16+.","The categories are: Academic, Art, Drama, Music and Sport Scholarships","Scholarships are not means-tested and can be combined with bursaries"],
+      percentageOfFees: [5,20],
+    },
+    schoolImage: "/images/royalGuildford.jpg",
+    documentId: 1850432473238921,
+    ranking: 8,
+    Bursaries: {
+      BursariesAvailable: true,
+      BursariesDetail: ["A bursary (assistance with fees) to attend the RGS and RGS Prep can offer a life-changing experience, providing students with the knowledge, the values and the skills to flourish at school and beyond.  Our vision is to realise the talent of future generations by providing an excellent education to students of all backgrounds.  As a result, although entry is competitive, any parent who would like their son to come to the RGS or RGS Prep should not be deterred from applying for financial reasons as bursary funding is offered to successful applicants on a means-tested basis.","Those applying to join the RGS at age 11 and those applying to join from Year 3 at RGS Prep are eligible for bursaries","There is no set number of bursary awards that may be made; the funds available will determine the number of awards granted.  The value of bursaries is set by strict criteria and is based upon financial need; these are rigorously means tested and reviewed each year."],
+      percentageOfFees: [25,100],
+    },
+    feesScheme: {
+      feesSchemeAvailability: true,
+      feesSchemeDetails: ["It is possible to pay all your child’s school fees in advance, as a single lump sum. The fee can be paid by anyone (not only the child’s parents) and brings with it significant savings."],
+    },
+    forceScheme: {
+      forceSchemeAvailable: false,
+      forcesSchemeDescription: null,
+      percentageOfFees: null,
+    },
+    siblingsDiscount: {
+      siblingsDiscountAvailable: false,
+      siblingsDiscountDetails: null,
+      percentageOfFees: null,
+    },
+    established: 1509,
+    enquireUrl: "https://www.rgsg.co.uk/admissions/"
+  },
+  {
+    schoolName: "Sherrardswood School",
+    schoolDescription: `Sherrardswood School is a well-regarded independent co-educational day school located in Welwyn, Hertfordshire, England. Founded in 1928, the school is known for its nurturing and inclusive community, where students receive a personalised education that encourages academic achievement and personal growth. Offering a broad and balanced curriculum, Sherrardswood fosters intellectual curiosity, creativity, and resilience, alongside a wide range of extracurricular activities, including sports, performing arts, and outdoor pursuits. Set within a beautiful woodland campus, the school provides a supportive and inspiring environment where students develop confidence, leadership skills, and a lifelong love of learning, preparing them for future success.`,
+    studentNumbers: 502,
+    faithSchool: "All-faiths",
+    schoolEmail: "office@sherrardswood.co.uk", 
+    schoolPhoneNumber: "+44 01438 714 282", 
+    latitude: 51.82680561273373, // //
+    longitude: -0.2061528604785276,  //51.82680561273373, -0.2061528604785276
+    schoolLocation: "Welwyn, Hertfordshire, South-East",
+    stages: ["primary", "secondary","sixth form"],
+    schoolType: ["day"],
+    coeducation: "mixed-sex",
+    totalSchoolFees: [1290, 6339], //per annual school year
+    scholarships: {
+      scholarshipsAvailable: true,
+      scholarshipsDetail: ["We offer a number of scholarships at various entry points: 11+, 13+ and 16+.","The categories are: Academic, Art, Drama, Music and Sport Scholarships","Scholarships are not means-tested and can be combined with bursaries"],
+      percentageOfFees: [5,20],
+    },
+    schoolImage: "/images/sherrardswood.png",
+    documentId: 1850433173238921,
+    ranking: 8,
+    Bursaries: {
+      BursariesAvailable: false,
+      BursariesDetail: null,
+      percentageOfFees: null,
+    },
+    feesScheme: {
+      feesSchemeAvailability: false,
+      feesSchemeDetails: null,
+    },
+    forceScheme: {
+      forceSchemeAvailable: false,
+      forcesSchemeDescription: null,
+      percentageOfFees: null,
+    },
+    siblingsDiscount: {
+      siblingsDiscountAvailable: false,
+      siblingsDiscountDetails: null,
+      percentageOfFees: null,
+    },
+    established: 1928,
+    enquireUrl: "https://www.sherrardswood.co.uk/admissions/"
+  },
+  {
+    schoolName: "Sherrardswood School",
+    schoolDescription: `Sherrardswood School is a well-regarded independent co-educational day school located in Welwyn, Hertfordshire, England. Founded in 1928, the school is known for its nurturing and inclusive community, where students receive a personalised education that encourages academic achievement and personal growth. Offering a broad and balanced curriculum, Sherrardswood fosters intellectual curiosity, creativity, and resilience, alongside a wide range of extracurricular activities, including sports, performing arts, and outdoor pursuits. Set within a beautiful woodland campus, the school provides a supportive and inspiring environment where students develop confidence, leadership skills, and a lifelong love of learning, preparing them for future success.`,
+    studentNumbers: 502,
+    faithSchool: "All-faiths",
+    schoolEmail: "office@sherrardswood.co.uk", 
+    schoolPhoneNumber: "+44 01438 714 282", 
+    latitude: 51.82680561273373, // //
+    longitude: -0.2061528604785276,  //51.82680561273373, -0.2061528604785276
+    schoolLocation: "Welwyn, Hertfordshire, South-East",
+    stages: ["primary", "secondary","sixth form"],
+    schoolType: ["day"],
+    coeducation: "mixed-sex",
+    totalSchoolFees: [1290, 6339], //per annual school year
+    scholarships: {
+      scholarshipsAvailable: true,
+      scholarshipsDetail: ["We offer a number of scholarships at various entry points: 11+, 13+ and 16+.","The categories are: Academic, Art, Drama, Music and Sport Scholarships","Scholarships are not means-tested and can be combined with bursaries"],
+      percentageOfFees: [5,20],
+    },
+    schoolImage: "/images/sherrardswood.png",
+    documentId: 1850433173238921,
+    ranking: 8,
+    Bursaries: {
+      BursariesAvailable: false,
+      BursariesDetail: null,
+      percentageOfFees: null,
+    },
+    feesScheme: {
+      feesSchemeAvailability: false,
+      feesSchemeDetails: null,
+    },
+    forceScheme: {
+      forceSchemeAvailable: false,
+      forcesSchemeDescription: null,
+      percentageOfFees: null,
+    },
+    siblingsDiscount: {
+      siblingsDiscountAvailable: false,
+      siblingsDiscountDetails: null,
+      percentageOfFees: null,
+    },
+    established: 1928,
+    enquireUrl: "https://www.sherrardswood.co.uk/admissions/"
   }
 
 

@@ -4,7 +4,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { User } from 'lucide-react'
-import styles from './header.module.css';
+//import styles from './header.module.css';
 import ContactButton from './contactButton';
 import EnquireButton from './enquireButton';
 
