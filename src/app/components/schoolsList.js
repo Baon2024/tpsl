@@ -1150,26 +1150,26 @@ const schoolsSampleData = [
     enquireUrl: "https://www.sherrardswood.co.uk/admissions/"
   },
   {
-    schoolName: "Sherrardswood School",
-    schoolDescription: `Sherrardswood School is a well-regarded independent co-educational day school located in Welwyn, Hertfordshire, England. Founded in 1928, the school is known for its nurturing and inclusive community, where students receive a personalised education that encourages academic achievement and personal growth. Offering a broad and balanced curriculum, Sherrardswood fosters intellectual curiosity, creativity, and resilience, alongside a wide range of extracurricular activities, including sports, performing arts, and outdoor pursuits. Set within a beautiful woodland campus, the school provides a supportive and inspiring environment where students develop confidence, leadership skills, and a lifelong love of learning, preparing them for future success.`,
-    studentNumbers: 502,
+    schoolName: "Amesbury School",
+    schoolDescription: `Amesbury School is a respected independent co-educational preparatory school located in Hindhead, Surrey, England. Founded in 1870, it is one of the oldest prep schools in the country, known for its nurturing environment and commitment to academic excellence. The school offers a broad and engaging curriculum that fosters intellectual curiosity, creativity, and personal growth. Alongside strong academics, Amesbury provides exceptional opportunities in sports, performing arts, and outdoor education, encouraging well-rounded development. Set within a picturesque campus, the school combines traditional values with a modern approach to learning, preparing students for success at leading senior schools and beyond.`,
+    studentNumbers: 349,
     faithSchool: "All-faiths",
-    schoolEmail: "office@sherrardswood.co.uk", 
-    schoolPhoneNumber: "+44 01438 714 282", 
-    latitude: 51.82680561273373, // //
-    longitude: -0.2061528604785276,  //51.82680561273373, -0.2061528604785276
-    schoolLocation: "Welwyn, Hertfordshire, South-East",
-    stages: ["primary", "secondary","sixth form"],
-    schoolType: ["day"],
+    schoolEmail: "admissions@amesburyschool.co.uk", 
+    schoolPhoneNumber: "+44 (0)1428 604 322", 
+    latitude: 51.10076709037832, // //51.10076709037832, -0.7435842027348746
+    longitude: -0.7435842027348746,  //
+    schoolLocation: "Hindhead, Surrey, South-East",
+    stages: ["primary", "prep"],
+    schoolType: ["day","boarding"],
     coeducation: "mixed-sex",
-    totalSchoolFees: [1290, 6339], //per annual school year
+    totalSchoolFees: [15120, 23334], //per annual school year
     scholarships: {
-      scholarshipsAvailable: true,
-      scholarshipsDetail: ["We offer a number of scholarships at various entry points: 11+, 13+ and 16+.","The categories are: Academic, Art, Drama, Music and Sport Scholarships","Scholarships are not means-tested and can be combined with bursaries"],
-      percentageOfFees: [5,20],
+      scholarshipsAvailable: false,
+      scholarshipsDetail: null,
+      percentageOfFees: null,
     },
-    schoolImage: "/images/sherrardswood.png",
-    documentId: 1850433173238921,
+    schoolImage: "/images/amesbury.jpg",
+    documentId: 185043317323331,
     ranking: 8,
     Bursaries: {
       BursariesAvailable: false,
@@ -1190,8 +1190,52 @@ const schoolsSampleData = [
       siblingsDiscountDetails: null,
       percentageOfFees: null,
     },
-    established: 1928,
-    enquireUrl: "https://www.sherrardswood.co.uk/admissions/"
+    established: 1870,
+    enquireUrl: "https://www.amesburyschool.co.uk/admissions/visit-us/"
+  },
+  {
+    schoolName: "Dulwich College",
+    schoolDescription: `Dulwich College is a prestigious independent boys’ day and boarding school located in South London, England. Founded in 1619 by Edward Alleyn, the school has a long-standing reputation for academic excellence, strong pastoral care, and a commitment to developing well-rounded individuals. Offering a rigorous and diverse curriculum, Dulwich College fosters intellectual curiosity, creativity, and leadership, alongside exceptional opportunities in sports, music, drama, and extracurricular activities. Its historic yet modern campus provides a stimulating environment where students are encouraged to achieve their full potential. With a strong tradition of scholarship and service, Dulwich College prepares students for top universities and successful futures.`,
+    studentNumbers: 1899,
+    faithSchool: "Church of England",
+    schoolEmail: "enquiries@dulwich.org.uk", 
+    schoolPhoneNumber: "+44 020 8693 3601", 
+    latitude: 51.43900097660687, // //51.10076709037832, -0.7435842027348746
+    longitude: -0.0855706603868238,  //51.43900097660687, -0.0855706603868238
+    schoolLocation: "Dulwich, London, South-East",
+    stages: ["primary", "prep","secondary","sixth form"],
+    schoolType: ["day","boarding"],
+    coeducation: "mixed-sex",
+    totalSchoolFees: 29094, //per annual school year
+    scholarships: {
+      scholarshipsAvailable: false,
+      scholarshipsDetail: null,
+      percentageOfFees: null,
+    },
+    schoolImage: "/images/amesbury.jpg",
+    documentId: 1850433173433331,
+    ranking: 8,
+    Bursaries: {
+      BursariesAvailable: false,
+      BursariesDetail: null,
+      percentageOfFees: null,
+    },
+    feesScheme: {
+      feesSchemeAvailability: false,
+      feesSchemeDetails: null,
+    },
+    forceScheme: {
+      forceSchemeAvailable: false,
+      forcesSchemeDescription: null,
+      percentageOfFees: null,
+    },
+    siblingsDiscount: {
+      siblingsDiscountAvailable: false,
+      siblingsDiscountDetails: null,
+      percentageOfFees: null,
+    },
+    established: 1619,
+    enquireUrl: "https://www.amesburyschool.co.uk/admissions/visit-us/"
   }
 
 

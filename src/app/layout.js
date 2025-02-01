@@ -1,13 +1,16 @@
 "use client"
-//import localFont from "next/font/local";
+import localFont from "next/font/local";
 import "./globals.css";
 import Header from './components/header'
 import { useState, createContext } from "react";
 import { SchoolCompareProvider } from "./schoolCompareContext";
 import { useSchoolCompare } from "./schoolCompareContext";
+import { Link } from "lucide-react";
+import { TRACE_OUTPUT_VERSION } from "next/dist/shared/lib/constants";
+import { useRouter } from "next/navigation";
 
 
-/*const geistSans = localFont({
+const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
@@ -16,7 +19,7 @@ const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
-});*/
+});
 
 /*export const metadata = {
   title: "Create Next App",
@@ -31,31 +34,41 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
+      <SchoolCompareProvider>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <SchoolCompareProvider>
+        
           <Header />
           <main>{children}</main>
           
             <FixedBottomButton />
           
-        </SchoolCompareProvider>
+       
       </body>
+      </SchoolCompareProvider>
     </html>
   );
 }
 
 const FixedBottomButton = () => {
 
+  const router = useRouter();
+
   const { schoolsToCompare } = useSchoolCompare();
 
   if (schoolsToCompare.length === 0) return null;
   //can't use schoolsToCompare in the parent above the SchoolCompareProvider, so have to do this instead
 
+  function schoolsToCompareHandler() {
+    router.push('/SchoolsToCompare');
+  }
+
   return (
+    
     <button
       
+      onClick={schoolsToCompareHandler}
       style={{
         position: "fixed",
         bottom: "10%",
@@ -74,5 +87,6 @@ const FixedBottomButton = () => {
     >
       compare schools
     </button>
+    
   );
 };
