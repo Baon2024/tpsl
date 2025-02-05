@@ -1208,17 +1208,17 @@ const schoolsSampleData = [
     coeducation: "mixed-sex",
     totalSchoolFees: 29094, //per annual school year
     scholarships: {
-      scholarshipsAvailable: false,
-      scholarshipsDetail: null,
-      percentageOfFees: null,
+      scholarshipsAvailable: true,
+      scholarshipsDetail: ["Academic Scholarships are awarded to those boys who perform exceptionally well and score the highest grades in their examination and interview. For entry to Years 7 and Year 9 (late entry) all boys who sit the entrance examinations are automatically considered for an academic scholarship.","The pupils who join us through the Year 9 deferred entry route will sit the entrance examinations when they are in Year 6 and will have the opportunity to apply for Academic, Music, Art, and sports scholarships when they are in Year 8.  Parents will be sent full information and the applications form in the summer term when their son is in Year 7.","Scholarships may be held by day boys and boarders and will be continued until the holder leaves the College, subject to satisfactory progress and conduct. Scholarships are not means-tested. Scholarships range in value from 10% to one third of tuition fees."],
+      percentageOfFees: [10, 33],
     },
-    schoolImage: "/images/amesbury.jpg",
+    schoolImage: "/images/dulwich.jpg",
     documentId: 1850433173433331,
     ranking: 8,
     Bursaries: {
-      BursariesAvailable: false,
-      BursariesDetail: null,
-      percentageOfFees: null,
+      BursariesAvailable: true,
+      BursariesDetail: ["We warmly welcome applications from parents and guardians with academically strong boys who need full or partial financial support to send their son to Dulwich College. Bursaries provide financial assistance with school fees. Whilst the majority of bursaries are offered on entry to Year 7 (11+), we also award bursaries to boys joining in Years 3 (7+), 5 (9+), 9 (13+) and 12 (16+). 125 pupils receive a free place at Dulwich College","The criteria listed below provide a guide of the circumstances in which a household might be eligible for a bursary award: A combined gross income of less than £110,000. Both parents are working (or actively seeking employment). Ownership of only one residential property with a mortgage or living in rented accommodation. Savings and/or discretionary spending of less than £10,000. No frequent and/or expensive holidays, new or luxury cars or investment in significant home improvements"],
+      percentageOfFees: 100,
     },
     feesScheme: {
       feesSchemeAvailability: false,
@@ -1235,7 +1235,183 @@ const schoolsSampleData = [
       percentageOfFees: null,
     },
     established: 1619,
-    enquireUrl: "https://www.amesburyschool.co.uk/admissions/visit-us/"
+    enquireUrl: "https://www.dulwich.org.uk/admissions/"
+  },
+  {
+    schoolName: "Merchant Taylor's School",
+    schoolDescription: `Merchant Taylors’ School is a prestigious independent boys’ day school located in Northwood, Hertfordshire, England. Founded in 1561 by the Merchant Taylors’ Company, the school has a distinguished history of academic excellence and character development. Offering a challenging and dynamic curriculum, it fosters intellectual curiosity, leadership, and independent thinking. Alongside academics, the school provides outstanding opportunities in sports, music, drama, and extracurricular activities, encouraging well-rounded personal growth. Set within a spacious and well-equipped campus, Merchant Taylors’ School nurtures ambition, integrity, and resilience, preparing students for top universities and successful careers in a wide range of fields.`,
+    studentNumbers: 963,
+    faithSchool: "Church of England",
+    schoolEmail: "admissions@mtsn.org.uk", 
+    schoolPhoneNumber: "+44 01923 845 517", 
+    latitude: 51.632380839212345, // //51.10076709037832, -0.7435842027348746
+    longitude: -0.4204043468826351,  //51.632380839212345, -0.4204043468826351
+    schoolLocation: "Northwood, Hertfordshire, South-East",
+    stages: ["primary", "prep","secondary","sixth form"],
+    schoolType: ["day"],
+    coeducation: "boys",
+    totalSchoolFees: 29610, //per annual school year
+    scholarships: {
+      scholarshipsAvailable: true,
+      scholarshipsDetail: ["Merchant Taylors’ School runs a Scholarship Programme to recognise and reward talent and potential across a variety of fields. Scholarships are awarded on merit, irrespective of means and are available to pupils entering Year 7 and the Sixth Form. Scholars are expected to work hard and make a positive contribution to the life of the school throughout their time at Merchant Taylors’.","Open to all, Academic Scholarships are offered based on a pupil’s performance at the entrance exams and interview. Candidates who have performed exceptionally well will be invited back for a scholarship assessment day. Successful pupils are rewarded with a reduction in their school fees.","Practical Scholarships recognise outstanding ability and potential in a particular field. Art; Drama; Design, Engineering and Technology; Music and Sports scholarships are available to boys joining us in Year 7. These scholarships need to be applied for once you have registered your son. The deadline for Practical Scholarships is 30th September of the year preceding entry (when your son is in Year 6). "],
+      percentageOfFees: "???",
+    },
+    schoolImage: "/images/merchantTaylorSchoolNorthwood.jpg",
+    documentId: 1850433663433331,
+    ranking: 8,
+    Bursaries: {
+      BursariesAvailable: true,
+      BursariesDetail: ["Since our founding in 1561, Merchant Taylors’ has been dedicated to providing the best educational opportunities possible to children with talent. This spirit continues through our bursary programme which aims to broaden access to education to exceptionally talented pupils irrespective of their financial circumstances. Our bursary programme provides financial support up to 100% of the fees and in some circumstances may also cover uniform, coaches, and other costs to enable pupils to take full advantage of the broad spectrum of activities here at Merchant Taylors’. Bursaries and Scholarships are assessed independently so if a pupil has been offered a Scholarship, they may also be eligible for a Bursary and vice versa. ","Eligibility for a Bursary is assessed via financial means-testing which is carried out by an independent company and is likely to require a home visit. The first step is to complete your son’s registration"],
+      percentageOfFees: 100,
+    },
+    feesScheme: {
+      feesSchemeAvailability: false,
+      feesSchemeDetails: null,
+    },
+    forceScheme: {
+      forceSchemeAvailable: false,
+      forcesSchemeDescription: null,
+      percentageOfFees: null,
+    },
+    siblingsDiscount: {
+      siblingsDiscountAvailable: false,
+      siblingsDiscountDetails: null,
+      percentageOfFees: null,
+    },
+    established: 1561,
+    enquireUrl: "https://www.mtsn.org.uk/admissions/welcome"
+  },
+  {
+    schoolName: "Wellington School",
+    schoolDescription: `Wellington School is a respected independent co-educational day and boarding school located in Somerset, England. Founded in 1837, the school is known for its strong academic standards, supportive community, and emphasis on character development. Offering a broad and engaging curriculum, Wellington School encourages intellectual curiosity, creativity, and independent thinking, alongside exceptional opportunities in sports, music, drama, and outdoor education. Set within a beautiful campus, the school provides a nurturing and inspiring environment where students develop confidence, leadership skills, and resilience. With a focus on both academic achievement and personal growth, Wellington School prepares students for top universities and future success.`,
+    studentNumbers: 908,
+    faithSchool: "Church of England",
+    schoolEmail: "admissions@wellington-school.org.uk", 
+    schoolPhoneNumber: "+44 01823 668 800", 
+    latitude: 50.976992227472756, // //51.10076709037832, -0.7435842027348746
+    longitude:  -3.226278522855273,  //50.976992227472756, -3.226278522855273
+    schoolLocation: "Wellington, Somerset, South-West",
+    stages: ["primary", "prep","secondary","sixth form"],
+    schoolType: ["day","boarding"],
+    coeducation: "mixed-sex",
+    totalSchoolFees: [9771, 47970], //per annual school year
+    scholarships: {
+      scholarshipsAvailable: true,
+      scholarshipsDetail: ["Scholarships are offered to recognise ability and potential in the following areas: Academic, Music, Sport, Drama, Performing Arts and Art & Design. Pupils applying for Sport, Music, Drama, Performing Arts and Art & Design scholarships must fulfil the academic requirements of the school. Scholarships are offered for entry into Year 7, Year 9 and the Sixth Form. For further information on scholarships and bursaries for the academic year 2025/26 please contact the Admissions Team"],
+      percentageOfFees: [5,20],
+    },
+    schoolImage: "/images/wellington.jpg",
+    documentId: 1850455563433331,
+    ranking: 8,
+    Bursaries: {
+      BursariesAvailable: true,
+      BursariesDetail: ["All parents are entitled to submit a means-testing form for bursarial assistance. Bursaries will be reviewed annually to ensure the award is still appropriate."],
+      percentageOfFees: "means-tested",
+    },
+    feesScheme: {
+      feesSchemeAvailability: false,
+      feesSchemeDetails: null,
+    },
+    forceScheme: {
+      forceSchemeAvailable: true,
+      forcesSchemeDescription: ["Wellington has a long and successful history of working with Forces’ families. We are very proud of our boarding community and currently have a number of Service children attending the School who benefit from the stable, healthy, challenging, fun and friendly environment provided by our Houses.","Wellington supports the Continuity of Education Allowance with a very generous Forces’ Bursary, with parents paying only 10% of the  Continuity of Education Allowance."],
+      percentageOfFees: "90% of CEA allowance (£10,211)",
+    },
+    siblingsDiscount: {
+      siblingsDiscountAvailable: false,
+      siblingsDiscountDetails: null,
+      percentageOfFees: null,
+    },
+    established: 1837,
+    enquireUrl: "https://www.wellington-school.org.uk/senior/admissions/visiting-the-school"
+  },
+  {
+    schoolName: "Tonbridge School",
+    schoolDescription: `Tonbridge School is a prestigious independent boys’ boarding and day school located in Kent, England. Founded in 1553, it has a long-standing reputation for academic excellence, strong pastoral care, and a commitment to developing well-rounded individuals. The school offers a rigorous and dynamic curriculum, fostering intellectual curiosity, critical thinking, and leadership. Alongside academics, Tonbridge provides outstanding opportunities in sports, music, drama, and extracurricular activities, encouraging personal growth and resilience. Set within a stunning and well-equipped campus, the school nurtures ambition, integrity, and a strong sense of community, preparing students for top universities and successful futures.`,
+    studentNumbers: 801,
+    faithSchool: "Church of England",
+    schoolEmail: "admissions@tonbridge-school.org", 
+    schoolPhoneNumber: "44 (0)1732 365 555", 
+    latitude: 51.19940145111369, // //51.10076709037832, -0.7435842027348746
+    longitude: 0.27609655852540793,  //51.19940145111369, 0.27609655852540793
+    schoolLocation: "Tombridge, Kent, South-East",
+    stages: ["secondary","sixth form"],
+    schoolType: ["day","boarding"],
+    coeducation: "boys",
+    totalSchoolFees: [29610, 59124], //per annual school year
+    scholarships: {
+      scholarshipsAvailable: true,
+      scholarshipsDetail: ["Our Scholarship programme is designed to highlight areas of exceptional talent among our boys, which will be further nurtured and supported over their time here. Tonbridge Scholars are expected to be active in all aspects of School life. All Scholarships are open to boys joining the School in Year 9 only, with the exception of Music and Sport as boys joining in Year 12 can also apply for these. Boys must already be holding an Unconditional Offer for a School place before applying for a scholarship. Boys can apply for multiple awards.","The winning of any Scholarship provides eligibility for means-tested support of up to 100% fee remission, meaning that all financially supported Scholarships are only available to boys residing in the UK. Boys awarded Scholarships who do not require or who are not eligible for financial support, will receive a one off payment of £2000 as recognition of their achievement. This financial award will be deducted from the first term’s fees.","Scholarships: Academic, Art, Design, Sports, Drama, Music"],
+      percentageOfFees: [0,100],
+    },
+    schoolImage: "/images/tonbridge.webp",
+    documentId: 1850456663433331,
+    ranking: 8,
+    Bursaries: {
+      BursariesAvailable: true,
+      BursariesDetail: ["We strongly believe that diversity opens minds. Our aim is to widen access and opportunity to academically able boys, who, regardless of background and financial means would not only benefit, but positively thrive from a Tonbridge education and add significant value to the School. Financial assistance is available following means-testing up to 100% of fees with a package for additional support where necessary. More than 70 Tonbridge boys currently benefit from significant fee reductions and the ambition is to grow that number further.","The level of financial support offered to a boy in receipt of the Foundation Award is means-tested. It should be noted that the level of support received depends not only on family income but also assets, necessary expenses, and liabilities. Eligibility is assessed by the Director of Finance following a review of a confidential financial circumstances form at the beginning of the process. The Foundation Award is available to both Boarders and Day boys, but only for those who are joining Tonbridge at the start of Year 9 and who are in receipt of a Scholarship. Boys will need to be at or near the top of their class in Year 6, exceeding at most levels. A good indicator of academic suitability for Tonbridge is high predicted scores for 11+ (Kent Test) and/or CAT4 exams. They will also need to be eager to learn and join in the many Co-Curricular opportunities that we offer. "],
+      percentageOfFees: [0, 100],
+    },
+    feesScheme: {
+      feesSchemeAvailability: false,
+      feesSchemeDetails: null,
+    },
+    forceScheme: {
+      forceSchemeAvailable: false,
+      forcesSchemeDescription: null,
+      percentageOfFees: null,
+    },
+    siblingsDiscount: {
+      siblingsDiscountAvailable: true,
+      siblingsDiscountDetails: ["A 10% remission of fees is given to the third son (and any subsequent sons) of the same family to attend the School."],
+      percentageOfFees: 10,
+    },
+    established: 1553,
+    enquireUrl: "https://www.tonbridge-school.co.uk/admissions/"
+  },
+  {
+    schoolName: "Haberdashers' Eltree Schools",
+    schoolDescription: `Haberdashers' Elstree Schools, comprising Haberdashers' Boys' School and Haberdashers' Girls' School, are prestigious independent day schools located in Elstree, Hertfordshire, England. With a shared heritage dating back to 1690, both schools are renowned for their academic excellence, strong pastoral care, and commitment to developing well-rounded individuals. Offering a rigorous and dynamic curriculum, they foster intellectual curiosity, creativity, and leadership, alongside outstanding opportunities in sports, music, drama, and extracurricular activities. Set within a modern and well-equipped campus, the schools provide a supportive and inspiring environment where students develop confidence, resilience, and a lifelong love of learning. With a strong tradition of scholarship and innovation, Haberdashers' Elstree Schools prepare students for top universities and successful futures.`,
+    studentNumbers: 2629,
+    faithSchool: "Christian",
+    schoolEmail: "officegirls@habselstree.org.uk/officeboys@habselstree.org.uk", 
+    schoolPhoneNumber: "44 020 8266 2300/020 8266 1700", 
+    latitude: 51.654948134316875, // //51.10076709037832, -0.7435842027348746
+    longitude: -0.3133737436229754,  //51.654948134316875, -0.3133737436229754
+    schoolLocation: "Elstree, London, South-East",
+    stages: ["primary","secondary","sixth form"],
+    schoolType: ["day"],
+    coeducation: "both but seperate",
+    totalSchoolFees: [22943, 28424], //per annual school year
+    scholarships: {
+      scholarshipsAvailable: true,
+      scholarshipsDetail: ["We have a range of specialist scholarships available at 11+ and 16+, as well as academic scholarships for both prospective and current students. Where eligible, students can receive more than one type of scholarship, while also benefitting from a bursary.","Types: Art, Creative Writing, Design and Technology, Drama, Gymnaastics, Music, Sports  "],
+      percentageOfFees: "???",
+    },
+    schoolImage: "/images/habselstree.jpg",
+    documentId: 1853336663433331,
+    ranking: 8,
+    Bursaries: {
+      BursariesAvailable: true,
+      BursariesDetail: ["Roughly 10% of our students receive financial support. Our bursary programmes are intended to be transformational, we award to lower-income families who qualify for full or nearly full support. Our bursary programmes open up the world of Habs Girls to students whose families could not otherwise send their children here. Approximately 160 Senior School students attend Habs each year with bursary support and they will continue to receive support throughout their time at Habs, for as long as they need it. All students applying for a bursary will need to sit our standard entrance assessments.","We have an additional bursary scheme for students of Black African or Caribbean heritage that sits alongside the overall Habs bursary programme. Bright Futures is a new, donor-supported initiative, it aims to gain greater representation in higher education for individuals with protected characteristics (Equality Act 2010), who are also underrepresented at Habs and whose families could not afford to send them to Habs without substantial financial support. Funding is currently available for up to two fully funded spaces for 11+, 13+ or 16+ entry at Habs Girls.","The level of financial support we can offer is based on your financial declaration. The process includes an informal meeting with a member of our Finance team. As a guide, families whose total household gross income is below £50,000 is likely to qualify for a free school place. Households with total gross income of approximately £115,000 or more are not eligible for bursary support. Every year, each bursary is subject to a means-test reassessment."],
+      percentageOfFees: [50, 100],
+    },
+    feesScheme: {
+      feesSchemeAvailability: true,
+      feesSchemeDetails: ["Many parents choose to spread the cost of their school fees by paying monthly, via a School Fee Plan. This independent service offers a convenient way to manage your child’s fees through regular direct debit payments. Any extras can then be added on a termly basis, such as music tuition and trips","Our Fees In Advance scheme allows you or any family members to make lump-sum payments towards all or part of your child’s fees, including extras. Many parents, grandparents and even godparents like to contribute as part of the scheme. The amount deposited with Habs is then used to pay your child’s fees as they fall due each term, until the pre-payment is exhausted. In return for holding the lump sum, the school will apply a discount to the advance payment of 3.50%, which approximates to a return on investment of 4.16% per year for higher-rate taxpayers. The scheme does not fix your future school fees. Yet the rate of return will be guaranteed at the time the money is received by Habs – and for however long it is held.","f you subscribe to the School Fees Refund scheme, you can claim back for absences due to illness or accident. You can also claim for contact with infection, which should be for a continuous contact period of at least five days, including weekends. If you would like to join the scheme, the current charge is 0.82% of your child’s school fees per term."],
+    },
+    forceScheme: {
+      forceSchemeAvailable: false,
+      forcesSchemeDescription: null,
+      percentageOfFees: null,
+    },
+    siblingsDiscount: {
+      siblingsDiscountAvailable: false,
+      siblingsDiscountDetails: null,
+      percentageOfFees: null,
+    },
+    established: 1690,
+    enquireUrl: "https://www.habselstree.org.uk/"
   }
 
 

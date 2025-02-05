@@ -20,6 +20,8 @@ import EnquireButton from '@/app/components/enquireButton';
 import { Separator } from "@/components/ui/separator";
 import SchoolMap from '@/app/components/schoolMap';
 import 'leaflet/dist/leaflet.css';
+import { useSchoolCompare } from '@/app/schoolCompareContext';
+import SchoolsToCompare from '@/app/SchoolsToCompare/page';
 
 
 console.log("these are the schools: ", schoolsSampleData);
@@ -84,11 +86,38 @@ function formatToGBP(number) {
 */
 const [isSubmitting, setIsSubmitting] = useState(false)
 const [ scholarshipSavings, setScholarshipSavings ] = useState(null);
+const [ addButton, setAddButton ] = useState(true);
+const [ removeButton, setRemoveButton ] = useState(false);
 
 console.log("scholarship.percentageOfFees is:", scholarships?.percentageOfFees?.length);
 console.log(scholarships?.percentageOfFees);
 
 console.log("forceScheme is:", forceScheme);
+
+const { schoolsToCompare, setSchoolsToCompare } = useSchoolCompare();
+
+function addSchoolCompareHandler() {
+
+  console.log("schoolsToCompare is:", schoolsToCompare);
+  console.log("selectedSchool is:", selectedSchool);
+
+  if (schoolsToCompare === undefined || !schoolsToCompare.some((school) => school.documentId === selectedSchool.documentId)) {
+
+  setSchoolsToCompare((prev) => [...prev, selectedSchool]);
+  setAddButton(false);
+  setRemoveButton(true);
+  }
+}
+
+function removeSchoolCompareHandler() {
+  console.log("schoolsToCompare is:", schoolsToCompare);
+  console.log("selectedSchool is:", selectedSchool);
+
+
+  setSchoolsToCompare(prev => prev.filter(school => school.documentId !== selectedSchool.documentId));
+  setRemoveButton(false);
+  setAddButton(true);
+}
 
 
   const handleEnquirySubmit = async (e) => {
@@ -385,6 +414,18 @@ useEffect(() => {
                     <EnquireButton enquireUrl={enquireUrl} />
                   </SheetTrigger>
                 </Sheet>
+                {addButton && (
+                <div className="flex items-center gap-2">
+                  <h2 className="text-2xl font-bold">Compare Now</h2>
+                  <button onClick={addSchoolCompareHandler}>Add School</button>
+                  </div>
+                )}
+                {removeButton && (
+                <div className="flex items-center gap-2">
+                  <h2 className="text-2xl font-bold">Compare Now</h2>
+                  <button onClick={removeSchoolCompareHandler}>remove School</button>
+                  </div>
+                )}
               </CardContent>
             </Card>
 

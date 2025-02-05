@@ -84,8 +84,8 @@ const FixedBottomButton = () => {
         zIndex: 9999, // Ensures it's above all elements
         boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
       }}
-    >
-      compare schools
+    ><p>
+      compare schools</p><p>{schoolsToCompare.length}</p>
     </button>
     
   );

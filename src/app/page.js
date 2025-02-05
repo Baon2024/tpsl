@@ -11,6 +11,7 @@ import SchoolsList from "./components/schoolsList";
 import supabase from "@/lib/supabase";
 import EmptyContainer from "./components/emptyContainer";
 //import { useRouter } from "next/router";
+import ScrollProgressBar from "./components/scrollbar";
 
 export default function Home() {
 
@@ -201,6 +202,7 @@ export default function Home() {
     //could easily make it so that schools are fed into SchoolsList based on their ranking, by filtering above
     //and then apply different visual size for highest few, based on index position
   <>
+    <ScrollProgressBar />
     <Hero />
     <LandingPainPoints painPoints={painPoints} title={`76% of parents miss out on financial aid opportunities due to lack of information`} />
     <SearchBar2 searchTerm={searchTerm} setSearchTerm={setSearchTerm} />

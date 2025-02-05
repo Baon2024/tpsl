@@ -5,8 +5,12 @@ import { useSchoolCompare } from "../schoolCompareContext";
 
 export default function SchoolsToCompare() {
 
-    const { schoolsToCompare } = useSchoolCompare();
+    const { schoolsToCompare, setSchoolsToCompare } = useSchoolCompare();
     console.log("schoolsToCompare is:", schoolsToCompare);
+
+    function clearSchoolsHandler() {
+      setSchoolsToCompare([]);
+    }
 
     return (
         <>
@@ -19,6 +23,7 @@ export default function SchoolsToCompare() {
           {/* Render other properties as needed */}
         </div>
       ))}
+      <button onClick={clearSchoolsHandler}>clear schools</button>
         </>
     )
 }
