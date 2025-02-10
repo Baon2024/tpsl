@@ -13,7 +13,6 @@ function buildClassNames(...values) {
 
 
 export default function LandingPainPoints ({
-    title,
     subtitle,
     painPoints,
     className,
@@ -26,7 +25,7 @@ export default function LandingPainPoints ({
       >
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-            {title}
+          <strong style={{ color: "red" }}>76%</strong> of parents miss out on financial aid opportunities due to lack of information
           </h2>
           <h3 className="text-2xl mt-4 text-slate-600 dark:text-slate-400 mb-12">
             {subtitle}

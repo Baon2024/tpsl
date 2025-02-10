@@ -38,7 +38,7 @@ export default function societyPage()  {
 
     const selectedSchool = selectedSchoolArray[0];
 
-    const { schoolImage, latitude, forceScheme, established, schoolDescription, longitude, feesScheme, Bursaries, scholarships, schoolLocation, schoolName, enquireUrl, totalSchoolFees } = selectedSchool;
+    const { schoolImage, schoolEmail, siblingDiscount, schoolPhoneNumber, latitude, forceScheme, established, schoolDescription, longitude, feesScheme, Bursaries, scholarships, schoolLocation, schoolName, enquireUrl, totalSchoolFees } = selectedSchool;
     console.log("scholarships on schoolPage is:", scholarships);
 
     console.log("fees scheme is:", feesScheme);
@@ -54,9 +54,18 @@ function formatToGBP(number) {
     return new Intl.NumberFormat('en-GB').format(number);
   }
 
-  console.log("totalSchoolFees are:", totalSchoolFees);
+  let formattedTotalSchoolFees;
 
-  const formattedTotalSchoolFees = formatToGBP(totalSchoolFees);
+  console.log("totalSchoolFees are:", totalSchoolFees);
+  if (Array.isArray(totalSchoolFees)) {
+
+    formattedTotalSchoolFees = totalSchoolFees.map(fee => formatToGBP(fee));
+  }
+  else {
+    formattedTotalSchoolFees = formatToGBP(totalSchoolFees);
+  }
+  /*= formatToGBP(totalSchoolFees[0]);*/
+  console.log("formattedSchoolFees are:", formattedTotalSchoolFees);
 
   const feePaymemtScheme = true; //just creating local fake version, whilst testing
   const feePaymemtSchemeDetailFiller = "just some filler stuff";
@@ -71,8 +80,8 @@ function formatToGBP(number) {
 
   console.log("feepaymentschemedetails is:", feePaymemtSchemeDetail);
 
-  const siblingDiscount = true;
-  const siblingDiscountDetail = "filler stuff"
+  //const siblingDiscount = true;
+  //const siblingDiscountDetail = "filler stuff"
 
 //could add a feature that shows ranking, with a slider for non-logged in viewer to add a rating
 //onChange, it would send rating to be added to school.rating array of ratings
@@ -203,11 +212,11 @@ useEffect(() => {
                 </div>
                 <div className="flex items-center gap-2 text-gray-600">
                   <Phone className="h-5 w-5" />
-                  N/A
+                 {schoolPhoneNumber}
                 </div>
                 <div className="flex items-center gap-2 text-gray-600">
                   <Mail className="h-5 w-5" />
-                  N/A
+                  {schoolEmail}
                 </div>
               </div>
             </div>
@@ -354,7 +363,7 @@ useEffect(() => {
                
              
             )}
-             {siblingDiscount && (
+             {siblingDiscount?.siblingsDiscountAvailable && (
               
                 
                 <div className="space-y-4">
@@ -438,7 +447,10 @@ useEffect(() => {
                   <div className="rounded-lg border bg-card p-4">
                     <h3 className="font-semibold">Annual School Fees</h3>
                     <p className="mt-2 text-2xl font-bold text-primary">
-                      {`from £${formattedTotalSchoolFees}`}
+                      {Array.isArray(formattedTotalSchoolFees) && formattedTotalSchoolFees.length === 2 
+                      ? `from £${formattedTotalSchoolFees[0]} to £${formattedTotalSchoolFees[1]}` 
+                      : !Array.isArray(formattedTotalSchoolFees) && `£${formattedTotalSchoolFees}`}
+                      
                     </p>
                   </div>
 

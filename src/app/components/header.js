@@ -18,7 +18,7 @@ export default function Header() {
           <Link href="/" className="text-xl font-bold"/*{styles.header}*/>
             thePublicSchoolList
           </Link>
-          <ContactButton />
+          
           {/*
           <div className="flex items-center space-x-4">
             <Link 

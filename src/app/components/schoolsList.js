@@ -1412,14 +1412,371 @@ const schoolsSampleData = [
     },
     established: 1690,
     enquireUrl: "https://www.habselstree.org.uk/"
+  },
+  {
+    schoolName: "Queen Ethelburga's",
+    schoolDescription: `Queen Ethelburga’s Collegiate is a prestigious independent co-educational day and boarding school located in North Yorkshire, England. Established in 1912, the Collegiate is made up of four distinct schools: **The Chapter House** (for pupils aged 3 months to Year 5), **King’s Magna** (for Years 6-9), **The College**, and **The Faculty** (both for Years 10-13). This structure allows students to receive a tailored education that suits their individual learning styles and ambitions. Renowned for its academic excellence, Queen Ethelburga’s fosters intellectual curiosity, creativity, and leadership while offering a broad and dynamic curriculum. Students benefit from exceptional opportunities in sports, performing arts, and extracurricular activities, supported by world-class facilities, including modern classrooms, a professional-grade theatre, extensive sports facilities, and high-quality boarding accommodations. Set within a stunning 220-acre countryside campus, the Collegiate provides a nurturing and inspiring environment where students develop confidence, resilience, and ambition. With a strong focus on both academic achievement and personal growth, Queen Ethelburga’s prepares students for top universities and successful futures, instilling values of respect, independence, and excellence.`,
+    studentNumbers: 1335,
+    faithSchool: "Non-Denominational",
+    schoolEmail: "admission@qe.org", 
+    schoolPhoneNumber: "+44 (0)1423 33 33 30", 
+    latitude: 54.02715689936455, // //51.10076709037832, -0.7435842027348746
+    longitude: -1.2963811025563412,  //54.02715689936455, -1.2963811025563412
+    schoolLocation: "Thorpe Underwood, North Yorkshire, Yorkshire & Humber",
+    stages: ["primary","secondary","sixth form"],
+    schoolType: ["day","boarding"],
+    coeducation: "co-educational",
+    totalSchoolFees: [13050, 72375], //per annual school year //4350
+    scholarships: {
+      scholarshipsAvailable: false,
+      scholarshipsDetail: ["We wish to inform you that we have made the decision not to offer scholarships or bursaries to new families for the next academic year. Our school fees remain competitively priced across the local area, and we have absorbed much of the VAT cost without compromising any of the exceptional offerings we provide at QE. For now, our current priority is to support our existing families and ensure continuity for our students, especially those in crucial exam years, to prevent any disruption to their education."],
+      percentageOfFees: "???",
+    },
+    schoolImage: "/images/queenEthelburga's.webp",
+    documentId: 1854436663433331,
+    ranking: 8,
+    Bursaries: {
+      BursariesAvailable: false,
+      BursariesDetail: ["We wish to inform you that we have made the decision not to offer scholarships or bursaries to new families for the next academic year. Our school fees remain competitively priced across the local area, and we have absorbed much of the VAT cost without compromising any of the exceptional offerings we provide at QE. For now, our current priority is to support our existing families and ensure continuity for our students, especially those in crucial exam years, to prevent any disruption to their education."],
+      percentageOfFees: "???",
+    },
+    feesScheme: {
+      feesSchemeAvailability: false,
+      feesSchemeDetails: null,
+    },
+    forceScheme: {
+      forceSchemeAvailable: true,
+      forcesSchemeDescription: ["At QE, we offer a generous discount on fees for Forces children. If you are eligible for the CEA (Continuity of Education Allowance), the parental contribution is £1,470 per term."],
+      percentageOfFees: [60,66],
+    },
+    siblingsDiscount: {
+      siblingsDiscountAvailable: true,
+      siblingsDiscountDetails: ["Sibling discounts are offered with fee reductions of 5% for a second child in attendance, 20% for a third child and 35% for a fourth child and any subsequent children. Please note: these discounts only apply to UK students and are capped at 5% for siblings in Kindergarten."],
+      percentageOfFees: [5,35],
+    },
+    established: 1912,
+    enquireUrl: "https://www.qe.org/admissions"
+  },
+  {
+    schoolName: "Yarm School",
+    schoolDescription: `Yarm School is a leading independent co-educational day school located in Yarm, North Yorkshire, England. Founded in 1978, the school has built a strong reputation for academic excellence, outstanding pastoral care, and a commitment to developing well-rounded individuals. Catering to pupils from Nursery through to Sixth Form, Yarm School offers a broad and engaging curriculum that fosters intellectual curiosity, creativity, and leadership. Beyond academics, the school provides exceptional opportunities in sports, performing arts, outdoor education, and extracurricular activities, encouraging personal growth and resilience. Situated on a picturesque riverside campus with state-of-the-art facilities, Yarm School offers a supportive and inspiring environment where students can thrive. With a focus on both academic achievement and character development, the school prepares pupils for top universities and successful futures while instilling values of integrity, ambition, and community spirit.`,
+    studentNumbers: 1167,
+    faithSchool: "All Faiths",
+    schoolEmail: "admin@yarmschool.org", 
+    schoolPhoneNumber: "+44 01642 786 023", 
+    latitude: 54.50707805216794, // //51.10076709037832, -0.7435842027348746
+    longitude: -1.3519089448647768,  //54.50707805216794, -1.3519089448647768
+    schoolLocation: "Yarm, North Yorkshire, Yorkshire & Humber",
+    stages: ["primary","secondary","sixth form"],
+    schoolType: ["day"],
+    coeducation: "co-educational",
+    totalSchoolFees: [11253, 18681], //per annual school year
+    scholarships: {
+      scholarshipsAvailable: true,
+      scholarshipsDetail: ["As an academically selective school, many of our pupils are high on the national spectrum of academic achievement. We want to recognise gifted and talented children and give them an opportunity to join one of the leading independent schools in the North East by offering a number of academic Scholarships throughout the Senior School and Sixth Form.","Music Scholarships are available for pupils on entry at 11+, 13+ or 16+. They must show reasonable, all-round academic ability in the Entrance Assessment and a high standard of achievement on one or more instruments or voice. Pupils may also offer composition at 16+. All applicants must demonstrate superb musical progress and a high level of involvement in the musical life of the School to retain their Music Scholarship. In addition, the pupil must make sound academic progress and display high standards of behaviour.","We believe that ambitious, driven students should benefit from an independent education no matter their domestic circumstances. That’s why we offer four fully funded Sixth Form Scholarships to outstanding students new to the School.","Our Sixth Form Scholarships are means-tested and candidates must secure a minimum of eight 7/8/9 grades at GCSE. Joint parental income must also be below £45,000 per annum. Our Sixth Form Scholarships are means-tested and candidates must secure a minimum of eight 7/8/9 grades at GCSE. Joint parental income must also be below £45,000 per annum.","we are one of a limited number of schools that offer the prestigious Arkwright Scholarships. Together with Arkwright, we aim to enable, inspire and nurture future leaders in engineering and technical design. These Scholarships are tenable for two Sixth Form years. Students must study Maths at A Level and will be asked to demonstrate their plan to study engineering or technical design at degree level. Applications must be made by the end of January in the year the Sixth Form studies are to commence."],
+      percentageOfFees: "means-tested",
+    },
+    schoolImage: "/images/yarm.jpg",
+    documentId: 1854226663433331,
+    ranking: 8,
+    Bursaries: {
+      BursariesAvailable: true,
+      BursariesDetail: ["Our means-tested Bursaries are open to pupils joining the First Year (Year 7) in our Senior School or Lower Sixth (Year 12) in our Sixth Form. They are intended to make it possible for promising, academically talented children to receive an independent school education at Yarm, regardless of their financial or domestic circumstances.","Yarm’s Bursaries cover a percentage of the pupil’s tuition; as a guide, assistance is given on a sliding scale linked to family income. In some cases, we will also offer financial support for extras such as lunch, school trips and uniform.","On average, almost £500k per annum is spent supporting around 60 children with means-tested Bursaries, which range in value from 100%+ to 20% of the full fee, depending on the family’s financial circumstances","We will consider making an award where the total gross family income is less than £55,000 per annum. Savings and assets are also considered when assessing eligibility for a bursary award."],
+      percentageOfFees: [20, 100],
+    },
+    feesScheme: {
+      feesSchemeAvailability: false,
+      feesSchemeDetails: null,
+    },
+    forceScheme: {
+      forceSchemeAvailable: false,
+      forcesSchemeDescription: null,
+      percentageOfFees: null,
+    },
+    siblingsDiscount: {
+      siblingsDiscountAvailable: false,
+      siblingsDiscountDetails: null,
+      percentageOfFees: null,
+    },
+    established: 1978,
+    enquireUrl: "https://www.yarmschool.org/admissions/"
+  },
+  {
+    schoolName: "Benenden School",
+    schoolDescription: `Benenden School is a prestigious independent boarding school for girls, located in the Kent countryside, England. Founded in 1923, the school is renowned for its academic excellence, outstanding pastoral care, and commitment to developing confident, well-rounded young women. Offering a rigorous and dynamic curriculum, Benenden fosters intellectual curiosity, creativity, and leadership, alongside exceptional opportunities in sports, performing arts, and extracurricular activities. Set within a stunning 250-acre campus with state-of-the-art facilities, the school provides a nurturing and inspiring environment where students develop resilience, independence, and ambition. With a strong tradition of academic achievement, personal development, and global outlook, Benenden School prepares students for top universities and successful futures, equipping them with the skills and values needed to thrive in an ever-changing world.`,
+    studentNumbers: 584,
+    faithSchool: "Church of England",
+    schoolEmail: "registry@benenden.school", 
+    schoolPhoneNumber: "+44 01580 240 592", 
+    latitude: 51.07564538913721, // //51.10076709037832, -0.7435842027348746
+    longitude: 0.5713626836547036,  //51.07564538913721, 0.5713626836547036
+    schoolLocation: "Benenden, Kent, South-East",
+    stages: ["secondary","sixth form"],
+    schoolType: ["day","boarding"],
+    coeducation: "girls",
+    totalSchoolFees: [40680, 56700], //per annual school year
+    scholarships: {
+      scholarshipsAvailable: true,
+      scholarshipsDetail: ["Being a Scholar is a position of honour at Benenden. Whilst it does not carry any remission in fees, it does allow pupils to play a key role in the life of the School and opens a world of opportunities from which she can expand her learning. "],
+      percentageOfFees: "no fee remision",
+    },
+    schoolImage: "/images/benenden.jpg",
+    documentId: 1224226663433331,
+    ranking: 8,
+    Bursaries: {
+      BursariesAvailable: true,
+      BursariesDetail: ["Three types of Bursaries:", "11+ Fourths Award programme (previously the 11+ Trust Award Bursary programme) - Each year Benenden School can offer one or more places for a girl to enter the Fourth Form (11+ or Year 7). Each place may be fully funded – that is to say up to 100% of school fees, subject to means-testing. The 11+ Fourths Award is open only to girls attending a local primary schools, located within a 7.5 mile radius of Benenden School.","16+ Founders Award (previously the Sixth Form Trust Award programme) - Each year Benenden School can offer one or more places for a pupil to enter the Sixth Form (16+ or Year 12). Each place may be fully funded – that is to say up to 100% of school fees, subject to means-testing. In addition to covering fees, if necessary, all school uniform costs would be covered and an allowance paid to cover two extra activities per term, eg musical instrument tuition, sports coaching, or extra drama, etc. The successful candidate would be expected to complete her education with us.","Benenden Bursary Awards at 11+, 12+, 13+, 14+ and 16+ - Our general Bursary award progamme is open to all UK resident candidates. Awards are subject to means-testing and the eligibility criteria set out below. Full details of the new Bursary Awards and the application process can be found below."],
+      percentageOfFees: [20, 100],
+    },
+    feesScheme: {
+      feesSchemeAvailability: true,
+      feesSchemeDetails: ["Benenden operates a fee payment in advance scheme. For more details please contact their Accounts team"],
+    },
+    forceScheme: {
+      forceSchemeAvailable: true,
+      forcesSchemeDescription: ["Families who are in receipt of the UK government Continuity of Education Allowance (CEA) for Service or Diplomatic Children may seek additional bursary support from Benenden of up to 20% of fees. This is not be means-tested."],
+      percentageOfFees: [0,20],
+    },
+    siblingsDiscount: {
+      siblingsDiscountAvailable: false,
+      siblingsDiscountDetails: null,
+      percentageOfFees: null,
+    },
+    established: 1923,
+    enquireUrl: "https://www.benenden.school/admissions/?_gl=1*19ieerh*_ga*NjIwMDQxNTc1LjE3Mzg4Njg2NDc.*_ga_PFQS6VRF35*MTczODg2ODY0Ni4xLjEuMTczODg2OTc3Ni42MC4wLjA."
+  },
+  {
+    schoolName: "Brighton School",
+    schoolDescription: `Brighton College is a prestigious independent co-educational day and boarding school located in Brighton, England. Founded in 1845, the school is renowned for its academic excellence, innovative teaching, and strong pastoral care. Consistently ranked among the top schools in the UK, Brighton College fosters intellectual curiosity, creativity, and leadership through a dynamic and forward-thinking curriculum. Beyond academics, the school offers exceptional opportunities in sports, music, drama, and extracurricular activities, encouraging students to develop resilience, confidence, and a global outlook. Set within a stunning mix of historic and modern architecture, the campus provides world-class facilities that support students' personal and academic growth. With a strong emphasis on kindness, inclusivity, and ambition, Brighton College prepares students for top universities and successful futures in a rapidly evolving world.`,
+    studentNumbers: 1242,
+    faithSchool: "Church of England",
+    schoolEmail: "collegeadmissions@brightoncollege.net", 
+    schoolPhoneNumber: "+44 (0)1273 704 200", 
+    latitude: 50.82065404578936, // //51.10076709037832, -0.7435842027348746
+    longitude: -0.12204453162237046,  //50.82065404578936, -0.12204453162237046
+    schoolLocation: "Brighton, East Sussex, South-East",
+    stages: ["secondary","sixth form"],
+    schoolType: ["day","boarding"],
+    coeducation: "co-educational",
+    totalSchoolFees: [14160, 31770], //per annual school year
+    scholarships: {
+      scholarshipsAvailable: true,
+      scholarshipsDetail: ["Scholarships are awarded during the admissions process to recognise talented pupils who show great promise in a particular area of school life. Scholars are expected to act as role models in their fields of interest. Successful pupils are rewarded with an annual amount deducted from their fees, which lasts throughout their time at the College.","Sport, Music, Design & Technology, Drama, Dance, Art & Photography and Academic Scholarships are available","Since September 2020, Brighton College has offered 20 free 16+ places in our Opening Doors scholarship programme. This initiative makes Sixth Form places at Brighton College, one of the world’s leading schools, available to talented and ambitious young people from the local area. With fully funded Sixth Form scholarships, we hope to attract local pupils for whom our pastoral care and academic rigor will offer a life-changing opportunity. This may include: Pupils who are eligible for free school meals, Pupils in care or who have been in care, Pupils who would be the first in their families to attend university, Pupils who have experienced a significant disadvantage, or who have been displaced, such as a refugee."],
+      percentageOfFees: [0, 100],
+    },
+    schoolImage: "/images/brightonCollege.jpg",
+    documentId: 1224225563433331,
+    ranking: 8,
+    Bursaries: {
+      BursariesAvailable: true,
+      BursariesDetail: ["With the aim of giving more children the opportunity to flourish, a bursary is awarded on the basis of a means-test form and offer a fee reduction appropriate to the individual situation of each family. Bursaries are reviewed each year and may change as a family’s financial situation changes. They are given for day places only. "],
+      percentageOfFees: [0, 100],
+    },
+    feesScheme: {
+      feesSchemeAvailability: false,
+      feesSchemeDetails: null,
+    },
+    forceScheme: {
+      forceSchemeAvailable: false,
+      forcesSchemeDescription: null,
+      percentageOfFees: null,
+    },
+    siblingsDiscount: {
+      siblingsDiscountAvailable: false,
+      siblingsDiscountDetails: null,
+      percentageOfFees: null,
+    },
+    established: 1923,
+    enquireUrl: "https://www.brightoncollege.org.uk/"
+  },
+  {
+    schoolName: "Downe House School",
+    schoolDescription: `Downe House School is a prestigious independent boarding school for girls, located in Berkshire, England. Founded in 1907, the school is renowned for its academic excellence, strong pastoral care, and commitment to empowering young women. With a challenging and enriching curriculum, Downe House fosters intellectual curiosity, creativity, and leadership while maintaining a strong sense of tradition and innovation. Beyond academics, the school offers outstanding opportunities in sports, music, drama, and extracurricular activities, encouraging students to develop confidence, resilience, and a global perspective. Set within a beautiful and well-equipped campus, Downe House provides a nurturing and inspiring environment where students can thrive. With a strong focus on academic achievement, personal development, and character-building, the school prepares pupils for top universities and successful futures, instilling values of integrity, ambition, and service.`,
+    studentNumbers: 569,
+    faithSchool: "Church of England",
+    schoolEmail: " hamisie@downehouse.net", 
+    schoolPhoneNumber: "+44 01635 200 286", 
+    latitude: 51.43765994003928, // //51.10076709037832, -0.7435842027348746
+    longitude: -1.2744322199076514,  //51.43765994003928, -1.2744322199076514
+    schoolLocation: "Thatcham, Berkshire, South-East",
+    stages: ["secondary","sixth form"],
+    schoolType: ["day","boarding"],
+    coeducation: "girls",
+    totalSchoolFees: [43350, 58290], //per annual school year
+    scholarships: {
+      scholarshipsAvailable: true,
+      scholarshipsDetail: ["Downe House offers Scholarships and Exhibitions to girls with exceptional potential in Creative Arts, Music, Drama, Sport and Academics. Our Award Holders play an important role in the life of the School, inspiring others to strive for excellence and sharing a culture of endeavour whilst at the same time fulfilling their own potential. Scholarship Awards do not carry fee remission but families can apply for assistance with fees through our bursary scheme."],
+      percentageOfFees: "no fee remision",
+    },
+    schoolImage: "/images/downeHouse.jpg",
+    documentId: 1224225563433131,
+    ranking: 8,
+    Bursaries: {
+      BursariesAvailable: true,
+      BursariesDetail: ["In 2023-24, 45 girls are benefitting from full and partial means-tested bursaries. We value pupils who will flourish in and contribute to life at Downe House, seizing every opportunity and enriching our community. These gifted pupils will benefit from an education and boarding environment of the highest calibre and quality, as well as the provision of academic, cultural, sporting and social experiences to help them reach their potential. Our means-tested bursaries are available at all points of entry to Downe House and vary in size based on the circumstances of the applicant’s family. We offer financial assistance as high as 100% plus an allowance towards School extras, recognising that a Downe House education encompasses more than classroom learning. Bursaries also take into account academic entry requirements and an applicant’s capacity to progress in their work through the School. If you feel that you may need the support of  one of our means tested bursaries, please discuss with us well in advance of your daughter’s date of entry. Please don’t hesitate to contact our Registrar, Miss Angela Nutt by calling 01635 204701 for a confidential conversation"],
+      percentageOfFees: [0, 100],
+    },
+    feesScheme: {
+      feesSchemeAvailability: false,
+      feesSchemeDetails: null,
+    },
+    forceScheme: {
+      forceSchemeAvailable: false,
+      forcesSchemeDescription: null,
+      percentageOfFees: null,
+    },
+    siblingsDiscount: {
+      siblingsDiscountAvailable: false,
+      siblingsDiscountDetails: null,
+      percentageOfFees: null,
+    },
+    established: 1907,
+    enquireUrl: "https://www.downehouse.net/downe-house-admissions/"
+  },
+  {
+    schoolName: "Fettes College",
+    schoolDescription: `Fettes College is a prestigious independent co-educational boarding and day school located in Edinburgh, Scotland. Founded in 1870, the school is renowned for its academic excellence, strong pastoral care, and rich heritage. Offering a rigorous and well-rounded curriculum, Fettes fosters intellectual curiosity, creativity, and leadership, preparing students for top universities worldwide. Beyond academics, the school provides exceptional opportunities in sports, music, drama, and extracurricular activities, encouraging personal growth, resilience, and teamwork. Set within a stunning 90-acre campus with historic architecture and state-of-the-art facilities, Fettes College offers a supportive and inspiring environment where students thrive. With a strong emphasis on academic achievement, character development, and global citizenship, the school equips pupils with the skills and values needed for lifelong success.`,
+    studentNumbers: 744,
+    faithSchool: "Interdenominational",
+    schoolEmail: " hamisie@downehouse.net", 
+    schoolPhoneNumber: "+44 01635 200 286", 
+    latitude: 51.43765994003928, // //51.10076709037832, -0.7435842027348746
+    longitude: -1.2744322199076514,  //51.43765994003928, -1.2744322199076514
+    schoolLocation: "Edinburgh, Midlothian, Scotland",
+    stages: ["primary","secondary","sixth form"],
+    schoolType: ["day","boarding"],
+    coeducation: "co-educational",
+    totalSchoolFees: [13950, 42225], //per annual school year
+    scholarships: {
+      scholarshipsAvailable: true,
+      scholarshipsDetail: ["Fettes College offers a range of Scholarships and Awards based on merit, each of which is awarded entirely at the discretion of the Head. In Scotland and at Fettes Scholarships are not connected to Bursaries - Bursaries are means tested, whereas Scholarships are awarded based on a child demonstrating excellence in a particular area. Considerable kudos is attached to being a scholar at Fettes and Scholarships cover up to a maximum of 5% of the fees. To be considered for a Scholarship or Award you must sit your assessment at Fettes.","The following Scholarships and Awards are available at 13+ and are assessed in the January prior to entry: Academic Scholarships, All-Rounder Awards, Art Awards, Music Awards and Exhibitions, Piping and Snare Drumming Awards and Exhibitions, Sports Awards","The following Scholarships and Awards are available at 16+ and are assessed in the November prior to entry: Academic Scholarships, Art Awards, Music Awards and Exhibitions, Piping and Snare Drumming Awards and Exhibitions, Sports Awards"],
+      percentageOfFees: [0, 5],
+    },
+    schoolImage: "/images/fettes.jpg",
+    documentId: 1124225563433131,
+    ranking: 8,
+    Bursaries: {
+      BursariesAvailable: true,
+      BursariesDetail: ["Fettes is committed to broadening access to the school by offering means-tested financial support towards the payment of school fees – known as a Bursary. In Scotland, bursaries are entirely different to scholarships. Bursaries are means-tested and can cover up to 100% of fees payable, depending on the financial circumstances of applicants. Given the inclusive nature of the school, consideration will also be given to support towards the cost of essential school equipment and some relevant and educationally focussed trips. There are strict deadlines, each year, for applying for a bursary to Fettes "],
+      percentageOfFees: [0, 100],
+    },
+    feesScheme: {
+      feesSchemeAvailability: false,
+      feesSchemeDetails: null,
+    },
+    forceScheme: {
+      forceSchemeAvailable: true,
+      forcesSchemeDescription: ["We offer a tiered remission to HM Forces families (and Foreign Office families who qualify for CEA) based on year group and rank. This is applied as follows: In the Prep School – 15% remission. In the Senior School – 20% remission (25% remission is available to Lieutenant, Captain, Flight Lieutenant or below.)","No other remission will be available, and scholarships awarded will be entirely honorary with no financial benefit."],
+      percentageOfFees: [5, 25], //can't remember whether others were counted same way?
+    },
+    siblingsDiscount: {
+      siblingsDiscountAvailable: true,
+      siblingsDiscountDetails: ["If you have two or more children attending Fettes at the same time (5% for your second child, 35% for your third child and 50% for your fourth and any additional children who are on the School roll at the same time."],
+      percentageOfFees: [5, 50],
+    },
+    established: 1870,
+    enquireUrl: "https://www.fettes.com/admissions/"
+  },
+  {
+    schoolName: "Haileybury College",
+    schoolDescription: `Haileybury College is a prestigious independent co-educational boarding and day school located in Hertfordshire, England. Founded in 1862, the school is renowned for its academic excellence, strong pastoral care, and commitment to developing well-rounded individuals. Offering a challenging and enriching curriculum, Haileybury fosters intellectual curiosity, creativity, and leadership, preparing students for top universities worldwide. Beyond academics, the school provides outstanding opportunities in sports, music, drama, and extracurricular activities, encouraging personal growth, resilience, and a spirit of service. Set within a stunning 500-acre campus with historic architecture and state-of-the-art facilities, Haileybury offers a supportive and inspiring environment where students thrive. With a strong emphasis on academic achievement, character development, and global awareness, the school equips pupils with the skills and values needed for lifelong success.`,
+    studentNumbers: 914,
+    faithSchool: "Church of England",
+    schoolEmail: "reception@haileybury.com", 
+    schoolPhoneNumber: "+44 (0) 1992 706200", 
+    latitude: 51.778751712359224, // //51.10076709037832, -0.7435842027348746
+    longitude:  -0.029236187479593702,  //51.778751712359224, -0.029236187479593702
+    schoolLocation: "Hertford, Hertfordshire, South-East",
+    stages: ["secondary","sixth form"],
+    schoolType: ["day","boarding"],
+    coeducation: "co-educational",
+    totalSchoolFees: [25770, 38775], //per annual school year
+    scholarships: {
+      scholarshipsAvailable: true,
+      scholarshipsDetail: ["A Haileybury Scholarship typically carries a nominal fee remission and successful applicants gain enormously from the additional opportunities and enrichment programmes on offer. Scholarships are awarded on merit and applicants are required to attend a scholarship assessment day.","Scholarship categories: Academic, Music, Sport, (16+ only) Design Technology, Drama and Art","A Scholarship will normally be held for the duration of a pupil’s career at Haileybury, subject to them continuing to meet the standards expected. Scholarships are reviewed annually. Applicants may only apply for a maximum of three scholarships. Dependent upon individual circumstances, a scholarship and bursary can run concurrently in the case of a pupil requiring financial assistance."],
+      percentageOfFees: "nominal fee remission",
+    },
+    schoolImage: "/images/haileybury.jpg",
+    documentId: 1124221363433131,
+    ranking: 8,
+    Bursaries: {
+      BursariesAvailable: true,
+      BursariesDetail: ["The Governors of Haileybury are committed to providing financial aid, in the form of bursaries, to any child with academic potential who would benefit from accessing the opportunities Haileybury has to offer but who would otherwise not have the means to attend. Bursary support takes the form of a discount on tuition fees payable depending upon the financial circumstances of applicants. The awards are made at the discretion of the Master in consultation with the Bursary Awards Committee, based on a means test, which includes a review of a family’s circumstances, income and capital resources.","If you are interested in seeking a place after your visit, please register for the entrance tests. Parents seeking a bursary are required to complete a bursary application form by 1 October, which seeks to establish the financial circumstances of the household. Bursary forms are available from Admissions, admissions@haileybury.com"],
+      percentageOfFees: [0, 100],
+    },
+    feesScheme: {
+      feesSchemeAvailability: false,
+      feesSchemeDetails: null,
+    },
+    forceScheme: {
+      forceSchemeAvailable: false,
+      forcesSchemeDescription: null,
+      percentageOfFees: null, 
+    },
+    siblingsDiscount: {
+      siblingsDiscountAvailable: false,
+      siblingsDiscountDetails: null,
+      percentageOfFees: null,
+    },
+    established: 1862,
+    enquireUrl: "https://www.haileybury.com/admissions/"
+  },
+  {
+    schoolName: "Marlborough College",
+    schoolDescription: `Marlborough College is a prestigious independent co-educational boarding and day school located in Wiltshire, England. Founded in 1843, the school is renowned for its academic excellence, strong pastoral care, and commitment to developing well-rounded individuals. Offering a rigorous and diverse curriculum, Marlborough fosters intellectual curiosity, creativity, and leadership, preparing students for top universities worldwide. Beyond academics, the school provides exceptional opportunities in sports, music, drama, and extracurricular activities, encouraging personal growth, resilience, and teamwork. Set within a stunning historic campus with state-of-the-art facilities, Marlborough College offers a supportive and inspiring environment where students thrive. With a strong emphasis on academic achievement, character development, and global citizenship, the school equips pupils with the skills and values needed for lifelong success.`,
+    studentNumbers: 1010,
+    faithSchool: "Church of England",
+    schoolEmail: "admissions@marlboroughcollege.org", 
+    schoolPhoneNumber: "+44 01672 892 300", 
+    latitude: 51.417508800409436, // //51.10076709037832, -0.7435842027348746
+    longitude:  -1.7350428990178521,  //51.417508800409436, -1.7350428990178521
+    schoolLocation: "Marlborough, Wiltshire, South-West",
+    stages: ["secondary","sixth form"],
+    schoolType: ["boarding"],
+    coeducation: "co-educational",
+    totalSchoolFees: 59142, //per annual school year
+    scholarships: {
+      scholarshipsAvailable: true,
+      scholarshipsDetail: ["In order to obtain a scholarship, it is necessary to gain a place at the College through the Entry Assessment process.","Scholarships are available for: Academic, Art, Design Technology, Drama and Music. With the large number of candidates applying each year for sport, the College offers Sport Awards for the duration of a pupil’s first year, after which a number will be offered scholarships.","Scholarships are honorary and carry no reduction in fees but they provide access to the relevant scholarship programme. ","Our Directors’ Awards are awarded to a small number of pupils joining the College in the Shell and Lower Sixth at the discretion of the Director of Music or the Director of Sport. They are awarded in recognition of outstanding excellence in Music or Sport to children who are perceived to be able to have a substantial impact on the life of the College. They carry a fee reduction of up to 20%. Successful candidates will be: exceptionally talented in Music or Sport, role models in their expert area and expected to encourage positive behaviours and ambition in those around them, able to meet or exceed the College’s academic standards, and committed to participating fully in all aspects of life in a full boarding school."],
+      percentageOfFees: [0, 20],
+    },
+    schoolImage: "/images/marlboroughCollege.webp",
+    documentId: 2124221363433131,
+    ranking: 8,
+    Bursaries: {
+      BursariesAvailable: true,
+      BursariesDetail: ["Our bursaries offer transformative opportunities for young people and we strongly believe that the whole College benefits from a pupil community that is diverse and more representative of our society.  What sets us apart is the significant pastoral benefits that come from living within our full boarding community which develop into positive, enduring bonds of friendship for life. Bursaries are available for eligible families applying for entry to the College at both 13+ and 16+. Depending on family circumstances, a bursarial award can cover between 5% and 100% of fees, plus additional amounts towards extras such as IT equipment, academic trips, travel costs and uniform. Candidates for a bursary would not be required to present scholarship level in a particular subject, although overall academic strength is an important consideration for all who apply for a place at the College.","Types of Bursaries: General Bursary, Art and Sports, Specific Boarding, Consolidated Fund, Swindon Academy and Old Malburian awards"],
+      percentageOfFees: [5, 100],
+    },
+    feesScheme: {
+      feesSchemeAvailability: false,
+      feesSchemeDetails: null,
+    },
+    forceScheme: {
+      forceSchemeAvailable: false,
+      forcesSchemeDescription: null,
+      percentageOfFees: null, 
+    },
+    siblingsDiscount: {
+      siblingsDiscountAvailable: false,
+      siblingsDiscountDetails: null,
+      percentageOfFees: null,
+    },
+    established: 1843,
+    enquireUrl: "https://www.marlboroughcollege.org/admissions/"
   }
+
+  //Marlborough college, Millfield school, Radley school (?), sevenoaks school
+  //st mary's school ascot, The King's School Canterbury, Uppingham school, wycombe abbey school
+
+
 
 
 
   
 ];
   
-export default function SchoolsList({searchTerm}) {
+export default function SchoolsList({searchTerm, setSubscriptionModalBox}) {
 
 
     //const schoolsToShow = schoolsSampleData.filter(school => school.schoolLocation || school.schoolName || school.schoolType)
@@ -1464,6 +1821,7 @@ export default function SchoolsList({searchTerm}) {
             feesScheme={school?.feesScheme}
             index={index}
             school={school}
+            setSubscriptionModalBox={setSubscriptionModalBox}
             /*onClickHandler={onClickHandler}*/ 
           />
         ))}

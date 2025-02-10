@@ -12,6 +12,8 @@ import supabase from "@/lib/supabase";
 import EmptyContainer from "./components/emptyContainer";
 //import { useRouter } from "next/router";
 import ScrollProgressBar from "./components/scrollbar";
+import PricingPage from "./components/subscriptionContainer";
+import { X } from "lucide-react"; // Install: npm install lucide-react
 
 export default function Home() {
 
@@ -19,6 +21,7 @@ export default function Home() {
   const [ modalBox, setModalBox ] = useState(false);
   const [ message, setMessage ] = useState('');
   const [ subject, setSubject ] = useState('');
+  const [ subscriptionModalBox, setSubscriptionModalBox ] = useState(false);
 
 
 
@@ -85,6 +88,10 @@ export default function Home() {
   ]
 
   const [ societies, addSocieties ] = useState([]);
+
+  function handleCloseModal() {
+    setSubscriptionModalBox(false);
+  }
 
   //will need to add the useEffect API call to get list of societies here, and then pass down to the right component below
 
@@ -204,9 +211,29 @@ export default function Home() {
   <>
     <ScrollProgressBar />
     <Hero />
-    <LandingPainPoints painPoints={painPoints} title={`76% of parents miss out on financial aid opportunities due to lack of information`} />
+    <LandingPainPoints painPoints={painPoints} />
     <SearchBar2 searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-    <SchoolsList searchTerm={searchTerm} />
+    <SchoolsList searchTerm={searchTerm} setSubscriptionModalBox={setSubscriptionModalBox} />
+    {subscriptionModalBox && (
+  <div 
+    className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-[1000] p-4"
+    onClick={handleCloseModal}
+  >
+    
+      
+      <button
+  className="absolute top-3 right-3 text-gray-600 hover:text-gray-900 p-1"
+  onClick={handleCloseModal}
+>
+  <X size={24} />
+</button>
+
+       
+      <PricingPage />
+    
+  </div>
+)}
+
     { schools && schools.map((school) => (
       <p>{school.name}</p>
     ))}

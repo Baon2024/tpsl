@@ -7,6 +7,7 @@ import { useState, useEffect, useContext, useMemo } from 'react';
 import { useSchoolCompare } from '../schoolCompareContext';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 //import { useSchoolCompare } from '../schoolCompareContext';
 
 
@@ -23,7 +24,8 @@ export function SchoolCard({
   forceScheme,
   feesScheme,
   index,
-  school
+  school,
+  setSubscriptionModalBox
 }) {
 
   //const [isMounted, setIsMounted] = useState(false);
@@ -42,6 +44,7 @@ export function SchoolCard({
   
   const { schoolsToCompare, setSchoolsToCompare } = useSchoolCompare();
   const [isChecked, setIsChecked] = useState(false);
+  const router = useRouter();
   
   useEffect(() => {
     console.log("schools to compare are:", schoolsToCompare);
@@ -143,13 +146,32 @@ console.log('Clicked School documentId:', school.documentId);
       // Debugging the state after update (useEffect will log after this update)
       console.log("After update - schoolsToCompare:", schoolsToCompare);
     })}
-  
 
+    const user = {
+      subscribed: false
+    }
+  
+    const checkWhetherHaveAccess = (e) => {
+      e.preventDefault(); // Stop default navigation
+    
+      console.log("Index:", index, "User:", user);
+    
+      if (index > 25 && user.subscribed === false) {
+        console.log("✅ Redirecting to /subscribeToTPSL");
+        //setSubscriptionModalBox(true); // - marked out whilst adding schools, alternative way
+        //router.push('/subscribeToTPSL'); //- just marked out whilst i try different method
+        return; // Stop further execution
+      }
+    
+      console.log(`✅ Redirecting to /societies/${documentId}`);
+      router.push(`/societies/${documentId}`);
+    };
 
 
   return (
     <Link
       href={`/societies/${documentId}`}
+      /*onClick={checkWhetherHaveAccess}*/
       className="relative h-[calc(19.5em-28px)] sm:h-[275px] lg:h-[calc(25vw-28px-28px)] w-full text-left hover:outline-none focus:outline-none hover:ring-0 focus:ring-0 active:ring-0 hover:transform hover:scale-110 transition-transform duration-300 group"
       
     >
@@ -161,7 +183,7 @@ console.log('Clicked School documentId:', school.documentId);
             checked={isChecked}
             className="w-5 h-5 rounded-full text-accent "
             onChange={handleCheckBoxToggle}
-            onClick={(e) => e.preventDefault()}
+            onClick={(e) => e.stopPropagation()}
           />
         </div>
   
