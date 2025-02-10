@@ -8,6 +8,7 @@ import { useSchoolCompare } from "./schoolCompareContext";
 import { Link } from "lucide-react";
 import { TRACE_OUTPUT_VERSION } from "next/dist/shared/lib/constants";
 import { useRouter } from "next/navigation";
+import { Analytics } from "@vercel/analytics/react"
 
 
 const geistSans = localFont({
@@ -43,7 +44,7 @@ export default function RootLayout({ children }) {
           <main>{children}</main>
           
             <FixedBottomButton />
-          
+          <Analytics />
        
       </body>
       </SchoolCompareProvider>
