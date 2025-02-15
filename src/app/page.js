@@ -14,6 +14,7 @@ import EmptyContainer from "./components/emptyContainer";
 import ScrollProgressBar from "./components/scrollbar";
 import PricingPage from "./components/subscriptionContainer";
 import { X } from "lucide-react"; // Install: npm install lucide-react
+import NewsletterSignup from "./components/newsletterSignup";
 
 export default function Home() {
 
@@ -22,6 +23,7 @@ export default function Home() {
   const [ message, setMessage ] = useState('');
   const [ subject, setSubject ] = useState('');
   const [ subscriptionModalBox, setSubscriptionModalBox ] = useState(false);
+  const [ clicks, setClicks ] = useState(0);
 
 
 
@@ -56,6 +58,18 @@ export default function Home() {
   
       getSchools(); // Call the function
     }, []); // Empty dependency array ensures this runs only on mount
+
+    useEffect(() => {
+      const clicksToSet = localStorage.getItem('clicks');
+      console.log("clicksToSet from localStorage is:", clicksToSet);
+      if (clicksToSet) {
+        setClicks(clicksToSet);
+      }
+    },[])
+
+    useEffect(() => {
+      console.log("clicks are:", clicks);
+    },[])
   
 
   const [ searchTerm, setSearchTerm ] = useState('');
@@ -213,7 +227,8 @@ export default function Home() {
     <Hero />
     <LandingPainPoints painPoints={painPoints} />
     <SearchBar2 searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-    <SchoolsList searchTerm={searchTerm} setSubscriptionModalBox={setSubscriptionModalBox} />
+    <SchoolsList searchTerm={searchTerm} setSubscriptionModalBox={setSubscriptionModalBox} setClicks={setClicks} clicks={clicks} />
+    <NewsletterSignup />
     {subscriptionModalBox && (
   <div 
     className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-[1000] p-4"

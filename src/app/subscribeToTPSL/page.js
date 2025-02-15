@@ -8,3 +8,7 @@ export default function SubscribeToTPSL() {
         </>
     )
 }
+
+
+
+//need to redirect to logIn/SignUp, if the user isn't a member/logged-in.

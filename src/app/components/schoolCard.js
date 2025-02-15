@@ -25,7 +25,9 @@ export function SchoolCard({
   feesScheme,
   index,
   school,
-  setSubscriptionModalBox
+  setSubscriptionModalBox,
+  clicks,
+  setClicks
 }) {
 
   //const [isMounted, setIsMounted] = useState(false);
@@ -155,6 +157,11 @@ console.log('Clicked School documentId:', school.documentId);
       e.preventDefault(); // Stop default navigation
     
       console.log("Index:", index, "User:", user);
+      const storedClicks = parseInt(localStorage.getItem(`clicks`) || "0", 10);
+      console.log("stored Clicks are:", storedClicks);
+      const newClicks = storedClicks + 1;
+      console.log("newClicks on card click is:", newClicks);
+      localStorage.setItem('clicks', newClicks);
     
       if (index > 25 && user.subscribed === false) {
         console.log("✅ Redirecting to /subscribeToTPSL");
@@ -169,9 +176,9 @@ console.log('Clicked School documentId:', school.documentId);
 
 
   return (
-    <Link
-      href={`/societies/${documentId}`}
-      /*onClick={checkWhetherHaveAccess}*/
+    <button
+      /*href={`/societies/${documentId}`}*/
+      onClick={checkWhetherHaveAccess}
       className="relative h-[calc(19.5em-28px)] sm:h-[275px] lg:h-[calc(25vw-28px-28px)] w-full text-left hover:outline-none focus:outline-none hover:ring-0 focus:ring-0 active:ring-0 hover:transform hover:scale-110 transition-transform duration-300 group"
       
     >
@@ -287,7 +294,7 @@ console.log('Clicked School documentId:', school.documentId);
           </div>
         </div>
       </Card>
-    </Link>
+    </button>
   );
   
 }

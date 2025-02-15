@@ -213,29 +213,6 @@ const schoolsSampleData = [
     enquireUrl: "https://oundleschool.org.uk/admissions",
   },
   {
-    schoolName: "Marlborough College",
-    schoolLocation: "Wiltshire, South-West",
-    stages: ["secondary", "sixth form"],
-    schoolType: ["boarding", "day"],
-    coeducation: "co-ed",
-    totalSchoolFees: 45900,
-    scholarships: {
-      scholarshipsAvailable: true,
-      scholarshipsDetail: "Academic, music, and sports scholarships available.",
-      percentageOfFees: 25,
-    },
-    schoolImage: null,
-    documentId: 67849302,
-    ranking: 15,
-    Bursaries: {
-      BursariesAvailable: true,
-      BursariesDetail: "Bursaries offered to students from low-income families.",
-      percentageOfFees: 50,
-    },
-    established: 1843,
-    enquireUrl: "https://marlboroughcollege.org/admissions",
-  },
-  {
     schoolName: "Wellington College",
     schoolLocation: "Crowthorne, South-East",
     stages: ["secondary", "sixth form"],
@@ -452,56 +429,88 @@ const schoolsSampleData = [
   },
   {
     schoolName: "St Paul's School",
-    schoolDescription: "St Paul's School is an independent boys' school known for its academic excellence.",
+    schoolDescription: `St Paul’s School is a prestigious independent boys’ school located in London, England. Founded in 1509, it is renowned for its academic excellence, strong intellectual tradition, and commitment to nurturing curiosity, leadership, and independent thought. The school consistently ranks among the top in the UK, offering a rigorous curriculum that prepares students for leading universities worldwide. Beyond academics, St Paul’s provides outstanding opportunities in sports, music, drama, and a wide range of extracurricular activities, fostering creativity, resilience, and teamwork. With a strong emphasis on pastoral care and personal development, the school cultivates a supportive yet challenging environment where students can excel. Set on a modern riverside campus with world-class facilities, St Paul’s combines tradition with innovation, equipping pupils with the skills, knowledge, and confidence needed for lifelong success.`,
+    studentNumbers: 1502,
+    faithSchool: "All-Faiths",
     schoolEmail: "admissions@stpaulsschool.org.uk",
-    schoolPhoneNumber: "020 8746 1900",
-    latitude: null,
-    longitude: null,
+    schoolPhoneNumber: "+44 020 8746 1900",
+    latitude: 51.4880153923539,
+    longitude: -0.2366167797629858, //51.4880153923539, -0.2366167797629858
     schoolLocation: "London",
     stages: ["secondary", "sixth form"],
     schoolType: ["day"],
     coeducation: "male",
-    totalSchoolFees: "from £25,000",
+    totalSchoolFees: [27162, 51129],
     scholarships: {
       scholarshipsAvailable: true,
       scholarshipsDetail: "available for academic excellence and sporting ability",
       percentageOfFees: [10, 50]
     },
-    schoolImage: "/images/St-Pauls-School.jpg",
+    schoolImage: "/images/stPaulLondon.jpg",
     documentId: 18502949,
     ranking: 5,
     Bursaries: {
       BursariesAvailable: true,
       BursariesDetail: "Bursaries are available for families that demonstrate financial need.",
-      percentageOfFees: "up to 100%"
+      percentageOfFees: [0, 100],
+    },
+    feesScheme: {
+      feesSchemeAvailability: false,
+      feesSchemeDetails: null,
+    },
+    forceScheme: {
+      forceSchemeAvailable: false,
+      forcesSchemeDescription: null,
+      percentageOfFees: null,
+    },
+    siblingsDiscount: {
+      siblingsDiscountAvailable: true,
+      siblingsDiscountDetails: [`The Governors make some remission of fees when there are three or more children of one family at St Paul’s School, St Paul’s Juniors or St Paul’s Girls’ School. A formal application, in writing, must be made by the parent to the Finance Director.`],
+      percentageOfFees: "???",
     },
     established: 1509,
     enquireUrl: "https://stpaulsschool.org.uk/admissions/scholarships-and-bursaries/"
   },
   {
     schoolName: "Tonbridge School",
-    schoolDescription: "Tonbridge School is one of the leading independent boys' schools in the UK.",
+    schoolDescription: `Tonbridge School is a prestigious independent boarding and day school for boys, located in Kent, England. Founded in 1553, it is renowned for its academic excellence, strong pastoral care, and commitment to developing well-rounded individuals. The school offers a rigorous and stimulating curriculum, preparing students for top universities in the UK and worldwide, while fostering intellectual curiosity, independent thinking, and leadership skills. Beyond academics, Tonbridge provides exceptional opportunities in sports, music, drama, and a diverse range of extracurricular activities, encouraging personal growth, teamwork, and resilience. The school is known for its outstanding facilities, including state-of-the-art science and arts centers, and a strong tradition of service and community engagement. Set within a historic yet modern campus, Tonbridge School provides a dynamic and inspiring environment where students thrive, equipping them with the skills and confidence needed for lifelong success.`,
+    studentNumbers: 801,
+    faithSchool: "Church of England",
     schoolEmail: "admissions@tonbridge-school.org",
-    schoolPhoneNumber: "01732 365 555",
-    latitude: null,
-    longitude: null,
+    schoolPhoneNumber: "+44 01732 365 555",
+    latitude: 51.19944851080719, //51.19944851080719, 0.2758819819281802
+    longitude: 0.2758819819281802,
     schoolLocation: "Tonbridge, Kent",
     stages: ["secondary", "sixth form"],
     schoolType: ["boarding", "day"],
     coeducation: "male",
-    totalSchoolFees: "from £36,000",
+    totalSchoolFees: [44358, 59124],
     scholarships: {
       scholarshipsAvailable: true,
       scholarshipsDetail: "for outstanding academic, musical, and sporting achievements",
       percentageOfFees: [10, 100]
     },
-    schoolImage: "/images/Tonbridge-School-main.jpg",
+    schoolImage: "/images/tonbridge.webp",
     documentId: 18502950,
     ranking: 6,
     Bursaries: {
       BursariesAvailable: true,
       BursariesDetail: "Bursaries available for families with financial need.",
-      percentageOfFees: "up to 100%"
+      percentageOfFees: [0, 100],
+    },
+    feesScheme: {
+      feesSchemeAvailability: false,
+      feesSchemeDetails: null,
+    },
+    forceScheme: {
+      forceSchemeAvailable: false,
+      forcesSchemeDescription: null,
+      percentageOfFees: null,
+    },
+    siblingsDiscount: {
+      siblingsDiscountAvailable: true,
+      siblingsDiscountDetails: ["A 10% reduction of fees is given to the third son (and any subsequent sons) of the same family to attend the school."],
+      percentageOfFees: 10,
     },
     established: 1553,
     enquireUrl: "https://tonbridge-school.org/admissions/scholarships-and-bursaries/"
@@ -509,6 +518,8 @@ const schoolsSampleData = [
   {
     schoolName: "Radley College",
     schoolDescription: "Radley College is a renowned boys' school located in Oxfordshire, known for its academic and extracurricular excellence.",
+    studentNumbers: 767,
+    faithSchool: "Church of England",
     schoolEmail: "admissions@radley.org.uk",
     schoolPhoneNumber: "01235 543 144",
     latitude: 51.69249743995564, //51.69249743995564, -1.2459376315366617
@@ -541,6 +552,8 @@ const schoolsSampleData = [
   {
     schoolName: "St Peter School York",
     schoolDescription: "Welcome to St Peter's School, York, the fourth oldest school in the world and one of the country's leading schools. Our academic results are outstanding but we believe that independent thinking and a love of learning are just as important as excellent grades. Here there is a real focus on developing intellectual curiosity in the classroom and beyond, with pupils and staff being members of a vibrant, learning community.",
+    studentNumbers: 1282,
+    faithSchool: "Church of England",
     schoolEmail: "bursaries@stpetersyork.org.uk",
     schoolPhoneNumber: "01904 527 300",
     latitude: 53.966374704438394,
@@ -573,6 +586,8 @@ const schoolsSampleData = [
   {
     schoolName: "Gordonstoun",
     schoolDescription: "At Gordonstoun, we believe that a broader curriculum broadens not only minds but opportunities too. It is a belief that’s served both us and our students well for over 80 years and that has made Gordonstoun the world leader in character education. Our curriculum, which is unrivalled in breadth, helps every child to achieve their full potential.",
+    studentNumbers: 547,
+    faithSchool: "Non-Denominational",
     schoolEmail: "fees@gordonstoun.org.uk",
     schoolPhoneNumber: "+ 44 (0)1343 837829",
     latitude: 57.70346128228585, //57.70346128228585, -3.3702543042896953
@@ -605,6 +620,8 @@ const schoolsSampleData = [
   {
     schoolName: "Shrewsbury School",
     schoolDescription: `Shrewsbury School is a prestigious independent co-educational boarding and day school located in Shrewsbury, Shropshire, England. Founded in 1552 by Edward VI, it is one of the original nine "great public schools" defined by the Public Schools Act 1868. The school combines a rich tradition of academic excellence with strong extracurricular programs, including music, drama, sports, and outdoor activities. Its scenic campus overlooks the River Severn and provides modern facilities alongside historic architecture. Known for its strong sense of community, the school offers a well-rounded education emphasizing personal growth, leadership, and preparation for university and beyond.`,
+    studentNumbers: 839,
+    faithSchool: "Church of England",
     schoolEmail: "reception@shrewsbury.org.uk", 
     schoolPhoneNumber: "+ 44 01743 280 500", 
     latitude: 52.702397099804806, //52.702397099804806, -2.7645012970941125
@@ -642,6 +659,8 @@ const schoolsSampleData = [
   {
     schoolName: "Ampleforth College",
     schoolDescription: `Ampleforth College is a renowned independent co-educational boarding and day school located in North Yorkshire, England. Founded in 1802 by the Benedictine monks of Ampleforth Abbey, it is one of the country's leading Catholic schools. The college emphasizes a holistic education rooted in Benedictine values, offering a strong academic curriculum alongside exceptional opportunities in sports, music, drama, and outdoor activities. Its picturesque campus, set in a tranquil valley, provides modern facilities and a nurturing environment that fosters personal growth, leadership, and spiritual development. Ampleforth College is known for its commitment to faith, community, and preparing students for successful futures.`,
+    studentNumbers: 392,
+    faithSchool: "Roman Catholic",
     schoolEmail: "admissions@ampleforth.org.uk", 
     schoolPhoneNumber: "+ 44 01439 766 000", 
     latitude: 54.20237464429836, //
@@ -684,6 +703,8 @@ const schoolsSampleData = [
   {
     schoolName: "King's College School Cambridge",
     schoolDescription: `King's College School, Cambridge, is a distinguished independent co-educational day school located in the heart of Cambridge, England. Founded in 1441 as part of King’s College by King Henry VI, the school has a rich history of academic excellence and is closely associated with the world-famous King’s College Chapel. The school provides a rigorous and well-rounded education, emphasizing intellectual curiosity, creativity, and personal development. Alongside its strong academic program, King's College School offers outstanding opportunities in music, arts, and sports. Its close-knit community and central location create a vibrant environment where students thrive and are prepared for future success.`,
+    studentNumbers: 414,
+    faithSchool: "Anglican",
     schoolEmail: "office@kcs.cambs.sch.uk", 
     schoolPhoneNumber: "+ 44 01223 365 814", 
     latitude: 52.203043628857415, //
@@ -726,6 +747,8 @@ const schoolsSampleData = [
   {
     schoolName: "The Leys School",
     schoolDescription: `The Leys School is a prestigious independent co-educational boarding and day school located in the historic city of Cambridge, England. Founded in 1875, it combines academic excellence with a strong emphasis on pastoral care and personal development. The school offers a broad and balanced curriculum, complemented by a wide range of extracurricular activities, including sports, music, drama, and outdoor pursuits. Its beautiful campus blends historic architecture with modern facilities, providing a nurturing and inspiring environment. Known for its welcoming community and focus on individual achievement, The Leys School prepares students for success at university and beyond while fostering values of integrity, leadership, and service.`,
+    studentNumbers: 570,
+    faithSchool: "Methodist",
     schoolEmail: "office@theleys.net", 
     schoolPhoneNumber: "+44 (0)1223 508904", 
     latitude: 52.19682464128857, //
@@ -768,6 +791,8 @@ const schoolsSampleData = [
   {
     schoolName: "The Perse School",
     schoolDescription: `The Perse School is a highly respected independent co-educational day school located in Cambridge, England. Founded in 1615 by Dr. Stephen Perse, the school has a long-standing reputation for academic excellence and innovative teaching. The Perse offers a rich and diverse curriculum, encouraging intellectual curiosity, critical thinking, and creativity. Alongside academics, the school provides outstanding opportunities in sports, music, drama, and outdoor education, fostering well-rounded personal development. Its modern facilities and supportive community create an environment where students are inspired to achieve their full potential. Known for its strong values and commitment to preparing students for successful futures, The Perse School is one of the leading schools in the region.`,
+    studentNumbers: 1705,
+    faithSchool: "Church of England",
     schoolEmail: "schooloffice@perse.co.uk", 
     schoolPhoneNumber: "+44 (0)1223 403800", 
     latitude: 52.1972419211202, // //52.1972419211202, 0.12726669307427999
@@ -810,6 +835,8 @@ const schoolsSampleData = [
   {
     schoolName: "King's Ely",
     schoolDescription: `King's Ely is a historic independent co-educational day and boarding school located in Ely, Cambridgeshire, England. With roots dating back to 970 AD, it is one of the oldest schools in the world, blending centuries of tradition with a modern approach to education. The school offers a broad curriculum that nurtures academic excellence, creativity, and critical thinking, alongside exceptional opportunities in music, drama, art, and outdoor activities. Situated near the iconic Ely Cathedral, the campus provides a unique and inspiring setting. Known for its welcoming and inclusive community, King's Ely fosters personal growth, leadership, and resilience, preparing students to excel in their future endeavors.`,
+    studentNumbers: 603,
+    faithSchool: "Church of England",
     schoolEmail: "admissions@kingsely.org", 
     schoolPhoneNumber: "+44 (0)1353 660707", 
     latitude: 52.39883541327537, // //52.1972419211202, 0.12726669307427999
@@ -852,6 +879,8 @@ const schoolsSampleData = [
   {
     schoolName: "Oswestry School",
     schoolDescription: `Oswestry School is a distinguished independent co-educational day and boarding school located in Shropshire, England. Founded in 1407, it is one of the oldest schools in the country, combining a rich heritage with a forward-thinking approach to education. The school offers a broad and balanced curriculum that emphasizes academic excellence, creativity, and critical thinking. With a strong focus on personal development, students are encouraged to participate in a wide range of extracurricular activities, including sports, music, drama, and outdoor pursuits. Its welcoming community and picturesque campus provide a nurturing environment where students thrive, developing confidence, leadership, and resilience to prepare for their futures.`,
+    studentNumbers: 507,
+    faithSchool: "Non-Denominational",
     schoolEmail: "enquiries@oswestryschool.com", 
     schoolPhoneNumber: "+44 (0) 1691 655711", 
     latitude: 52.85611213778966, // //52.1972419211202, 0.12726669307427999
@@ -894,6 +923,8 @@ const schoolsSampleData = [
   {
     schoolName: "The Peterborough School",
     schoolDescription: `The Peterborough School is a well-regarded independent co-educational day school located in Peterborough, Cambridgeshire, England. Founded in 1895, the school offers a nurturing and inclusive environment where students are encouraged to excel academically and personally. With a broad and dynamic curriculum, it promotes intellectual curiosity, creativity, and critical thinking, alongside opportunities to participate in sports, music, drama, and various extracurricular activities. Set within a beautiful campus close to the city center, the school combines modern facilities with a strong sense of community. The Peterborough School is known for its dedication to pastoral care, fostering confidence, leadership, and a lifelong love of learning in its students.`,
+    studentNumbers: 533,
+    faithSchool: "Church of England",
     schoolEmail: "admissions@tpsch.co.uk", 
     schoolPhoneNumber: "+44 01733 343357", 
     latitude: 52.57559517316705, // //52.1972419211202, 0.12726669307427999
@@ -936,6 +967,8 @@ const schoolsSampleData = [
   {
     schoolName: "Eaton Square Prep School",
     schoolDescription: `Eaton Square Senior School is a respected independent co-educational day school located in the heart of central London. Known for its personalized approach to education, the school provides a supportive and inclusive environment where students are encouraged to thrive academically, socially, and emotionally. Offering a modern curriculum designed to foster intellectual curiosity, creativity, and critical thinking, Eaton Square also places great emphasis on extracurricular opportunities, including sports, performing arts, and leadership initiatives. With its prime location and close-knit community, the school prepares students for success at university and beyond, instilling confidence, resilience, and a passion for lifelong learning.`,
+    studentNumbers: 413,
+    faithSchool: "All-Faiths",
     schoolEmail: "registrar@eatonsquareschools.com", 
     schoolPhoneNumber: "+44 0207 225 3131", 
     latitude: 51.49361938367208, // //52.1972419211202, 0.12726669307427999
@@ -978,6 +1011,8 @@ const schoolsSampleData = [
   {
     schoolName: "Radnor House Twickenham",
     schoolDescription: `Radnor House is a highly regarded independent co-educational day school situated on the banks of the River Thames in Twickenham, London. Founded in 2011, the school is known for its nurturing and inclusive community, where each student is encouraged to excel both academically and personally. Offering a broad and dynamic curriculum, Radnor House emphasizes intellectual curiosity, creativity, and resilience, alongside exceptional opportunities in sports, performing arts, and extracurricular activities. Its modern facilities and picturesque riverside setting provide an inspiring environment for learning. Radnor House is dedicated to fostering confidence, leadership, and a love of learning, preparing students for successful futures.`,
+    studentNumbers: 455,
+    faithSchool: "Non-Denominational",
     schoolEmail: "registrar@eatonsquareschools.com", 
     schoolPhoneNumber: "+44 (0)20 8891 6264", 
     latitude: 51.44216000131499, // //52.1972419211202, 0.12726669307427999
@@ -1764,10 +1799,274 @@ const schoolsSampleData = [
     },
     established: 1843,
     enquireUrl: "https://www.marlboroughcollege.org/admissions/"
+  },
+  {
+    schoolName: "Millfield School",
+    schoolDescription: `Millfield School is a prestigious independent co-educational day and boarding school located in Somerset, England. Founded in 1935, the school is renowned for its academic excellence, strong pastoral care, and world-class sports facilities. Offering a broad and dynamic curriculum, Millfield fosters intellectual curiosity, creativity, and leadership, preparing students for top universities and future careers. Beyond academics, the school provides outstanding opportunities in sports, music, drama, and extracurricular activities, encouraging personal growth, resilience, and teamwork. With a reputation for nurturing talent in a wide range of disciplines, Millfield supports students in reaching their full potential. Set within a spacious and well-equipped campus, the school offers an inspiring environment where students can thrive. With a strong emphasis on individual development, ambition, and innovation, Millfield equips pupils with the skills and confidence needed for lifelong success.`,
+    studentNumbers: 1383,
+    faithSchool: "All Faiths",
+    schoolEmail: "generaloffice@millfieldschool.com", 
+    schoolPhoneNumber: "+44 01458 442 291/+44 01458 832 446", 
+    latitude: 51.1289423733992, // //51.10076709037832, -0.7435842027348746
+    longitude:  -2.727175818793825,  //51.1289423733992, -2.727175818793825
+    schoolLocation: "Street, Somerset, South-West",
+    stages: ["primary","secondary","sixth form"],
+    schoolType: ["day","boarding"],
+    coeducation: "co-educational",
+    totalSchoolFees: [12693, 57132], //per annual school year
+    scholarships: {
+      scholarshipsAvailable: true,
+      scholarshipsDetail: ["Millfield prep: We award a number of Academic, Art, Drama, Music and Sports Scholarships each year for entry into Years 6, 7 and 8 for new pupils (into Years 6 and 7 only for existing pupils already attending Millfield Prep). Additionally, our Millfield Prep Award recognises Prep pupils who are talented all-rounders (strong academics and talented in any two areas from Art, Drama, Music, Sport). Please note that this award is only for Years 6, 7 and 8 whilst at Millfield Prep School and will automatically end on transfer to Year 9. Pupils who hold a Millfield Prep Award may apply for a new Scholarship for entry into Year 9 and these are currently available for Academic, Co-curricular and Sport. Scholarships carry a maximum fee reduction of up to 10% (multiple awards may be applied for but the maximum fee reduction will be no more than 10%).  Parents who do not require financial assistance are encouraged to accept their child's Scholarship on an honorary basis. Parents in genuine financial need can apply to have a Scholarship augmented by a bursary, subject to a means test. ", "Millfield: Scholarships are available for entry into Year 9 or the Lower Sixth. Application forms will be provided once the Senior Registration Form has been completed. Academic, Art, Chess, Dance, Drama, Music, Product Design and Sport Scholarships are awarded annually to candidates who are exceptionally talented in any one or two of these disciplines. Scholarships carry a maximum fee reduction of up to 10%. Parents can apply to have a Scholarship augmented by a bursary, subject to a means test. Alternatively, parents who do not require financial assistance are encouraged to accept their child's Scholarship on an honorary basis. Parents in genuine financial need can apply to have a Scholarship augmented by a bursary, subject to a means test. "],
+      percentageOfFees: [0, 10],
+    },
+    schoolImage: "/images/MillfieldHouse.jpg",
+    documentId: 2124121363533131,
+    ranking: 8,
+    Bursaries: {
+      BursariesAvailable: true,
+      BursariesDetail: ["Where a child is judged suitable to receive an award, the amount of any assistance in addition to a scholarship is assessed on a means-tested basis on the extent of need. Factors which the School may take into account include but are not limited to: (*) The ability to improve the financial position or earning power of the family, (*) Opportunities to release any capital (including investments and significant equity value in houses), (*) The costs of any siblings at the School, (*) In cases of divorce or separation, the contribution made by both parents (unless otherwise directed by a Court Order), (*) Any contribution to fees or other household costs by other family members or other outside sources, (*) All awards are subject to the School’s ability to fund them within the context of its overall budget and cannot therefore be guaranteed. The School seeks to support as many children as possible through its limited scholarship and bursary funds. In particular, the School’s ability to fund high value awards is limited and such awards are allocated to children with exceptional talent or potential where there is a genuine financial need. "],
+      percentageOfFees: [0, 100],
+    },
+    feesScheme: {
+      feesSchemeAvailability: false,
+      feesSchemeDetails: null,
+    },
+    forceScheme: {
+      forceSchemeAvailable: true,
+      forcesSchemeDescription: ["We are pleased to announce that for September 2024 we have created an exclusive package for military families in receipt of CEA, where families pay only 10% of our boarding fee in addition to CEA. We value our service families and in recognition of your service we offer this significant reduction in school fees.", "The boarding fee includes tuition, most activities at school, breakfast, three-course lunch, three-course supper, laundry, games and prep, textbook loan, pupils’ personal accident insurance, contribution to travel and accommodation when representing the school, and internet access. Please be aware that fees in many other schools are not inclusive of all of the above and are charged as ‘extras’ on termly bills. Millfield is home to more than 40 military children and we have many former military personnel working at the school.  We understand that a good, consistent and stable education is important to military families. With Millfield Prep having 130 full-time boarders and Millfield being a full boarding school of 950 students, including 250 British expats, we offer an outstanding education, excellent learning support, world class sporting programmes and facilities, unrivalled co-curricular programmes, and a home from home environment. Millfield and Millfield Prep are near RNAS Yeovilton, only 60 – 90 minutes from the Salisbury Plain Garrisons and 2 hours from Plymouth, RAF Odiham and RAF Brize Norton. Millfield Prep Head Dan Thornburn is from a military family himself, attending boarding school as a child, so he knows first hand what life is like for serving personnel and their families."],
+      percentageOfFees: 90, 
+    },
+    siblingsDiscount: {
+      siblingsDiscountAvailable: false,
+      siblingsDiscountDetails: null,
+      percentageOfFees: null,
+    },
+    established: 1935,
+    enquireUrl: "https://www.millfieldschool.com/admissions/"
+  },
+  {
+    schoolName: "Sevenoaks School",
+    schoolDescription: `Sevenoaks School is a prestigious independent co-educational day and boarding school located in Kent, England. Founded in 1432, it is one of the oldest and most respected schools in the UK, known for its academic excellence, international outlook, and innovative approach to education. Sevenoaks was one of the first UK schools to adopt the International Baccalaureate (IB) Diploma, which remains at the heart of its rigorous and forward-thinking curriculum. Beyond academics, the school offers exceptional opportunities in sports, music, drama, and extracurricular activities, fostering leadership, creativity, and personal growth. With a diverse and globally minded student body, Sevenoaks provides a nurturing yet challenging environment that encourages intellectual curiosity and independent thinking. Its modern campus, set in picturesque surroundings, features cutting-edge facilities that support academic and extracurricular excellence. With a strong emphasis on global citizenship, innovation, and character development, Sevenoaks prepares students for top universities and successful futures`,
+    studentNumbers: 1245,
+    faithSchool: "Non-Denominational",
+    schoolEmail: "admissions@sevenoaksschool.org", 
+    schoolPhoneNumber: "+44 (0)1732 467 703/+44 (0)1732 467713", 
+    latitude: 51.26630098522708, // //51.10076709037832, -0.7435842027348746
+    longitude:  0.1954745414527575,  //51.26630098522708, 0.1954745414527575
+    schoolLocation: "Sevenoaks, Kent, South-East",
+    stages: ["secondary","sixth form"],
+    schoolType: ["day","boarding"],
+    coeducation: "co-educational",
+    totalSchoolFees: [34416, 61584], //per annual school year
+    scholarships: {
+      scholarshipsAvailable: true,
+      scholarshipsDetail: [`Academic scholarships are available at all entry points and are offered after the entrance exams. Co-curricular scholarships are offered in art, drama, music and sport. Music scholarships are available to external candidates at all entry points, while art, drama and sport scholarships are available to internal candidates at 13+ entry, and to external candidates at 13+ and 16+ entry. Candidates can only apply for one co-curricular scholarship. Co-curricular scholarships are also awarded ad hoc to students who demonstrate exceptional talent whilst at the school, at the school’s discretion. We no longer offer a financial element to our scholarships, as we embrace a principle of awarding financial assistance according to need. Music scholars still receive free tuition in one instrument. `],
+      percentageOfFees: "honorary, no fee remission",
+    },
+    schoolImage: "/images/sevenoaks.jpg",
+    documentId: 8124121363533131,
+    ranking: 8,
+    Bursaries: {
+      BursariesAvailable: true,
+      BursariesDetail: ["Our tradition of financial assistance began with the school’s foundation in 1432 by William Sevenoke. Today, the school continues to actively welcome applications from children who would only be able to take up their place with financial assistance. Currently 80 pupils are in receipt of financial assistance, with some receiving additional support to cover the cost of uniform, trips and other extras. It is a key priority for the school to significantly increase the number of students we support financially over the coming years ","All awards of financial assistance are means-tested, which requires parents to answer detailed questions and provide evidence of their financial circumstances. We use an outside team who will usually visit your home as part of the assessment process. We therefore encourage families to visit the school and consider the likelihood of their child passing our assessment process and being offered a place before applying for financial assistance. The school only offers financial assistance to day students, not to boarders. Applicants  for financial assistance will be asked to confirm that they live within a reasonable daily commute – usually up to 45 minutes – of the school."],
+      percentageOfFees: [0, 100],
+    },
+    feesScheme: {
+      feesSchemeAvailability: true,
+      feesSchemeDetails: [`In return for a lump sum payment at or after the acceptance of an offer of a place for the pupil, the School offers a termly fee contribution to be applied against each term's fee invoice for a set number of terms. The total value of these fee contributions will be discounted at an agreed rate to calculate the amount of the lump sum payment. The discount rate is 1.00% and is calculated on the compound basis and, for the purposes of the scheme, the increase in fees is calculated at 4% per annum compound. Please note that under the Scheme terms and conditions, you will be required to pay the difference between the amount applied under this scheme per term and the total amount due to the School that term (for example, where fees have been increased beyond those assumed in the proposal or where extras are due).`],
+    },
+    forceScheme: {
+      forceSchemeAvailable: false,
+      forcesSchemeDescription: null,
+      percentageOfFees: null, 
+    },
+    siblingsDiscount: {
+      siblingsDiscountAvailable: false,
+      siblingsDiscountDetails: null,
+      percentageOfFees: null,
+    },
+    established: 1432,
+    enquireUrl: "https://www.sevenoaksschool.org/admissions/"
+  },
+  {
+    schoolName: "St Mary's School Ascot",
+    schoolDescription: `St Mary’s School Ascot is a prestigious independent Roman Catholic boarding school for girls, located in Berkshire, England. Founded in 1885, the school is renowned for its academic excellence, strong pastoral care, and emphasis on faith, character, and personal development. It provides a rigorous and well-rounded curriculum, preparing students for top universities in the UK and beyond. Beyond academics, St Mary’s offers exceptional opportunities in sports, music, drama, and extracurricular activities, fostering leadership, creativity, and resilience. The school places great importance on community values, spiritual growth, and service to others, creating a supportive and nurturing environment where students thrive. Set within a beautiful and well-equipped campus, St Mary’s School Ascot provides an inspiring atmosphere that encourages intellectual curiosity, ambition, and lifelong success.`,
+    studentNumbers: 398,
+    faithSchool: "Roman Catholic",
+    schoolEmail: "admissions@stmarysascot.com", 
+    schoolPhoneNumber: "+44 (0)1344 296 614", 
+    latitude: 51.39343383917327, // //51.10076709037832, -0.7435842027348746
+    longitude: -0.6693810027181786,  //51.39343383917327, -0.6693810027181786
+    schoolLocation: "Ascot, Berkshire, South-East",
+    stages: ["secondary","sixth form"],
+    schoolType: ["day","boarding"],
+    coeducation: "girls",
+    totalSchoolFees: [45000, 63180], //per annual school year
+    scholarships: {
+      scholarshipsAvailable: true,
+      scholarshipsDetail: [`All candidates sitting assessment for entry at 11+, 13+ and 16+ will automatically be considered for the academic scholarships (All-Rounder, Art, Music and Sports). At 11+ there are three academic scholarships available. The value of each scholarship is 5% of the fees. Candidates sit papers in English and Mathematics and also complete a general paper. At 13+ there are three academic scholarships available. The value of each scholarship is 5% of the fees. Candidates sit papers in English, Mathematics, Science, Religious Studies, a modern language (French, Spanish, Italian or German), Latin, and choose from either History or Geography. At 16+ there is one academic scholarship available. The value of the scholarship is 5% of the fees. Candidates sit a written paper, meet Department Heads of those subjects they wish to study at A Level, and are also interviewed by the Head of Sixth Form. Scholarships are tenable throughout the scholar’s time at St Mary’s, subject to certain conditions.`],
+      percentageOfFees: 5,
+    },
+    schoolImage: "/images/stMary'sAscot.jpg",
+    documentId: 8121213635113131,
+    ranking: 8,
+    Bursaries: {
+      BursariesAvailable: true,
+      BursariesDetail: ["St Mary’s School Ascot is able to provide means-tested admission bursaries, which are awarded on an annual basis to pupils whose parents are financially eligible and who meet the application requirements. Due to the limited financial resources of the school, not every eligible application for a bursary will be successful."],
+      percentageOfFees: [0, 100],
+    },
+    feesScheme: {
+      feesSchemeAvailability: false,
+      feesSchemeDetails: null,
+    },
+    forceScheme: {
+      forceSchemeAvailable: false,
+      forcesSchemeDescription: null,
+      percentageOfFees: null, 
+    },
+    siblingsDiscount: {
+      siblingsDiscountAvailable: false,
+      siblingsDiscountDetails: null,
+      percentageOfFees: null,
+    },
+    established: 1885,
+    enquireUrl: "https://www.st-marys-ascot.co.uk/admissions/"
+  },
+  {
+    schoolName: "The King's School Canterbury",
+    schoolDescription: `The King’s School, Canterbury is a prestigious independent co-educational day and boarding school located in Kent, England. Founded in 597 AD, it is the oldest school in the UK and one of the most historic in the world. Renowned for its academic excellence, strong pastoral care, and rich heritage, the school offers a rigorous and dynamic curriculum that prepares students for top universities globally. Beyond academics, The King’s School provides outstanding opportunities in sports, music, drama, and extracurricular activities, fostering leadership, creativity, and personal growth. The school embraces both tradition and innovation, with state-of-the-art facilities complementing its historic surroundings. With a strong emphasis on intellectual curiosity, independent thinking, and character development, King’s Canterbury offers a supportive and inspiring environment where students thrive, equipping them with the skills and confidence for lifelong success.`,
+    studentNumbers: 910,
+    faithSchool: "Church of England",
+    schoolEmail: "registrar@junior-kings.co.uk", 
+    schoolPhoneNumber: "+44 01227 714 000", 
+    latitude: 51.281481264578154, // //51.10076709037832, -0.7435842027348746
+    longitude: 1.084055697160071,  //51.281481264578154, 1.084055697160071
+    schoolLocation: "Canterbury, Kent, South-East",
+    stages: ["secondary","sixth form"],
+    schoolType: ["day","boarding"],
+    coeducation: "co-educational",
+    totalSchoolFees: [17175, 30300], //per annual school year
+    scholarships: {
+      scholarshipsAvailable: true,
+      scholarshipsDetail: [`There are scholarships available at Junior and Senior Schools.`,`Two 11+ Academic Scholarships and two 11+ Academic Exhibitions are awarded to suitable internal or external candidates showing strong academic potential for the future. Internal and external candidates are invited to attend a special 11+ Scholarship Day at the School. They will sit extension tests in English, Maths and Thinking Skills and will have an interview with a senior member of staff. Awards will be based upon overall performance. The maximum award available will be 5% of full fees for a Scholarship and 2.5% for an Exhibition. The awards are held for two years only at Junior King’s.`,`Seven types of Scholarship are available at Senior school: Academic, Music, Art, Sports, Design & Technology, Drama and Dance`],
+      percentageOfFees: [5, 10],
+    },
+    schoolImage: "/images/kingsSchoolCanterbury.webp",
+    documentId: 8121111635113131,
+    ranking: 8,
+    Bursaries: {
+      BursariesAvailable: true,
+      BursariesDetail: [`Bursary support at all levels of up to 100% of full boarding fees may be available depending on the financial, compassionate or other circumstances of applicants. All bursary awards are subject to annual testing of parental means and may be varied upward or downward depending on circumstances. Awards are assessed on the basis of a completed Statement of Financial Circumstances which is available from the Bursar.`,`Bursaries may be made available to parents or guardians of children in the Junior School but only in exceptional circumstances would a bursary be awarded to pupils below Year 7 entry (11+). Bursaries are awarded at the discretion of the Governors, and the Head and School Bursar are responsible for the management and coordination of the process.`,`The deadline for Bursary applications is 31 October in the year preceding entry.`],
+      percentageOfFees: [0, 100],
+    },
+    feesScheme: {
+      feesSchemeAvailability: false,
+      feesSchemeDetails: null,
+    },
+    forceScheme: {
+      forceSchemeAvailable: false,
+      forcesSchemeDescription: null,
+      percentageOfFees: null, 
+    },
+    siblingsDiscount: {
+      siblingsDiscountAvailable: false,
+      siblingsDiscountDetails: null,
+      percentageOfFees: null,
+    },
+    established: 597,
+    enquireUrl: "https://www.kings-school.co.uk/admissions/"
+  },
+  {
+    schoolName: "Uppingham School",
+    schoolDescription: `Uppingham School is a prestigious independent co-educational boarding school located in Rutland, England. Founded in 1584, the school is renowned for its academic excellence, strong sense of community, and commitment to developing well-rounded individuals. With a rigorous and forward-thinking curriculum, Uppingham prepares students for top universities worldwide while fostering intellectual curiosity, creativity, and leadership. Beyond academics, the school offers exceptional opportunities in sports, music, drama, and a wide range of extracurricular activities, encouraging personal growth, resilience, and teamwork. Uppingham is known for its outstanding performing arts and sports facilities, as well as its dedication to pastoral care and student wellbeing. Set within a historic yet modern campus, the school provides a dynamic and inspiring environment where students thrive. With a strong emphasis on tradition, innovation, and character development, Uppingham equips pupils with the skills and values needed for lifelong success.`,
+    studentNumbers: 844,
+    faithSchool: "Church of England",
+    schoolEmail: "admissions@uppingham.co.uk", 
+    schoolPhoneNumber: "+44 01572 820 611", 
+    latitude: 52.588164390847524, // //51.10076709037832, -0.7435842027348746
+    longitude: -0.7252521315968805,  //52.588164390847524, -0.7252521315968805
+    schoolLocation: "Oakham, Rutland, Midlands",
+    stages: ["secondary","sixth form"],
+    schoolType: ["day","boarding"],
+    coeducation: "co-educational",
+    totalSchoolFees: [34074, 55674], //per annual school year
+    scholarships: {
+      scholarshipsAvailable: true,
+      scholarshipsDetail: [`Scholarships are awarded to pupils joining the School into the Fourth Form (13+, Year 9) or joining the School at Sixth Form level (16+, Year 12). Scholarship awards may be made either for evidence of a high level of attainment and promise or exceptional specialist aptitude. Candidates are assessed through test, examination or observation, interview and reference.`,`Uppingham is proud of its moral and charitable commitment to widening participation in the School. To do so, we use as much of our funding as we can to enable as many young people as possible to benefit from an Uppingham education. For that reason, non means-tested scholarships would not ordinarily exceed 5% of the fees. Larger scholarship awards are made on the basis of financial need, which means that any scholarship award can be supplemented up to 110% of the school fees through a means-tested award.`,`At Uppingham a candidate may only hold one scholarship award at any one time so that they can specialise in their area of talent. This does not preclude them from participating in other areas of school life, however, the rich additional provision of each of our scholarship programmes requires pupils to manage their time judiciously within their field of expertise. Uppingham awards scholarships to candidates who show excellence in the following fields: Academic, Music, Art, Textiles, Design and Technology, Sport, Drama and All Rounder (The Thring Award, 13+ only). `],
+      percentageOfFees: [5, 110],
+    },
+    schoolImage: "/images/uppingham.png",
+    documentId: 3321111635113131,
+    ranking: 8,
+    Bursaries: {
+      BursariesAvailable: true,
+      BursariesDetail: [`Where a family’s financial means leaves them unable to afford a place at Uppingham they may be eligible to receive support via Means Tested Fee Assistance. To initiate access to assessment of such need, families should be familiar with the Fee Assistance Policy and contact the Director of Admissions, Charlie Bostock, to request a Blue Form (bursary application form).`],
+      percentageOfFees: [0, 110],
+    },
+    feesScheme: {
+      feesSchemeAvailability: true,
+      feesSchemeDetails: [`We offer a Standard Fees in Advance scheme, which is an attractive way of reducing school fees by making an advanced lump sum payment. A deposit into the scheme secures future fees at a fixed discount, with possible tax benefits, and gives you peace of mind that your school fees are dealt with. Under the Scheme, a lump sum payment in units of £1,000 is made to cover future fees, either in advance of entry to the School, or at any time after joining the School. Payments can be made by anyone who has parental consent and is approved by the School. You can choose the amount you wish to deposit, the number of terms’ fees you wish to cover (between three and fifteen terms), or the amount of annual fees you wish to cater for. You can also decide the rate of future annual fee inflation you wish to be applied in your quotation and can add supplementary payments. `],
+    },
+    forceScheme: {
+      forceSchemeAvailable: false,
+      forcesSchemeDescription: null,
+      percentageOfFees: null, 
+    },
+    siblingsDiscount: {
+      siblingsDiscountAvailable: false,
+      siblingsDiscountDetails: null,
+      percentageOfFees: null,
+    },
+    established: 1584,
+    enquireUrl: "https://www.uppingham.co.uk/admissions/"
+  },
+  {
+    schoolName: "Wycombe Abbey",
+    schoolDescription: `Wycombe Abbey is a prestigious independent boarding school for girls, located in Buckinghamshire, England. Founded in 1896, it is renowned for its academic excellence, exceptional pastoral care, and commitment to developing confident and ambitious young women. The school consistently ranks among the top in the UK for academic achievement, with a rigorous curriculum that prepares students for leading universities worldwide. Beyond academics, Wycombe Abbey offers outstanding opportunities in sports, music, drama, and a wide range of extracurricular activities, fostering leadership, creativity, and resilience. The school places great emphasis on personal development, wellbeing, and a strong sense of community, ensuring that students are both challenged and supported. Set within a stunning 170-acre campus, Wycombe Abbey provides a nurturing yet intellectually stimulating environment where students thrive, equipping them with the skills, values, and confidence needed for lifelong success.`,
+    studentNumbers: 645,
+    faithSchool: "Church of England",
+    schoolEmail: "admissions@wycombeabbey.com", 
+    schoolPhoneNumber: "+44 (0) 1494 897008", 
+    latitude: 51.62626930312093, // //51.10076709037832, -0.7435842027348746
+    longitude: -0.751159392910686,  //51.62626930312093, -0.751159392910686
+    schoolLocation: "High Wycombe, Buckinghamshire, South-East",
+    stages: ["secondary","sixth form"],
+    schoolType: ["day","boarding"],
+    coeducation: "girls",
+    totalSchoolFees: [44496, 58572], //per annual school year
+    scholarships: {
+      scholarshipsAvailable: true,
+      scholarshipsDetail: [`Wycombe Abbey Scholarships and Exhibition Awards carry consierable prestige within the School but are of limited financial value. `],
+      percentageOfFees: [0, 5],
+    },
+    schoolImage: "/images/wycombeAbbey.jpg",
+    documentId: 3321111555553131,
+    ranking: 8,
+    Bursaries: {
+      BursariesAvailable: true,
+      BursariesDetail: [`Wycombe Abbey are able to offer mean-tested bursaries.`,`Assistance, in the form of a Bursary, may represent up to 100% of the fees and is dependent on assessment of the parental financial circumstances. All Bursaries are reviewed annually and may increase or reduce in accordance with changes to parental circumstances. The financial assessment takes into account the value of assets held, including the family home, savings, investments, pension provision and other realisable assets, as well as income, the size of the family, and any other dependents. In general, a family with a combined disposable income of less than £30,000 may be eligible for an award of up to 100%. Alternatively, a family with a combined gross income of over £150,000 may not qualify for any support. We also offer additional assistance to recipients of bursaries to help cover the cost of co-curricular activities, uniform costs and educational trips`],
+      percentageOfFees: [0, 100],
+    },
+    feesScheme: {
+      feesSchemeAvailability: false,
+      feesSchemeDetails: null,
+    },
+    forceScheme: {
+      forceSchemeAvailable: true,
+      forcesSchemeDescription: [`A 25% discount on boarding fees is offered to children of HM Armed Forces and HM Diplomatic Services who are in receipt of the Continuity of Education Allowance. This is in addition to the sibling discounts listed.`],
+      percentageOfFees: 25, 
+    },
+    siblingsDiscount: {
+      siblingsDiscountAvailable: true,
+      siblingsDiscountDetails: [`Wycombe Abbey offers a sibling discount on day and boarding fees. The discount is 5% for the second child, increasing by 5% for each subsequent child.`],
+      percentageOfFees: [5, 10],
+    },
+    established: 1584,
+    enquireUrl: "https://www.wycombeabbey.com/admissions/"
   }
 
-  //Marlborough college, Millfield school, Radley school (?), sevenoaks school
-  //st mary's school ascot, The King's School Canterbury, Uppingham school, wycombe abbey school
+  
+
 
 
 
@@ -1776,7 +2075,7 @@ const schoolsSampleData = [
   
 ];
   
-export default function SchoolsList({searchTerm, setSubscriptionModalBox}) {
+export default function SchoolsList({searchTerm, setSubscriptionModalBox, clicks, setClicks}) {
 
 
     //const schoolsToShow = schoolsSampleData.filter(school => school.schoolLocation || school.schoolName || school.schoolType)
@@ -1822,6 +2121,8 @@ export default function SchoolsList({searchTerm, setSubscriptionModalBox}) {
             index={index}
             school={school}
             setSubscriptionModalBox={setSubscriptionModalBox}
+            clicks={clicks}
+            setClicks={setClicks}
             /*onClickHandler={onClickHandler}*/ 
           />
         ))}

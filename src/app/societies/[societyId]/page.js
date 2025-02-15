@@ -22,6 +22,7 @@ import SchoolMap from '@/app/components/schoolMap';
 import 'leaflet/dist/leaflet.css';
 import { useSchoolCompare } from '@/app/schoolCompareContext';
 import SchoolsToCompare from '@/app/SchoolsToCompare/page';
+import SimpleFeedbackForm from '@/app/components/schoolFeedbackForm';
 
 
 console.log("these are the schools: ", schoolsSampleData);
@@ -516,6 +517,7 @@ useEffect(() => {
                       </p>
                     </div>
                   )}
+                  <SimpleFeedbackForm schoolName={schoolName} />
 
                 </div>
               </CardContent>

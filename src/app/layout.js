@@ -9,6 +9,7 @@ import { Link } from "lucide-react";
 import { TRACE_OUTPUT_VERSION } from "next/dist/shared/lib/constants";
 import { useRouter } from "next/navigation";
 import { Analytics } from "@vercel/analytics/react"
+import { useEffect } from "react";
 
 
 const geistSans = localFont({
@@ -30,6 +31,9 @@ const geistMono = localFont({
 export default function RootLayout({ children }) {
 
   //const { schoolsToCompare, setSchoolsToCompare } = useSchoolCompare();
+  useEffect(() => {
+    console.log("localStorage is:", localStorage);
+  },[])
   
 
 
