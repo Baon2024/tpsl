@@ -23,6 +23,8 @@ import 'leaflet/dist/leaflet.css';
 import { useSchoolCompare } from '@/app/schoolCompareContext';
 import SchoolsToCompare from '@/app/SchoolsToCompare/page';
 import SimpleFeedbackForm from '@/app/components/schoolFeedbackForm';
+import { createClient } from '@supabase/supabase-js';
+
 
 
 console.log("these are the schools: ", schoolsSampleData);
@@ -34,7 +36,11 @@ export default function societyPage()  {
     const numberSocietyId = Number(societyId);
     const selectedSchoolArray = schoolsSampleData.filter(school => school.documentId === numberSocietyId);
     console.log("This is the selected school:", selectedSchoolArray);
-
+    
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+    const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+    
+    const supabase = createClient(supabaseUrl, supabaseAnonKey)
     
 
     const selectedSchool = selectedSchoolArray[0];
@@ -172,6 +178,61 @@ useEffect(() => {
     longitude: -0.4688750335594431,
     name: "Example School",
   };
+
+  async function saveSchoolHandler() {
+    const userData = localStorage.getItem('userTPSL');
+    if (userData) {
+      //add school to user's school array, with their uid.
+      const user = JSON.parse(userData); // Parse the stored user data
+      const userId = user.id;
+      console.log("userId in save school function is:", userId);
+      console.log("selected school to save is:", selectedSchool);
+
+      if (!userId || !selectedSchool) {
+        console.error("User ID or selected school is missing.");
+        return;
+      }
+
+      const { data: profile, error: fetchError } = await supabase
+      .from('profiles')
+      .select('schools')
+      .eq('id', userId)
+      .maybeSingle();
+
+      console.log("Fetched profile data:", profile);
+
+  if (fetchError) {
+    console.error("Error fetching schools:", fetchError);
+    return;
+  }
+
+  
+  // 🟢 Step 2: Ensure 'schools' is an array (if NULL, make it an empty array)
+  const currentSchools = profile.schools ?? []; // Use nullish coalescing to avoid `null`
+
+  console.log("Current schools before update:", currentSchools);
+
+  const schoolAlreadySaved = currentSchools.some(school => school.documentId === selectedSchool.documentId)
+  console.log("schoolAlreadySaved is:", schoolAlreadySaved);
+  if (schoolAlreadySaved) {
+    alert("school already saved");
+    return 
+  }
+
+  const updatedSchools = [...currentSchools, selectedSchool];
+
+  console.log("Updated schools:", updatedSchools);
+
+      
+      const { data, error } = await supabase
+      .from('profiles')
+      .update({
+        schools: updatedSchools })
+      .eq("id", userId)
+      .select()
+        
+    }
+  }
 
   return (
     <div className="min-h-screen bg-gray-50/50 pb-12">
@@ -518,6 +579,7 @@ useEffect(() => {
                     </div>
                   )}
                   <SimpleFeedbackForm schoolName={schoolName} />
+                  <Button onClick={saveSchoolHandler}>save school</Button>
 
                 </div>
               </CardContent>

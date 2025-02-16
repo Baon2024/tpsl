@@ -345,14 +345,16 @@ const schoolsSampleData = [
   },
   {
     schoolName: "Westminster School",
-    schoolDescription: "Westminster School is one of the oldest and most renowned schools in London.",
+    schoolDescription: [`Westminster School is a prestigious independent day and boarding school for boys, with a co-educational Sixth Form, located in the heart of London. Founded in 1560, it is renowned for its academic excellence, intellectual rigour, and strong tradition of producing some of the brightest minds in the UK. The school consistently ranks among the top in the country, offering a challenging curriculum that prepares students for leading universities worldwide, particularly Oxford and Cambridge.`, `Beyond academics, Westminster provides outstanding opportunities in sports, music, drama, and a wide range of extracurricular activities, fostering creativity, leadership, and resilience. Its central London location offers unique cultural and educational opportunities, while its historic yet modern facilities provide an inspiring learning environment. With a strong emphasis on independent thought, debate, and personal growth, Westminster School nurtures confident, inquisitive, and well-rounded individuals ready to excel in all walks of life.`],
+    studentNumbers: 774,
+    faithSchool: "Anglican",
     schoolEmail: "info@westminster.org.uk",
     schoolPhoneNumber: "020 7222 0265",
-    latitude: null,
-    longitude: null,
-    schoolLocation: "London",
+    latitude: 51.499684172990904,//51.499684172990904, -0.12794887395534177
+    longitude: -0.12794887395534177,
+    schoolLocation: "Westminister, London, South-East",
     stages: ["secondary", "sixth form"],
-    schoolType: ["day"],
+    schoolType: ["day","boarding"],
     coeducation: "mixed-sex",
     totalSchoolFees: 25000,
     scholarships: {
@@ -373,40 +375,58 @@ const schoolsSampleData = [
   },
   {
     schoolName: "Cheltenham Ladies' College",
-    schoolDescription: "Cheltenham Ladies' College is a leading girls' school in the UK with a focus on academic excellence.",
+    schoolDescription: [`Cheltenham Ladies’ College is a prestigious independent boarding and day school for girls, located in Cheltenham, England. Founded in 1853, it is renowned for its academic excellence, strong pastoral care, and commitment to empowering young women. The school consistently ranks among the top in the UK, offering a rigorous and dynamic curriculum that prepares students for leading universities worldwide.`,`Beyond academics, Cheltenham Ladies’ College provides outstanding opportunities in sports, music, drama, and a wide range of extracurricular activities, fostering leadership, creativity, and resilience. The school places great emphasis on personal development, global awareness, and a strong sense of community, ensuring students are both challenged and supported. Set within a stunning historic campus with state-of-the-art facilities, Cheltenham Ladies’ College offers a nurturing and intellectually stimulating environment where students thrive, equipping them with the skills, values, and confidence needed for lifelong success.`],
+    studentNumbers: 851,
+    faithSchool: "Christian",
     schoolEmail: "admissions@cheltladiescollege.org",
     schoolPhoneNumber: "01242 517 444",
-    latitude: null,
-    longitude: null,
-    schoolLocation: "Cheltenham, Gloucestershire",
+    latitude: 51.897964342831244,
+    longitude: -2.0814395623237427,//51.897964342831244, -2.0814395623237427
+    schoolLocation: "Cheltenham, Gloucestershire, South-West",
     stages: ["secondary", "sixth form"],
     schoolType: ["boarding", "day"],
-    coeducation: "female",
-    totalSchoolFees: 34000,
+    coeducation: "girls",
+    totalSchoolFees: [35823, 40590],
     scholarships: {
       scholarshipsAvailable: true,
-      scholarshipsDetail: "available for both academic and sporting achievements",
-      percentageOfFees: [10, 100]
+      scholarshipsDetail: [`CLC offers an exciting and enriching Scholarship Programme with a wealth of opportunities aimed at stretching and developing individual talent for the benefit of the whole community. Being a Scholar is a position of honour at CLC and those who earn the title will play a key role in the life of the school and enjoy the chance to lead and inspire others whilst fulfilling their own potential. Scholarship Awards do not carry fee remission`],
+      percentageOfFees: "no fee remission"
     },
-    schoolImage: "/images/Cheltenham-Ladies-College-main.jpg",
+    schoolImage: "/images/cheltenhamLadies.jpg",
     documentId: 18502947,
     ranking: 4,
     Bursaries: {
       BursariesAvailable: true,
-      BursariesDetail: "Bursaries are available for students with financial need.",
-      percentageOfFees: "up to 100%"
+      BursariesDetail: [`Our means-tested bursaries are known as Beale Awards and are named after our second and longest-serving Principal, Dorothea Beale, a pioneer in the education of young women. These awards offer fully or partially funded boarding or day places at College - from 1%-100%, depending on circumstances.`,`Across College, approximately 65 pupils receive fees support via a Beale Award, totalling approximately £1.6million annually. A significant number of these students receive 100% fees support, whilst others receive a percentage award determined through our financial means-testing process. All Beale Award families are also supported with pro-rated financial assistance towards the additional costs of attending school, such as uniform and co-curricular activities.`],
+      percentageOfFees: [1, 100]
+    },
+    feesScheme: {
+      feesSchemeAvailability: false,
+      feesSchemeDetails: null,
+    },
+    forceScheme: {
+      forceSchemeAvailable: false,
+      forcesSchemeDescription: null,
+      percentageOfFees: null,
+    },
+    siblingsDiscount: {
+      siblingsDiscountAvailable: false,
+      siblingsDiscountDetails: null,
+      percentageOfFees: null,
     },
     established: 1853,
     enquireUrl: "https://cheltladiescollege.org/admissions/scholarships-and-bursaries/"
   },
   {
     schoolName: "The Dragon School",
-    schoolDescription: "The Dragon School is a leading co-educational prep school with strong academic and extracurricular programs.",
+    schoolDescription: [`Dragon School is a prestigious independent preparatory school located in Oxford, England. Founded in 1877, it is renowned for its academic excellence, strong pastoral care, and commitment to developing well-rounded and confident young learners. The school provides a dynamic and engaging curriculum that fosters intellectual curiosity, creativity, and independent thinking, preparing students for top senior schools across the UK.`,`Beyond academics, Dragon School offers exceptional opportunities in sports, music, drama, and a diverse range of extracurricular activities, encouraging teamwork, resilience, and leadership skills. With a strong emphasis on character development and a nurturing yet stimulating environment, the school ensures that pupils are both challenged and supported. Set within a historic yet modern campus, Dragon School blends tradition with innovation, equipping students with the skills, values, and confidence needed for lifelong success.`],
+    studentNumbers: 807,
+    faithSchool: "Non-Denominational",
     schoolEmail: "info@dragonschool.org",
     schoolPhoneNumber: "01865 315 400",
-    latitude: null,
-    longitude: null,
-    schoolLocation: "Oxford, Oxfordshire",
+    latitude: 51.768166848104634,
+    longitude: -1.2556430228372186, //51.768166848104634, -1.2556430228372186
+    schoolLocation: "Oxford, Oxfordshire, South-East",
     stages: ["primary", "secondary"],
     schoolType: ["boarding", "day"],
     coeducation: "mixed-sex",
@@ -416,13 +436,27 @@ const schoolsSampleData = [
       scholarshipsDetail: "for excellence in academics, arts, and sports",
       percentageOfFees: [10, 50]
     },
-    schoolImage: "/images/The-Dragon-School-main.jpg",
+    schoolImage: "/images/dragonSchool.jpg",
     documentId: 18502948,
     ranking: 7,
     Bursaries: {
       BursariesAvailable: true,
-      BursariesDetail: "Bursaries are available for families in need of financial support.",
+      BursariesDetail: [`We fund up to five bursary places in each year group, with 25 children in total across the Prep school at any one time. (For the most part, places are offered to children coming into the school in Year 4. Exceptionally, those coming up from Dragon Pre-Prep or applying to join in Year 5 may be considered). There are no bursaries offered at the Pre-Prep. Our Bursaries are means-tested and families applying for support will be asked to submit a financial questionnaire which is reviewed by an independent organisation in accordance with our Means Tested Bursary Policy. The level of support varies according to financial need and the following examples are merely indicative: Single parent family on a low income living in rented accommodation. One child could receive 100% fee remission. Parents both earn moderate incomes and the family own a modest house with mortgage. One child could receive 75% fee remission.`],
       percentageOfFees: [10, 100]
+    },
+    feesScheme: {
+      feesSchemeAvailability: false,
+      feesSchemeDetails: null,
+    },
+    forceScheme: {
+      forceSchemeAvailable: true,
+      forcesSchemeDescription: [`The Dragon gives discounts on full boarding fees to children of employees of the Foreign, Commonwealth and Development Office and those who serve in the Armed Forces. Please contact our Admissions teams for more information.`],
+      percentageOfFees: "???",
+    },
+    siblingsDiscount: {
+      siblingsDiscountAvailable: false,
+      siblingsDiscountDetails: null,
+      percentageOfFees: null,
     },
     established: 1877,
     enquireUrl: "https://dragonschool.org/admissions/scholarships-and-bursaries/"

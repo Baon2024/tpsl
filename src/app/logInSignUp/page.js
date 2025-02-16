@@ -19,6 +19,11 @@ export default function LogInSignUp() {
   const [passwordRecovery, setPasswordRecovery] = useState(false)
   const [emailForRecovery, setEmailForRecovery] = useState('')
 
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+
+const supabase = createClient(supabaseUrl, supabaseAnonKey)
+
   async function loginSocietyHandler(e) {
     e.preventDefault()
     const dataToSend = { identifier: email, password }
@@ -30,13 +35,27 @@ export default function LogInSignUp() {
     e.preventDefault()
     const dataToSend = { username, email, password }
     const user = await signUpUser(dataToSend)
+    console.log("user from signUp function returned:", user);
+    const { data: session, error } = await supabase.auth.getSession();
+console.log("Supabase session:", session);
+    //use user.id to then update associated user table to create entry with the same id, and null schools and false subscribed
+    if (user?.user?.id) {
+      // Use the user ID to update the profiles table
+      console.log("user.user.is is:", user?.user?.id);
+      const { error } = await supabase
+          .from('profiles') // Make sure this is the correct table
+          .insert([{ id: user.user.id, schools: [], subscribed: false }]); // Set default values
+
+      if (error) {
+          console.error("Error updating profiles table:", error.message);
+      } else {
+          console.log("Profile entry successfully created!");
+      }
+  }
     handleAuthResponse(user)
   }
 
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-
-const supabase = createClient(supabaseUrl, supabaseAnonKey)
+  
 
   function handleAuthResponse(user) {
     if (user) {
