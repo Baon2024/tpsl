@@ -10,6 +10,7 @@ import { TRACE_OUTPUT_VERSION } from "next/dist/shared/lib/constants";
 import { useRouter } from "next/navigation";
 import { Analytics } from "@vercel/analytics/react"
 import { useEffect } from "react";
+import { createClient } from "@supabase/supabase-js";
 
 
 const geistSans = localFont({
@@ -30,9 +31,45 @@ const geistMono = localFont({
 
 export default function RootLayout({ children }) {
 
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+    const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+    
+    const supabase = createClient(supabaseUrl, supabaseAnonKey)
+
   //const { schoolsToCompare, setSchoolsToCompare } = useSchoolCompare();
+
   useEffect(() => {
     console.log("localStorage is:", localStorage);
+  },[])
+
+  useEffect(() => {
+    const user = localStorage.getItem('userTPSL');
+    console.log("user in layout.js function is:", user);
+    if (user) {
+      async function getUserSchools() {
+        const userData = localStorage.getItem('userTPSL');
+      const user = JSON.parse(userData); // Parse the stored user data
+      const userId = user.id;
+      console.log("userId in save school function is:", userId);
+      //console.log("selected school to save is:", selectedSchool);
+
+      if (!userId) {
+        console.error("User ID or selected school is missing.");
+        return;
+      }
+
+      const { data: profile, error: fetchError } = await supabase
+      .from('profiles')
+      .select('*')
+      .eq('id', userId)
+      .maybeSingle();
+
+      console.log("Fetched user's schools data:", profile);
+      localStorage.setItem('userTPSLProfile', JSON.stringify(profile));
+    }
+
+      getUserSchools();
+    }
   },[])
   
 

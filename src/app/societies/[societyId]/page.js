@@ -231,6 +231,8 @@ useEffect(() => {
       .eq("id", userId)
       .select()
         
+    } else {
+      alert("You need to be a member to use this feature!")
     }
   }
 

@@ -37,6 +37,8 @@ export default function Header() {
   }, [])
 
     const handleSubscribeClick = () => {
+
+      //I need three possible outcomes: not a user, user but not suisbcribed, user and susbcribed
       console.log("jwt is:", jwt);
       if (jwt) {
         router.push('/subscribeToTPSL') // Navigate to userPage if logged in

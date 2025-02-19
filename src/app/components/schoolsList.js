@@ -237,7 +237,9 @@ const schoolsSampleData = [
   },
   {
     schoolName: "Fyling Hall",
-    schoolDescription: "Fyling Hal is ------",
+    schoolDescription: [`Fyling Hall is a small, independent day and boarding school located in North Yorkshire, England. Founded in 1923, it is known for its strong sense of community, personalized approach to education, and commitment to academic excellence. The school provides a nurturing environment where students are encouraged to develop curiosity, resilience, and independence, preparing them for higher education and future careers. Beyond academics, Fyling Hall offers a broad range of extracurricular opportunities, including sports, music, drama, and outdoor activities, taking full advantage of its stunning coastal and countryside setting. With a focus on character development, leadership, and personal growth, the school fosters a supportive and inclusive atmosphere where students thrive both academically and socially. Fyling Hall’s unique setting and ethos create a well-rounded educational experience that equips pupils with the skills and confidence needed for lifelong success.`],
+    studentNumbers: 165,
+    faithSchool: "Interdenominational",
     schoolEmail: "Fyling-----@---.co.uk",
     schoolPhoneNumber: '02728 272 826',
     latitude: null,
@@ -248,10 +250,10 @@ const schoolsSampleData = [
     ],
     schoolType: [ "boarding", "day" ],
     coeducation: "mixed-sex",
-    totalSchoolFees: 54084, //present this as 'from £54,084', with daily fees as default (cheapest)
+    totalSchoolFees: [8733, 14508], //present this as 'from £54,084', with daily fees as default (cheapest)
     scholarships: {
       scholarshipsAvailable: true,
-      scholarshipsDetail: "for xxx",
+      scholarshipsDetail: [`These can be awarded where a pupil demonstrates an outstanding ability in one of the following areas: academia, sport, music, drama. A scholarship can also be awarded to a pupil deemed to be an ‘all-rounder’. Scholarships will usually not amount to more than 10% of the fees due.`], //A sibling discount of 10% applies to the younger child.
       percentageOfFees: [10, 100] //use this to calculate potential worth of savings, cost of fees overall
     },
     schoolImage: "/images/Fyling-Hall-main.jpg",
@@ -262,83 +264,107 @@ const schoolsSampleData = [
       BursariesDetail: "Parents wishing to apply for a bursary should write to the Headmaster outlining the reasons why financial support is necessary. As a general rule, it is unlikely that a bursary will be awarded when family income is greater than four times the school fees. It is possible, indeed not unusual, for a bursary holder to have a scholarship",
       percentageOfFees: "???",
     },
-    established: 1552,
-    enquireUrl: 'https://fylinghall.org/admissions/scholarships-and-bursaries/'
-  },
-  {
-    schoolName: "",
-    schoolLocation: "",
-    stages: [""],
-    schoolType: [""],
-    coeducation: "",
-    totalSchoolFees: 0,
-    scholarships: {
-      scholarshipsAvailable: true,
-      scholarshipsDetail: "Academic scholarships for high-achieving students.",
-      percentageOfFees: 25,
+    feesScheme: {
+      feesSchemeAvailability: false,
+      feesSchemeDetails: null,
     },
-    schoolImage: "/images/Westminster-School.jpg",
-    documentId: 8457201344,
-    ranking: 6,
-    Bursaries: {
-      BursariesAvailable: false,
-      BursariesDetail: null,
+    forceScheme: {
+      forceSchemeAvailable: false,
+      forcesSchemeDescription: null,
       percentageOfFees: null,
     },
-    established: 1179,
-    enquireUrl: "https://westminster.org.uk/admissions",
-  }, {
+    siblingsDiscount: {
+      siblingsDiscountAvailable: true,
+      siblingsDiscountDetails: [`A sibling discount of 10% applies to the younger child.`],
+      percentageOfFees: 10,
+    },
+    established: 1923,
+    enquireUrl: 'https://fylinghall.org/admissions/scholarships-and-bursaries/'
+  },
+   {
     schoolName: "Eton College",
-    schoolDescription: "Eton College is a prestigious and historic boys' school located near Windsor.",
+    schoolDescription: [`Eton College is one of the most prestigious independent boarding schools for boys in the world, located in Windsor, England. Founded in 1440 by King Henry VI, it is renowned for its academic excellence, strong traditions, and commitment to developing well-rounded, intellectually curious, and confident young men. The school consistently ranks among the top in the UK, offering a rigorous curriculum that prepares students for leading universities, particularly Oxford and Cambridge. Beyond academics, Eton provides outstanding opportunities in sports, music, drama, and a vast array of extracurricular activities, fostering leadership, resilience, and teamwork. The school is known for its distinctive traditions, including formal dress, house rivalries, and a deep sense of camaraderie among pupils. Set within a historic yet modern campus with world-class facilities, Eton College offers a challenging yet nurturing environment that equips students with the skills, values, and confidence needed for lifelong success.`],
+    studentNumbers: 1341,
+    faithSchool: "Church of England",
     schoolEmail: "admissions@eton.co.uk",
-    schoolPhoneNumber: "01753 370 100",
-    latitude: null,
-    longitude: null,
-    schoolLocation: "Windsor, Berkshire",
-    stages: ["primary", "secondary", "sixth form"],
+    schoolPhoneNumber: "+44 01753 370 100",
+    latitude: 51.49203031242214, //51.49203031242214, -0.6090060566848277
+    longitude: -0.6090060566848277,
+    schoolLocation: "Windsor, Berkshire, South-East",
+    stages: ["secondary", "sixth form"],
     schoolType: ["boarding"],
-    coeducation: "male",
-    totalSchoolFees: "from £42,000",
+    coeducation: "boys",
+    totalSchoolFees: 63297,
     scholarships: {
       scholarshipsAvailable: true,
-      scholarshipsDetail: "available for exceptional talent in academics and the arts",
-      percentageOfFees: [10, 100]
+      scholarshipsDetail: [`Scholarships differ from bursaries, which are means-tested awards given to help support families who wouldn’t otherwise be able to afford some or all of the school fees. Our scholarships do not carry any automatic fee remission. When a boy applies for a scholarship it is possible for his parents to apply for a means-tested bursary in connection with that scholarship to cover school fees. Please note that we do not offer sports or arts scholarships. Such abilities feature strongly in the majority of our selection processes along with all-round personality and suitability for membership of a boarding community. However, while sporting or artistic ability will be of interest after the selection has been made, these abilities are not a factor in deciding the 13+ King’s Scholarship and Music Awards.`,`Scholarships for entry at 13+: (*) King’s Scholarships: Based on academic ability for boys entering the School at age 13. Around 14 are awarded each year. (*) Rokos Scholarship: Boys who are outstanding academically, who have been educated in the UK state system at primary level and who need financial assistance to attend Eton can be considered for the Rokos Scholarship. Thanks to the generosity of a donor, this award provides means-tested financial support for up to four boys per year to attend Eton. These boys are identified by the School during the Admissions process. Where necessary, the scholarship will cover 100% fees and extras. We will help families identify the most appropriate pathway for their sons in Years 7 and 8. Boys should be registered in the normal way for 13+ entry by 30 June in UK School Year 5. Please contact the Admissions Office if you have any queries. (*) Music Awards: A wide range of scholarships and exhibition awards are designed to recognise and support talented musicians.`,`Scholarships for entry at 16+: (*) Orwell Awards are for boys who have spent Years 9, 10 and 11 in a UK state school. Boys who are receiving substantial financial assistance at a UK independent school that does not have a Sixth Form may also apply. Up to 14 places may be awarded per year; however, this depends on the quality of applications received. (*) MCM Drama Award: The MCM Drama Award may be awarded to a boy applying for the Orwell Award who will make an outstanding contribution to Drama at Eton. (*) Sixth Form Music Award: The Sixth Form Music Award may be awarded to a boy applying for the Orwell Award who is a musical high-flyer. `],
+      percentageOfFees: [0, 100]
     },
-    schoolImage: "/images/eton.jpeg",
+    schoolImage: "/images/etonCollege.jpg",
     documentId: 18502944,
     ranking: 1,
     Bursaries: {
       BursariesAvailable: true,
-      BursariesDetail: "Bursaries are available for students from families with low incomes.",
-      percentageOfFees: "up to 100%"
+      BursariesDetail: [`Eton warmly welcomes bursary applications from parents who might, under ordinary circumstances, not consider Eton for their son for financial reasons. Eton has substantial bursary funds designed to widen access by enabling boys to come to the School at the normal entry age of 13, who could not otherwise do so, and to allow boys to remain in the event of an unforeseen change in family circumstances. No parents with a talented boy should feel that Eton is necessarily beyond their means. Both the registration fee and the entrance fee may be waived in case of parental need subject to supporting documentation.`,`For boys entering the School at age 13 (Year 9), parents will be invited to complete a financial aid declaration form when their son is finishing Year 5. A completed application form needs to be submitted during Year 6 in accordance with published deadlines. These deadlines will be strictly adhered to.`, `All applications are subject to a detailed means-test. Parents should be aware that we do not have sufficient funds to satisfy all the requests received. A bursary award is made at the same time as a conditional offer of a place at the School is made. Bursary applications are treated confidentially and boys will not be aware of having a bursary unless their parents choose to tell them.`,`Bursaries range from 5% to 100% and are dependent on a family’s financial circumstances. We do not publish guidance on qualifying income levels as each application is assessed on a case by case basis. An independent company may carry out a home visit to assist in the assessment of family circumstances.  In 2022/23, 265 boys received fee reductions; 105 of these boys paid no fees at all. The average award was 69% of the fee.`],
+      percentageOfFees: [0, 100]
+    },
+    feesScheme: {
+      feesSchemeAvailability: true,
+      feesSchemeDetails: [`The School offers a pre-paid fees scheme which may be of interest to parents who have a capital sum available for Eton school fees. Putting a payment down in advance has the attraction of securing a chosen amount towards future school bills.`],
+    },
+    forceScheme: {
+      forceSchemeAvailable: false,
+      forcesSchemeDescription: null,
+      percentageOfFees: null,
+    },
+    siblingsDiscount: {
+      siblingsDiscountAvailable: false,
+      siblingsDiscountDetails: null,
+      percentageOfFees: null,
     },
     established: 1440,
     enquireUrl: "https://eton.co.uk/admissions/bursaries-and-scholarships/"
   },
   {
     schoolName: "Harrow School",
-    schoolDescription: "Harrow School is one of the top boys' schools in the country, known for its traditions.",
+    schoolDescription: [`Harrow School is a prestigious independent boarding school for boys, located in Harrow, London. Founded in 1572, it is renowned for its academic excellence, strong traditions, and commitment to developing well-rounded, confident young men. The school offers a rigorous curriculum that prepares students for top universities worldwide, with a particular emphasis on critical thinking, leadership, and intellectual curiosity.`,`Beyond academics, Harrow provides exceptional opportunities in sports, music, drama, and a wide range of extracurricular activities, fostering teamwork, resilience, and creativity. The school is known for its distinctive traditions, including the famous Harrow uniform, house competitions, and a strong sense of camaraderie among pupils. Set within a stunning historic campus with state-of-the-art facilities, Harrow School offers a challenging yet supportive environment, equipping students with the skills, values, and confidence needed for lifelong success.`],
+    studentNumbers: 837,
+    faithSchool: "Church of England",
     schoolEmail: "admissions@harrowschool.org.uk",
     schoolPhoneNumber: "020 8872 8400",
-    latitude: null,
-    longitude: null,
-    schoolLocation: "Harrow, London",
+    latitude: 51.57265036790661,//51.57265036790661, -0.3333364720227726
+    longitude: -0.3333364720227726,
+    schoolLocation: "Harrow, London, South-East",
     stages: ["secondary", "sixth form"],
     schoolType: ["boarding"],
-    coeducation: "male",
-    totalSchoolFees: 42000,
+    coeducation: "boys",
+    totalSchoolFees: 61584,
     scholarships: {
       scholarshipsAvailable: true,
-      scholarshipsDetail: "for academic and sporting achievements",
-      percentageOfFees: [10, 100]
+      scholarshipsDetail: [`Boys can be invited to compete for one or more of the following awards: Academic, Sport, Drama, Music, Art and Design and Technology, for entry into either Year 9 or Year 12. Awards are made on an overall assessment, which takes into account: (*) a boy's character and suitability for boarding, (*) his academic ability and potential, (*) the needs of the School, and (*) the field of boys applying.`],
+      percentageOfFees: 5,
     },
     schoolImage: "/images/Harrow.jpg",
     documentId: 18502945,
     ranking: 3,
     Bursaries: {
       BursariesAvailable: true,
-      BursariesDetail: "Bursaries are available for students who demonstrate financial need.",
-      percentageOfFees: "up to 100%"
+      BursariesDetail: [`Many boys at Harrow benefit from our means-tested bursary provision. Bursary support is considered for strong candidates upon application to the School. Bursaries can be awarded either independent from or dependent on obtaining a scholarship. Please see our guidance on Bursaries here. We strongly recommend that you inform us of your need for a bursary when making your application to the School. This will not disadvantage your son's application in any way. You will be able to indicate on the online registration form the level of bursarial assistance you would require for your son to come to Harrow, as a percentage of the School fee. In addition to our bursary provision, there are a number of specific financial awards that are granted to boys who fulfil set criteria.`,`Year 7, 9 and 12 awards available. `],
+      percentageOfFees: [0, 100]
+    },
+    feesScheme: {
+      feesSchemeAvailability: false,
+      feesSchemeDetails: null,
+    },
+    forceScheme: {
+      forceSchemeAvailable: true,
+      forcesSchemeDescription: [`The HJ Flower and H Gower Award, for very strong candidates who are the sons of serving members of the British armed forces`],
+      percentageOfFees: "???",
+    },
+    siblingsDiscount: {
+      siblingsDiscountAvailable: false,
+      siblingsDiscountDetails: null,
+      percentageOfFees: null,
     },
     established: 1572,
     enquireUrl: "https://harrowschool.org.uk/admissions/scholarships-and-bursaries/"
@@ -356,19 +382,33 @@ const schoolsSampleData = [
     stages: ["secondary", "sixth form"],
     schoolType: ["day","boarding"],
     coeducation: "mixed-sex",
-    totalSchoolFees: 25000,
+    totalSchoolFees: [44247, 62985],
     scholarships: {
       scholarshipsAvailable: true,
-      scholarshipsDetail: "for excellence in academics and arts",
-      percentageOfFees: [10, 50]
+      scholarshipsDetail: [`King’s Scholarships are the School’s much-coveted academic scholarships. The Scholarships, which are not means-tested, were originally established by Henry VIII and were more formally affirmed by Elizabeth I in 1560 – the historic link with the Royal Family continues today. Our King’s Scholars are privileged to be able to attend a variety of special services in Westminster Abbey, as invited by the Dean; and they have other ceremonial duties to perform in connection with the Abbey and the Crown. (*) There are a total of 48 King’s Scholars, with usually 12 chosen every year: up to eight academic King’s Scholarships are awarded each year to pupils entering the School at 13+ and up to six King’s Scholarships are awarded each year to pupils entering the School at 16+. King’s Scholars are required to board at the School and all belong to College, one of the six boarding houses. For information about College, please refer to our boarding pages. (*) For election to a King’s Scholarship a candidate for 13+ entry must be under 14 years of age on 1 September of the year of entry and for 16+ entry must be under 17 years of age on the same date. (*) The fee for King’s Scholars is set at the day fee for the academic year. The value of a scholarship may be supplemented by a bursary up to a maximum of 100% if there is proven financial need.`,`In order to be considered for a King’s Scholarship, a pupil in Year 8 can take an examination at Westminster known as ‘The Challenge’. The Challenge is held annually in late April or early May to determine which pupils are elected as King’s Scholars for 13+ entry the following September. The Challenge consists of papers in Mathematics, English, French, Science, Latin, History, Geography, which all Challenge candidates sit, and an optional Greek paper for those who have studied it. For King’s Scholarships awarded to pupils entering the Sixth Form at 16+, selection is based on the overall performance in the Sixth Form Entrance Exam papers and interviews, which take place in the November before the year of entry.`,`Annually, the School awards up to eight Music Awards for 13+ entry. These are each worth 10% of the day fee, irrespective of day or boarding status. In addition, three music exhibitions may be awarded annually at 13+ entry and four for 16+ entry. Both types of awards include free tuition on up to two instruments, and they may be supplemented by additional means-tested bursaries to a maximum of the full fees.`],
+      percentageOfFees: [10, 100]
     },
     schoolImage: "/images/Westminster-School.jpg",
     documentId: 18502946,
     ranking: 2,
     Bursaries: {
       BursariesAvailable: true,
-      BursariesDetail: "Bursaries for families in need are available on request.",
-      percentageOfFees: "up to 100%"
+      BursariesDetail: [`The School has a programme of bursary support that provides approximately £2.0m each year to pupils at both the Under School and Great School. This allows pupils of exceptional talent and promise to benefit from a high-quality education regardless of their background or financial position.`,`Means-tested day bursaries of up to 100% of day fees are available for day pupils and are awarded to pupils according to individual need, at both 13+ and 16+ entry. All bursaries continue until a pupil leaves the School at 18, although they may be decreased or increased if financial circumstances change. We aim to act as sensitively as possible; very few members of staff and none of the other pupils will be aware that a boy or girl is receiving financial assistance. When a full bursary is awarded, it will cover the cost of uniform, equipment and compulsory school expeditions.`,`Boarding bursaries are not awarded, except when combined with King’s Scholarships`,`For 13+ entrance: 3+ bursaries would usually be awarded only to those who already hold bursaries at their prep schools. To apply for a bursary, please email the Bursar’s Department to request an initial financial assessment form. Once you have submitted the form, you will be contacted by the Bursar. To be eligible for a bursary, a child’s parent(s) must have lived in the UK continuously in the two years prior to application and must also live in London at the date of application. If a child, who has been awarded a bursary, subsequently wins a scholarship, the monetary value of the scholarship will be absorbed within the bursary.`,`for 16+ entrance: Candidates who wish to apply for a bursary should ask their parents to upload their passports and complete the Bursary Part A (Initial Assessment) and Part B (In-depth Assessment) Forms, which is available as part of the main registration process online. If a pupil who has been awarded a bursary also is awarded with a Music or King’s Scholarship, the monetary value of the scholarship will be absorbed within the bursary. Please note that bursaries are available for day pupils who live in London only and who meet the eligibility criteria. Bursaries are available where the parents and children fall into all of the following categories: (*) The child has the right to live and study in the UK on commencement of their studies at the School. (*) At least one of the parents and the child have lived in the UK for at least two continuous years at the time of applying for a bursary. (*) The parents live inside the M25 London orbital at the time of applying for a bursary and whilst their child is in receipt of bursary funding from School.`],
+      percentageOfFees: [0, 100],
+    },
+    feesScheme: {
+      feesSchemeAvailability: false,
+      feesSchemeDetails: null,
+    },
+    forceScheme: {
+      forceSchemeAvailable: false,
+      forcesSchemeDescription: null,
+      percentageOfFees: null,
+    },
+    siblingsDiscount: {
+      siblingsDiscountAvailable: false,
+      siblingsDiscountDetails: null,
+      percentageOfFees: null,
     },
     established: 1560,
     enquireUrl: "https://westminster.org.uk/admissions/scholarships-and-bursaries/"
