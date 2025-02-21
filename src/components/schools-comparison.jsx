@@ -1,113 +1,101 @@
-'use client'
-//import { useContext } from "react"
-import { useSchoolCompare } from "../schoolCompareContext";
-import { Button } from "@/components/ui/button";
-import { createClient } from "@supabase/supabase-js";
+"use client"
 import { Mail, Phone, MapPin } from "lucide-react"
-//import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button"
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
 
-export default function SchoolsToCompare() {
+const schools = [
+  {
+    schoolName: "Bedford School",
+    schoolDescription: [
+      "Bedford School is a prestigious independent boarding and day school for boys, located in Bedford, England. Founded in 1552, it has a long history of academic excellence, character development, and leadership preparation.",
+      "Beyond academics, Bedford School offers outstanding opportunities in sports, music, drama, and a wide range of extracurricular activities.",
+    ],
+    studentNumbers: 1070,
+    faithSchool: "Church of England",
+    schoolEmail: "admissions@bedfordschool.org.uk",
+    schoolPhoneNumber: "+44 (0)1234 362 216",
+    schoolLocation: "Bedford, Bedfordshire, East Midlands",
+    stages: ["primary", "secondary", "sixth form"],
+    schoolType: ["boarding", "day"],
+    coeducation: "boys",
+    totalSchoolFees: [18942, 29229],
+    established: 1552,
+    ranking: 10,
+    scholarships: {
+      available: true,
+      percentageOfFees: "???",
+    },
+    bursaries: {
+      available: true,
+      percentageOfFees: [0, 100],
+    },
+  },
+  {
+    schoolName: "Stowe School",
+    schoolDescription: [
+      "Stowe School is a prestigious independent co-educational boarding and day school located in Buckinghamshire, England. Founded in 1923, it is known for its academic ambition and stunning historic setting.",
+      "Beyond academics, Stowe offers exceptional opportunities in sports, music, drama, and a wide range of extracurricular activities.",
+    ],
+    studentNumbers: 905,
+    faithSchool: "Church of England",
+    schoolEmail: "enquiries@stowe.co.uk",
+    schoolPhoneNumber: "+44 (0)1280 818 000",
+    schoolLocation: "Stowe, Buckinghamshire, South-East",
+    stages: ["secondary", "sixth form"],
+    schoolType: ["boarding", "day"],
+    coeducation: "Co-Educational",
+    totalSchoolFees: [32448, 53238],
+    established: 1923,
+    ranking: 13,
+    scholarships: {
+      available: true,
+      percentageOfFees: 5,
+    },
+    bursaries: {
+      available: true,
+      percentageOfFees: "???",
+    },
+  },
+  {
+    schoolName: "Oundle School",
+    schoolDescription: [
+      "Oundle School is a prestigious independent co-educational boarding and day school located in Northamptonshire, England. Founded in 1556, it is known for its academic excellence and strong traditions.",
+      "Beyond academics, Oundle provides exceptional opportunities in sports, music, drama, and a wide range of extracurricular activities.",
+    ],
+    studentNumbers: 1120,
+    faithSchool: "Church of England",
+    schoolEmail: "admissions@oundleschool.org.uk",
+    schoolPhoneNumber: "+44 (0)1832 277 125",
+    schoolLocation: "Oundle, Northamptonshire, East Midlands",
+    stages: ["secondary", "sixth form"],
+    schoolType: ["boarding", "day"],
+    coeducation: "Co-Educational",
+    totalSchoolFees: [28692, 37710],
+    established: 1556,
+    ranking: 14,
+    scholarships: {
+      available: true,
+      percentageOfFees: 0,
+    },
+    bursaries: {
+      available: true,
+      percentageOfFees: [10, 100],
+    },
+  },
+]
 
-    const { schoolsToCompare, setSchoolsToCompare } = useSchoolCompare();
-    console.log("schoolsToCompare is:", schoolsToCompare);
-
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
-    const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-    
-    const supabase = createClient(supabaseUrl, supabaseAnonKey)
-
-    function clearSchoolsHandler() {
-      setSchoolsToCompare([]);
-
-    }
-
-    async function saveSchoolHandler(selectedSchool) {
-      const userData = localStorage.getItem('userTPSL');
-      if (userData) {
-        //add school to user's school array, with their uid.
-        const user = JSON.parse(userData); // Parse the stored user data
-        const userId = user.id;
-        console.log("userId in save school function is:", userId);
-        console.log("selected school to save is:", selectedSchool);
-  
-        if (!userId || !selectedSchool) {
-          console.error("User ID or selected school is missing.");
-          return;
-        }
-  
-        const { data: profile, error: fetchError } = await supabase
-        .from('profiles')
-        .select('schools')
-        .eq('id', userId)
-        .maybeSingle();
-  
-        console.log("Fetched profile data:", profile);
-  
-    if (fetchError) {
-      console.error("Error fetching schools:", fetchError);
-      return;
-    }
-  
-    
-    // 🟢 Step 2: Ensure 'schools' is an array (if NULL, make it an empty array)
-    const currentSchools = profile.schools ?? []; // Use nullish coalescing to avoid `null`
-  
-    console.log("Current schools before update:", currentSchools);
-  
-    const schoolAlreadySaved = currentSchools.some(school => school.documentId === selectedSchool.documentId)
-    console.log("schoolAlreadySaved is:", schoolAlreadySaved);
-    if (schoolAlreadySaved) {
-      alert("school already saved");
-      return 
-    }
-  
-    const updatedSchools = [...currentSchools, selectedSchool];
-  
-    console.log("Updated schools:", updatedSchools);
-  
-        
-        const { data, error } = await supabase
-        .from('profiles')
-        .update({
-          schools: updatedSchools })
-        .eq("id", userId)
-        .select()
-          
-      } else {
-        alert("You need to be a member to use this feature!")
-      }
-    }
-
-    function clearSchoolHandler(school) {
-      console.log("school inside of clearSchoolHandler is:", school);
-      setSchoolsToCompare(schoolsToCompare.filter(sch => sch.documentId !== school.documentId));
-
-    }
-
-    return (
-        <>
-        {/*
-        <p>nothing to show yet</p>
-        {schoolsToCompare.map((school, index) => (
-        <div key={index}>
-          <p>{school.schoolName}</p>
-          <p>{school.schoolLocation}</p>
-          <p>{school.totalSchoolFees}</p>
-          <Button onClick={(e) => saveSchoolHandler(school)}>Save School</Button>
-          
-        </div>
-      ))}*/}
-      <button onClick={clearSchoolsHandler}>clear schools</button>
-      <ScrollArea className="w-full whitespace-nowrap rounded-md border">
+export function SchoolsComparison() {
+  return (
+    (<ScrollArea className="w-full whitespace-nowrap rounded-md border">
       <div className="w-full">
         <table className="w-full">
           <thead>
             <tr>
-              <th className="sticky left-0 bg-background px-6 py-3 text-left text-sm font-medium text-muted-foreground">
+              <th
+                className="sticky left-0 bg-background px-6 py-3 text-left text-sm font-medium text-muted-foreground">
                 School Details
               </th>
-              {schoolsToCompare.map((school) => (
+              {schools.map((school) => (
                 <th key={school.schoolName} className="px-6 py-3 text-left">
                   <div className="space-y-1">
                     <div className="text-lg font-semibold">{school.schoolName}</div>
@@ -123,7 +111,7 @@ export default function SchoolsToCompare() {
           <tbody className="divide-y">
             <tr>
               <td className="sticky left-0 bg-background px-6 py-4 font-medium">Established</td>
-              {schoolsToCompare.map((school) => (
+              {schools.map((school) => (
                 <td key={school.schoolName} className="px-6 py-4">
                   {school.established}
                 </td>
@@ -131,7 +119,7 @@ export default function SchoolsToCompare() {
             </tr>
             <tr>
               <td className="sticky left-0 bg-background px-6 py-4 font-medium">Type</td>
-              {schoolsToCompare.map((school) => (
+              {schools.map((school) => (
                 <td key={school.schoolName} className="px-6 py-4">
                   {school.coeducation}
                 </td>
@@ -139,7 +127,7 @@ export default function SchoolsToCompare() {
             </tr>
             <tr>
               <td className="sticky left-0 bg-background px-6 py-4 font-medium">Stages</td>
-              {schoolsToCompare.map((school) => (
+              {schools.map((school) => (
                 <td key={school.schoolName} className="px-6 py-4">
                   {school.stages.join(", ")}
                 </td>
@@ -147,7 +135,7 @@ export default function SchoolsToCompare() {
             </tr>
             <tr>
               <td className="sticky left-0 bg-background px-6 py-4 font-medium">School Type</td>
-              {schoolsToCompare.map((school) => (
+              {schools.map((school) => (
                 <td key={school.schoolName} className="px-6 py-4">
                   {school.schoolType.join(", ")}
                 </td>
@@ -155,7 +143,7 @@ export default function SchoolsToCompare() {
             </tr>
             <tr>
               <td className="sticky left-0 bg-background px-6 py-4 font-medium">Students</td>
-              {schoolsToCompare.map((school) => (
+              {schools.map((school) => (
                 <td key={school.schoolName} className="px-6 py-4">
                   {school.studentNumbers}
                 </td>
@@ -163,7 +151,7 @@ export default function SchoolsToCompare() {
             </tr>
             <tr>
               <td className="sticky left-0 bg-background px-6 py-4 font-medium">Fees (per year)</td>
-              {schoolsToCompare.map((school) => (
+              {schools.map((school) => (
                 <td key={school.schoolName} className="px-6 py-4">
                   £{school.totalSchoolFees[0].toLocaleString()} - £{school.totalSchoolFees[1].toLocaleString()}
                 </td>
@@ -171,7 +159,7 @@ export default function SchoolsToCompare() {
             </tr>
             <tr>
               <td className="sticky left-0 bg-background px-6 py-4 font-medium">Scholarships</td>
-              {schoolsToCompare.map((school) => (
+              {schools.map((school) => (
                 <td key={school.schoolName} className="px-6 py-4">
                   {school.scholarships.available ? (
                     <span>
@@ -188,15 +176,15 @@ export default function SchoolsToCompare() {
             </tr>
             <tr>
               <td className="sticky left-0 bg-background px-6 py-4 font-medium">Bursaries</td>
-              {schoolsToCompare.map((school) => (
+              {schools.map((school) => (
                 <td key={school.schoolName} className="px-6 py-4">
-                  {school.Bursaries.BursariesAvailable ? (
+                  {school.bursaries.available ? (
                     <span>
                       Available
-                      {Array.isArray(school.Bursaries?.percentageOfFees) && (
+                      {Array.isArray(school.bursaries.percentageOfFees) && (
                         <span className="text-muted-foreground">
                           {" "}
-                          ({school.Bursaries?.percentageOfFees[0]}-{school.Bursaries?.percentageOfFees[1]}%)
+                          ({school.bursaries.percentageOfFees[0]}-{school.bursaries.percentageOfFees[1]}%)
                         </span>
                       )}
                     </span>
@@ -208,7 +196,7 @@ export default function SchoolsToCompare() {
             </tr>
             <tr>
               <td className="sticky left-0 bg-background px-6 py-4 font-medium">Description</td>
-              {schoolsToCompare.map((school) => (
+              {schools.map((school) => (
                 <td key={school.schoolName} className="px-6 py-4">
                   <div className="max-w-md space-y-2">
                     {school.schoolDescription.map((para, idx) => (
@@ -222,7 +210,7 @@ export default function SchoolsToCompare() {
             </tr>
             <tr>
               <td className="sticky left-0 bg-background px-6 py-4 font-medium">Contact</td>
-              {schoolsToCompare.map((school) => (
+              {schools.map((school) => (
                 <td key={school.schoolName} className="px-6 py-4">
                   <div className="flex gap-2">
                     <Button asChild variant="outline" size="sm">
@@ -241,18 +229,11 @@ export default function SchoolsToCompare() {
                 </td>
               ))}
             </tr>
-            <tr>
-              <td className="sticky left-0 bg-background px-6 py-4 font-medium">remove school</td>
-              {schoolsToCompare.map((school) => (
-                <button onClick={(e) => clearSchoolHandler(school)}>clear school</button>
-              ))}
-              
-            </tr>
           </tbody>
         </table>
       </div>
       <ScrollBar orientation="horizontal" />
-    </ScrollArea>
-        </>
-    )
+    </ScrollArea>)
+  );
 }
+

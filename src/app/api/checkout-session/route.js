@@ -44,6 +44,10 @@ export async function POST(req, res) {
       });
 
       console.log("sessionId about to be returned is:", session);
+
+
+      
+
     
       //res.redirect(303, session.url);
       return NextResponse.json({ session: session });

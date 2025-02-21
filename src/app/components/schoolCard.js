@@ -93,7 +93,7 @@ console.log('Clicked School documentId:', school.documentId);
       
       // Debugging the state before making changes
       console.log("Before update - schoolsToCompare:", schoolsToCompare);
-    
+    if (schoolsToCompare.length < 8) {  //this sets number of schools that can be compared to 8
       setSchoolsToCompare((prev) => {
         // Find the index of the school in the current state
         const schoolIndex = prev.findIndex(item => item.documentId === school.documentId);
@@ -128,6 +128,7 @@ console.log('Clicked School documentId:', school.documentId);
           //setIsChecked(true);
           return updatedSchools;
         }
+        
 
 
     
@@ -147,14 +148,16 @@ console.log('Clicked School documentId:', school.documentId);
       
       // Debugging the state after update (useEffect will log after this update)
       console.log("After update - schoolsToCompare:", schoolsToCompare);
-    })}
+    })}}
 
-    const user = {
+    /*const user = {
       subscribed: false
-    }
+    }*/
   
     const checkWhetherHaveAccess = (e) => {
       e.preventDefault(); // Stop default navigation
+
+      const user = JSON.parse(localStorage.getItem('userTPSLProfile'));
     
       console.log("Index:", index, "User:", user);
       const storedClicks = parseInt(localStorage.getItem(`clicks`) || "0", 10);
@@ -162,11 +165,22 @@ console.log('Clicked School documentId:', school.documentId);
       const newClicks = storedClicks + 1;
       console.log("newClicks on card click is:", newClicks);
       localStorage.setItem('clicks', newClicks);
-    
-      if (index > 25 && user.subscribed === false) {
+
+      //const user = JSON.parse(localStorage.getItem('userTPSLProfile'));
+      
+      //allow users who haven't signed up to see 1- schools, then paywall
+      if (storedClicks > 10 && !user) {
         console.log("✅ Redirecting to /subscribeToTPSL");
         //setSubscriptionModalBox(true); // - marked out whilst adding schools, alternative way
-        //router.push('/subscribeToTPSL'); //- just marked out whilst i try different method
+        router.push('/subscribeToTPSL'); //- just marked out whilst i try different method
+        return; // Stop further execution
+      }
+
+      //allow those who have signed up but nto subscribed to see more schools - 25, before paywall
+      if (storedClicks > 25 && user.subscribed === false) {
+        console.log("✅ Redirecting to /subscribeToTPSL");
+        //setSubscriptionModalBox(true); // - marked out whilst adding schools, alternative way
+        router.push('/subscribeToTPSL'); //- just marked out whilst i try different method
         return; // Stop further execution
       }
     

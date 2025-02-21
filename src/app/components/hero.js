@@ -20,7 +20,7 @@ export default function Hero() {
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="text-center">
             <h1 className="text-balance text-5xl font-semibold tracking-tight text-blue-400 sm:text-7xl">
-              Cambridge Uni student arts & hum societies
+              Make a public school education viable for your children
             </h1>
             <p className="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">
               All public & private school bursaries, scholarships, sibling discounts, fee payment discounts & more brought together for the first time

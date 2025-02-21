@@ -58,6 +58,11 @@ export default function Header() {
       }
     }
 
+    const userProfile = JSON.parse(localStorage.getItem('userTPSLProfile'));
+    //console.log("userProfile in header is:", userProfile);
+    const isSubscribed = userProfile?.subscribed;
+    console.log("is subscribed is:", isSubscribed);
+
 
   return (
     <header className="fixed top-0 left-0 w-full fixed relative isolate shadow-md z-10">
@@ -79,6 +84,8 @@ export default function Header() {
             >
               FAQ
             </Link>
+            {!isSubscribed && (
+              <>
             <button 
               onClick={handleSubscribeClick}  
               className={`px-3 py-2 rounded-md text-sm font-medium ${
@@ -89,6 +96,8 @@ export default function Header() {
             >
               Subscribe
             </button>
+            </>
+            )}
             <button 
               onClick={handleProfileClick} 
               className="p-2 rounded-full hover:bg-gray-200"
@@ -96,6 +105,7 @@ export default function Header() {
             >
               <User className="h-5 w-5 text-gray-700" />
             </button>
+           
           </div>
           
         </nav>

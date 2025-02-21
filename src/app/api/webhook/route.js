@@ -111,6 +111,7 @@ export async function POST(req) {
 
       console.log("data returned from supabse update of user in backend:", { data, error });
       
+      //probably need to also store sessinId in database, so can be rteievd for managing subscvription
      
 
 

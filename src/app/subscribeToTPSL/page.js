@@ -1,7 +1,14 @@
 "use client"
+import { createClient } from "@supabase/supabase-js"
 
 
 export default function SubscribeToTPSL() {
+
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+    const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+    
+    const supabase = createClient(supabaseUrl, supabaseAnonKey)
+    
 
 
 
@@ -43,6 +50,20 @@ export default function SubscribeToTPSL() {
           
           const session = await res.json();
           console.log("session returned to frontend is:", session);
+
+          //store sessionId in user's profile databvase, so can be rteueved for managing sub
+          const sessionId = session.session.id;
+
+           
+      const { data, error } = await supabase
+      .from('profiles')
+      .update({
+        sessionId: sessionId })
+      .eq("id", userId)
+      .select()
+
+      console.log("sessionId save function:", { data, error});
+
           const sessionUrl = session.session.url;
           console.log("sessionUrl you're abiout to be redirect to is:", sessionUrl);
           window.location.href = sessionUrl; // Redirect to Stripe Checkout
@@ -53,6 +74,9 @@ export default function SubscribeToTPSL() {
     return (
         <>
         <p>you need to subscribe to Thepublicschoollist for access</p>
+        <h2>no account - up to 10 schools</h2>
+        <h2>signed-up but not subscribed - up to 25 schools, save schools</h2>
+        <h2>sign-up and subscribed - unlimited access, and everything from previous tier</h2>
         <button disabled={checkWhetherSubscribedHandler()} onClick={subscribeButtonHandler} style={{
                     backgroundColor: checkWhetherSubscribedHandler() ? "#ccc" : "#007bff",
                     color: checkWhetherSubscribedHandler() ? "#666" : "#fff",

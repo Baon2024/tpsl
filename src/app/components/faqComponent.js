@@ -7,7 +7,7 @@ const faqData = [
   {
     question: "What is ThePublicSchoolList?",
     answer:
-      "Next.js is a React framework for building full-stack web applications. You use React Components to build user interfaces, and Next.js for additional features and optimizations.",
+      "ThePublicSchoolList is a directory of public schools (private schools) in the United Kingdom, providing information on the scholarships, bursaries and other forms of fee-support available, in order to provide parents with the knowledge needed to help their children access independent schooling.",
   },
   {
     question: "How does it work?",

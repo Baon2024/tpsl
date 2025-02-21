@@ -121,116 +121,190 @@ const schoolsSampleData = [
   },
   {
     schoolName: "Bedford School",
-    schoolLocation: "Bedford, East",
-    stages: ["secondary", "sixth form"],
+    schoolDescription: [`Bedford School is a prestigious independent boarding and day school for boys, located in Bedford, England. Founded in 1552, it has a long history of academic excellence, character development, and leadership preparation. The school provides a rigorous curriculum that fosters intellectual curiosity and critical thinking, preparing students for top universities in the UK and abroad, including Oxford and Cambridge.`, `Beyond academics, Bedford School offers outstanding opportunities in sports, music, drama, and a wide range of extracurricular activities, encouraging personal growth, teamwork, and resilience. With a strong emphasis on pastoral care and well-being, the school nurtures a supportive and inclusive community. Its blend of historic architecture and modern facilities provides an inspiring environment where students can thrive both academically and personally, equipping them with the skills and values needed for future success.`],
+    studentNumbers: 1070,
+    faithSchool: "Church of England",
+    schoolEmail:  'admissions@bedfordschool.org.uk',//
+    schoolPhoneNumber: '+44 (0)1234 362 216',//
+    latitude: 52.141703504440656,//52.141703504440656, -0.4661550144318919
+    longitude: -0.4661550144318919,//
+    schoolLocation: "Bedford, Bedfordshire, East Midlands",
+    stages: ["primary","secondary", "sixth form"],
     schoolType: ["boarding", "day"],
-    coeducation: "boys-only",
-    totalSchoolFees: 42000,
+    coeducation: "boys",
+    totalSchoolFees: [18942, 29229],
     scholarships: {
       scholarshipsAvailable: true,
-      scholarshipsDetail: "Music scholarships for talented musicians.",
-      percentageOfFees: 20,
+      scholarshipsDetail: [`Scholarships are awarded to boys who excel academically or show outstanding talent in Art, Computer Science, Drama, Music or Sport. Boys who show ability in two of these areas and/or other particular strengths may be considered for an all-round exhibition.`,`Scholarships are non-means-tested honours that are awarded to current boys and external candidates as they enter Year 9 (13+), and to external candidates only at Year 12 (16+). In exceptional circumstances, boys may be considered for a scholarship on entry to the school in Years 10 and 11, subject to the availability of funding.`],
+      percentageOfFees: "???",
     },
-    schoolImage: null,
+    schoolImage: "/images/bedfordSchool.jpg",
     documentId: 73918284,
     ranking: 10,
     Bursaries: {
       BursariesAvailable: true,
-      BursariesDetail: "Means-tested bursaries available for eligible families.",
-      percentageOfFees: 50,
+      BursariesDetail: [`We welcome bursary applications from parents who require financial assistance for their son to join us at our key entry points in Year 7 (11+), Year 9 (13+) and Year 12 (16+). Current parents are also welcome to submit a bursary application before their son moves into Year 7, Year 9 or Year 12, providing that they meet the criteria for a bursary award. We would ask, in the first instance, that parents contact the Director of Finance and Operations (DFO) by emailing dfo@bedfordschool.org.uk if their financial position has changed significantly.`,`All awards are subject to means-testing of family income and capital, but bursaries of up to 100% of school fees (day and boarding) are possible. In addition to assessing your family’s financial circumstances, we will also examine your son’s academic performance and consider any other areas of recognised talent. The awards will then be allocated based on performance across the criteria set by the school. Achievement and potential are both considered. Boys with exceptional talent may also be invited to apply for an art, drama, music, sport or golf scholarship and attend the relevant assessment day.`,`The amount of any bursary awarded will be reviewed by The Harpur Trust on an annual basis and may be adjusted, increased or reduced, if your financial circumstances alter. Bursary awards normally last for the duration of your son’s time at the school (subject to your assessable family income per annum remaining within eligible levels) and will continue across the transfer at 16+ provided that the academic entry criteria for the Sixth Form are met.`],
+      percentageOfFees: [0, 100],
+    },
+    feesScheme: {
+      feesSchemeAvailability: false,
+      feesSchemeDetails: null,
+    },
+    forceScheme: {
+      forceSchemeAvailable: false,
+      forcesSchemeDescription: null,
+      percentageOfFees: null,
+    },
+    siblingsDiscount: {
+      siblingsDiscountAvailable: false,
+      siblingsDiscountDetails: null,
+      percentageOfFees: null,
     },
     established: 1552,
     enquireUrl: "https://bedfordschool.org/admissions",
   },
-  // Repeat similar structure for remaining schools up to 16.
-  {
-    schoolName: "Brighton College",
-    schoolLocation: "Brighton, South-East",
-    stages: ["primary", "secondary", "sixth form"],
-    schoolType: ["boarding", "day"],
-    coeducation: "co-ed",
-    totalSchoolFees: 44520,
-    scholarships: {
-      scholarshipsAvailable: true,
-      scholarshipsDetail: "Scholarships for academics, music, and sports.",
-      percentageOfFees: 20,
-    },
-    schoolImage: null,
-    documentId: 85749372,
-    ranking: 12,
-    Bursaries: {
-      BursariesAvailable: true,
-      BursariesDetail: "Bursaries available based on financial assessment.",
-      percentageOfFees: 50,
-    },
-    established: 1845,
-    enquireUrl: "https://brightoncollege.org.uk/admissions",
-  },
   {
     schoolName: "Stowe School",
-    schoolLocation: "Buckinghamshire, South-East",
+    schoolDescription: [`Stowe School is a prestigious independent co-educational boarding and day school located in Buckinghamshire, England. Founded in 1923, it is known for its academic ambition, emphasis on personal development, and stunning historic setting within Stowe House and its vast landscaped gardens. The school provides a broad and challenging curriculum designed to inspire intellectual curiosity and prepare students for top universities worldwide.`,`Beyond academics, Stowe offers exceptional opportunities in sports, music, drama, and a wide range of extracurricular activities, encouraging leadership, creativity, and resilience. The school fosters a strong sense of community and individuality, ensuring that each student is supported in their personal and academic growth. With its distinctive ethos of nurturing character and excellence, Stowe School provides an inspiring and enriching education that equips students with the confidence, skills, and values needed for future success.`],
+    studentNumbers: 905,
+    faithSchool: "Church of England",
+    schoolEmail:  'enquiries@stowe.co.uk',//
+    schoolPhoneNumber: '+44 (0)1280 818 000',//
+    latitude: 52.031455183077206,//52.031455183077206, -1.0178803161745376
+    longitude: -1.0178803161745376,//
+    schoolLocation: "Stowe, Buckinghamshire, South-East",
     stages: ["secondary", "sixth form"],
     schoolType: ["boarding", "day"],
-    coeducation: "co-ed",
-    totalSchoolFees: 47440,
+    coeducation: "Co-Educational",
+    totalSchoolFees: [32448, 53238],//
     scholarships: {
       scholarshipsAvailable: true,
-      scholarshipsDetail: "N/A",
+      scholarshipsDetail: [`Stowe awards Scholarships each year in recognition of proven talent at Third Form and Sixth Form Entry. 
+
+We believe that Scholarships should not reward talent alone, but should also consider an individual’s potential and ability to maintain an eager, open-minded attitude to learning. It is important that Scholars should consistently achieve high standards during their time at Stowe. 
+
+Scholars will take the lead in many of the intellectual and extra-curricular activities of the whole School – and it is here, and in the Houses, that they learn how to use and mix their special gifts with those of others. It is vital that the Scholarship process should encourage and reward attitudes to learning that will above all set standards for others. 
+
+For all Scholarship applications a full report from the candidate’s school will be requested. 
+
+Third Form candidates may apply for more than one Scholarship; however, candidates cannot be awarded both an Academic Scholarship and a Roxburgh Scholarship.
+
+Sixth Form candidates are not permitted to sit Scholarships in more than two disciplines. 
+
+It should also be noted that all Scholarships are tenable throughout the holder’s career at Stowe, subject only to the Head’s satisfaction with the holder’s industry, performance and behaviour. All scholarships are awarded at the discretion of the Scholarships and Bursaries Committee. 
+
+A typical Scholarship at Stowe is worth 5% of the School Fee. `],
       percentageOfFees: 5,
     },
-    schoolImage: null,
+    schoolImage: "/images/stoweSchool.jpg",
     documentId: 91837465,
     ranking: 13,
     Bursaries: {
       BursariesAvailable: true,
-      BursariesDetail: "Bursaries for deserving students from underprivileged backgrounds.",
-      percentageOfFees: 50,
+      BursariesDetail: [` Means-tested bursaries are available, with a limited number of fully-funded places where there is proven financial need. Bursaries are only available to successful Scholarship candidates and are awarded to further supplement fees according to financial circumstances following an in-depth financial assessment ahead of the Entry Days. If your child is applying for a Scholarship and requires additional bursary support, please contact the Admissions Office to obtain a Financial Circumstances Form. `],
+      percentageOfFees: "???",
+    },
+    feesScheme: {
+      feesSchemeAvailability: false,
+      feesSchemeDetails: null,
+    },
+    forceScheme: {
+      forceSchemeAvailable: false,
+      forcesSchemeDescription: null,
+      percentageOfFees: null,
+    },
+    siblingsDiscount: {
+      siblingsDiscountAvailable: true,
+      siblingsDiscountDetails: [`Sibling discounts are awarded when three children or more from the same family are in The Stowe Group of Schools at the same time. Each child will be entitled to a 5% discount. This is maintained until the children leave`],
+      percentageOfFees: 5,
     },
     established: 1923,
     enquireUrl: "https://stowe.co.uk/admissions",
   },
   {
     schoolName: "Oundle School",
-    schoolLocation: "Oundle, East Midlands",
+    schoolDescription: [`Oundle School is a prestigious independent co-educational boarding and day school located in Northamptonshire, England. Founded in 1556, it is known for its academic excellence, strong traditions, and commitment to developing well-rounded, confident, and intellectually curious students. The school offers a rigorous and stimulating curriculum that prepares pupils for leading universities worldwide, particularly Oxford and Cambridge.`,`Beyond academics, Oundle provides exceptional opportunities in sports, music, drama, and a wide range of extracurricular activities, fostering leadership, teamwork, and resilience. The school is also recognized for its emphasis on STEM subjects and its state-of-the-art SciTec Centre. With a blend of historic architecture and modern facilities, Oundle offers a nurturing yet challenging environment that encourages students to excel both academically and personally, equipping them with the skills and values needed for lifelong success.`],
+    studentNumbers: 1120,
+    faithSchool: "Church of England",
+    schoolEmail:  'admissions@oundleschool.org.uk',
+    schoolPhoneNumber: '+44 (0)1832 277 125',
+    latitude: 52.48163713594271,//52.48163713594271, -0.4684974604389704
+    longitude: -0.4684974604389704,
+    schoolLocation: "Oundle, Northamptonshire, East Midlands",
     stages: ["secondary", "sixth form"],
     schoolType: ["boarding", "day"],
-    coeducation: "co-ed",
-    totalSchoolFees: 43710,
+    coeducation: "Co-Educational",
+    totalSchoolFees: [28692, 37710],//
     scholarships: {
       scholarshipsAvailable: true,
-      scholarshipsDetail: "Scholarships available in music, sports, and academics.",
-      percentageOfFees: 20,
+      scholarshipsDetail: [`We offer a range of Entrance Scholarships at 11+, 13+ and 16+. All scholarships are won in open competition and are awarded solely on merit. They are highly prized, recognising not just honed skills and talents but also endeavour and potential. We look to our Scholars, who should join Oundle with great pride in their status, to provide intellectual and cultural leadership to their peers and in return, we offer dedicated programmes of opportunity and support to help them make the most of their talents.`,`No fee remission is attached to a Scholarship as we believe its integrity lies in its honorary capacity. All scholarships can, however, be underpinned by bursary assistance if the financial circumstances of an individual family necessitate it. All awards are conditional upon success in the entrance examinations and the tenure of any award depends upon continued satisfactory progress once in School.`,`11+: We offer Music Scholarships at this stage, as well as Entrance Exhibitions in recognition of outstanding academic achievement and effort in the entrance papers. Children, especially at 11+, develop at different stages and once at Oundle, may go on to develop an enhanced level of confidence and skill relative to their year-group. We therefore offer further Scholarship opportunities from 13+ upwards across a wide range of disciplines, including Academic. Each Scholarship Award comes with a tailored pathway to support continued development in that discipline.`,`13+: Our 13+ Scholarships reward distinctive ability or special talent in Academic, Art, Drama, Design Engineering and Technology (DET), Music and Sport. We also offer an Oundle Scholarship to reward talented candidates who have a genuine interest and ability in two or more of our Scholarship disciplines. For those pupils applying to Oundle through the Common Entrance (CE) route, we encourage you to liaise with your child’s current school as formal applications are made via the Head of our Feeder Schools. We are, of course, always happy to advise and give information where appropriate.`,`16+: At 16+, we offer Entrance Scholarships in Academic, Art, Design Engineering Technology (DET), Music and Sport. All short listed candidates will be asked to indicate whether they wish to apply for a 16+ Scholarship when they are contacted in the September prior to the entry exams in November of Year 11.`],
+      percentageOfFees: "no fee remission",
     },
     schoolImage: "/images/Oundle-School.jpg",
     documentId: 11293847,
     ranking: 14,
     Bursaries: {
       BursariesAvailable: true,
-      BursariesDetail: "Means-tested bursaries for eligible families.",
+      BursariesDetail: [`We are proud that over one hundred pupils at Oundle are supported with bursaries and we are continually working to increase our Bursary Endowment Fund.`,`We are committed to offering a broad range of means-tested financial support, both for new pupils and for those families who find themselves in difficult financial circumstances part way through their child’s education, often through no fault of their own. We also have a Bursary Scheme which seeks to provide opportunities for children from disadvantaged backgrounds who are identified as being particularly likely to benefit from a boarding education.`,`Bursaries vary in size according to circumstance; it may be that a ten percent remission makes all the difference to a family, whilst others may require 100 percent or more to ensure a pupil does not miss out on the broad range of co-curricular opportunities Oundle offers.`,`Average fee remission: 70%`],
       percentageOfFees: [10, 100],
+    },
+    feesScheme: {
+      feesSchemeAvailability: true,
+      feesSchemeDetails: [`We offer a Fees in Advance (FIA) Scheme, which provides the opportunity to pay a discounted lump sum in return for a guaranteed credit to a pupil’s fee account over a pre-defined period. It is possible to pay all your child’s School fees in advance as a single lump sum. The fee can be paid by anyone, including grandparents, as it is not limited to the child’s parents. For further information or to discuss a quotation, please contact our Finance team on billing@oundleschool.org.uk.`],
+    },
+    forceScheme: {
+      forceSchemeAvailable: false,
+      forcesSchemeDescription: null,
+      percentageOfFees: null,
+    },
+    siblingsDiscount: {
+      siblingsDiscountAvailable: false,
+      siblingsDiscountDetails: null,
+      percentageOfFees: null,
     },
     established: 1556,
     enquireUrl: "https://oundleschool.org.uk/admissions",
   },
   {
     schoolName: "Wellington College",
-    schoolLocation: "Crowthorne, South-East",
+    schoolDescription: [`Wellington College is a prestigious independent day and boarding school located in Berkshire, England. Founded in 1859 in memory of the Duke of Wellington, the school is renowned for its academic excellence, forward-thinking approach to education, and strong emphasis on leadership and character development. It consistently ranks among the top schools in the UK, offering a rigorous and dynamic curriculum that prepares students for leading universities worldwide. Beyond academics, Wellington College provides exceptional opportunities in sports, music, drama, and a wide range of extracurricular activities, fostering creativity, resilience, and teamwork. The school is known for its progressive outlook, combining tradition with innovation to create a well-rounded and modern education. Set within a stunning 400-acre campus with state-of-the-art facilities, Wellington College offers an inspiring and supportive environment, equipping students with the skills, confidence, and values needed to succeed in life.`],
+    studentNumbers: 1140,
+    faithSchool: "Church of England",
+    schoolEmail:  'info@wellingtoncollege.org.uk',
+    schoolPhoneNumber: '+44 (0)1344 444 013',
+    latitude: 53.39366171416993,//53.39366171416993, -2.3353384719169354
+    longitude: -2.3353384719169354,
+    schoolLocation: "Crowthorne, Berkshire, South-East",
     stages: ["secondary", "sixth form"],
     schoolType: ["boarding", "day"],
-    coeducation: "co-ed",
-    totalSchoolFees: 45780,
+    coeducation: "co-educational",
+    totalSchoolFees: [43830, 59940],
     scholarships: {
       scholarshipsAvailable: true,
-      scholarshipsDetail: "Scholarships for excellence in academics, music, and sports.",
-      percentageOfFees: 30,
+      scholarshipsDetail: [`At 13+ a small number of Academic Scholarships are offered before entry to the College via an examination and interview process that takes place during Year 8. The majority of the scholarships including the College’s seven highest academic accolades – our named Scholarships – are awarded at the end of the Third Form (Year 9). All students are considered for Academic Scholarships on the basis of the selection criteria below, there is no need to apply. All academic scholarships carry prestige and entitle pupils to join the Academic Scholarship Programme but are not attached to fee remission. From the start of Fourth Form (Year 10) we have approximately 24 Academic Scholars involved in the Academic Scholarship Programme. `],
+      percentageOfFees: "no fee remission",
     },
-    schoolImage: null,
+    schoolImage: "/images/wellingtonCollege.jpg",//fix this 
     documentId: 95837402,
     ranking: 16,
     Bursaries: {
       BursariesAvailable: true,
-      BursariesDetail: "Means-tested bursaries available for eligible students.",
-      percentageOfFees: 50,
+      BursariesDetail: [`For children with exceptional talents whose families would not be able to afford the full Wellington fees, we offer awards ranging from 10% to 100% of fees. Eligibility for an award is generally assessed – via means testing – at the time of an offer being made so that a family can accept the offer knowing that the required level of fee assistance is available.`,`An average year might see 20 pupils be admitted with an average award of c. 50% remission. Any family wishing to make an application for fee assistance will be invited to apply as part of the broader admissions process. A link to the online confidential ‘statement of financial position’ form will be sent after the registration deadline to families requesting fee assistance.`,`The Prince Albert Foundation is a scholarship programme aimed at widening participation to families who would not normally consider or be able to access independent education, and for whom we can offer a genuine shift in opportunity. Currently there are 10-15 fully funded Prince Albert Scholarships awarded each year, predominantly at 16+. Children who are eligible for Prince Albert Scholarships are those whose families are at socio-economic disadvantage; all families are means assessed by the College’s Chief Operating Officer. There is often a further relevant need/desire for boarding.`,`Candidates must meet our minimum academic criteria for entrance; we  assess potential as well as current achievement, and actively encourage applicants who will maximise opportunities at the College – including academic, sporting, music and student leadership. The Prince Albert Foundation is not a programme designed to recruit pupils with a significant sporting talent.`],
+      percentageOfFees: [0, 100],
+    },
+    feesScheme: {
+      feesSchemeAvailability: false,
+      feesSchemeDetails: null,
+    },
+    forceScheme: {
+      forceSchemeAvailable: false,
+      forcesSchemeDescription: null,
+      percentageOfFees: null,
+    },
+    siblingsDiscount: {
+      siblingsDiscountAvailable: false,
+      siblingsDiscountDetails: null,
+      percentageOfFees: null,
     },
     established: 1859,
     enquireUrl: "https://wellingtoncollege.org.uk/admissions",
@@ -240,21 +314,21 @@ const schoolsSampleData = [
     schoolDescription: [`Fyling Hall is a small, independent day and boarding school located in North Yorkshire, England. Founded in 1923, it is known for its strong sense of community, personalized approach to education, and commitment to academic excellence. The school provides a nurturing environment where students are encouraged to develop curiosity, resilience, and independence, preparing them for higher education and future careers. Beyond academics, Fyling Hall offers a broad range of extracurricular opportunities, including sports, music, drama, and outdoor activities, taking full advantage of its stunning coastal and countryside setting. With a focus on character development, leadership, and personal growth, the school fosters a supportive and inclusive atmosphere where students thrive both academically and socially. Fyling Hall’s unique setting and ethos create a well-rounded educational experience that equips pupils with the skills and confidence needed for lifelong success.`],
     studentNumbers: 165,
     faithSchool: "Interdenominational",
-    schoolEmail: "Fyling-----@---.co.uk",
-    schoolPhoneNumber: '02728 272 826',
-    latitude: null,
-    longitude: null,
-    schoolLocation: "Fylingdales, Scarborough, North Yorkshire",
+    schoolEmail:  'office@fylinghall.org',
+    schoolPhoneNumber: '+44 (0) 1947 880 353',
+    latitude: 54.42569965423745,//54.42569965423745, -0.557511016034008
+    longitude: -0.557511016034008,
+    schoolLocation: "Fylingdales, North Yorkshire, Yorkshire & Humber",
     stages: [
       "reception", "primary", "secondary", "sixth form"
     ],
     schoolType: [ "boarding", "day" ],
-    coeducation: "mixed-sex",
+    coeducation: "co-educational",
     totalSchoolFees: [8733, 14508], //present this as 'from £54,084', with daily fees as default (cheapest)
     scholarships: {
       scholarshipsAvailable: true,
       scholarshipsDetail: [`These can be awarded where a pupil demonstrates an outstanding ability in one of the following areas: academia, sport, music, drama. A scholarship can also be awarded to a pupil deemed to be an ‘all-rounder’. Scholarships will usually not amount to more than 10% of the fees due.`], //A sibling discount of 10% applies to the younger child.
-      percentageOfFees: [10, 100] //use this to calculate potential worth of savings, cost of fees overall
+      percentageOfFees: [0, 10] //use this to calculate potential worth of savings, cost of fees overall
     },
     schoolImage: "/images/Fyling-Hall-main.jpg",
     documentId: 18502939,

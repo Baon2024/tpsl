@@ -1,4 +1,5 @@
-import FAQ from "@/components/FAQ"
+//import FAQ from "@/components/FAQ"
+import FAQ from "../components/faqComponent"
 
 export default function FAQPage() {
   return (
