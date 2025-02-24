@@ -1,7 +1,7 @@
 'use client'
 //import { useContext } from "react"
 import { useSchoolCompare } from "../schoolCompareContext";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { createClient } from "@supabase/supabase-js";
 //import { Mail, Phone, MapPin } from "lucide-react"
@@ -96,6 +96,39 @@ export default function SchoolsToCompare() {
       setSchoolsToCompare(schoolsToCompare.filter(sch => sch.documentId !== school.documentId));
 
     }
+
+    useEffect(() => {
+
+      const userData = localStorage.getItem('userTPSL');
+      
+        //add school to user's school array, with their uid.
+        const user = JSON.parse(userData); // Parse the stored user data
+        const userId = user.id;
+        console.log("userId in save school function is:", userId);
+        //console.log("selected school to save is:", selectedSchool);
+  
+       
+      
+    
+      async function getSchools() {
+      const { data: profile, error: fetchError } = await supabase
+      .from('profiles')
+      .select('schools')
+      .eq('id', userId)
+      .maybeSingle();
+
+
+      console.log("schools from profile are:", profile);
+      setLocalSavedSchools(profile.schools);
+      }
+
+      getSchools()
+
+    },[])
+
+    useEffect(() => {
+      console.log("localSavedSchool is:", localSavedSchools)
+    },[localSavedSchools, setLocalSavedSchools])
 
     return (
         <>
@@ -236,8 +269,8 @@ export default function SchoolsToCompare() {
                         onClick={() => saveSchoolHandler(school)}
                         className="flex items-center gap-2"
                       >
-                         {localSavedSchools.includes(school.documentId) ? <BookmarkCheck className="h-4 w-4" /> : <Bookmark className="h-4 w-4" />}
-                         {localSavedSchools.includes(school.documentId) ? "Saved" : "Save School"}
+                         {localSavedSchools.some(savedSchool => savedSchool.documentId === school.documentId) ? <BookmarkCheck className="h-4 w-4" /> : <Bookmark className="h-4 w-4" />}
+                         {localSavedSchools.some( savedSchool => savedSchool.documentId === school.documentId) ? "Saved" : "Save School"}
                       </Button>
                       <Button
                         variant="destructive"
