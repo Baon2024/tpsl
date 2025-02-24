@@ -26,7 +26,7 @@ const supabase = createClient(supabaseUrl, supabaseAnonKey)
 
   async function loginSocietyHandler(e) {
     e.preventDefault()
-    const dataToSend = { identifier: email, password }
+    const dataToSend = { email: email, password: password }
     const user = await loginUser(dataToSend)
     handleAuthResponse(user)
   }
@@ -71,6 +71,8 @@ console.log("Supabase session:", session);
   }
 
   const loginUser = async (dataToSend) => {
+
+    console.log("dataToSend in login function is:", dataToSend);
     try {
         const { data, error } = await supabase.auth.signInWithPassword({
             email: dataToSend.email,
@@ -80,6 +82,7 @@ console.log("Supabase session:", session);
         return data
     } catch (error) {
         console.error("Login Error:", error.message)
+        alert(`Login error: ${error.message} `)
         return null
     }
 }
@@ -94,6 +97,7 @@ const signUpUser = async (dataToSend) => {
         return data
     } catch (error) {
         console.error("Registration Error:", error.message)
+        alert(`Registration error: ${error.message} `)
         return null
     }
 }

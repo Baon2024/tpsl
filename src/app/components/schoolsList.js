@@ -6,115 +6,220 @@ const schoolsSampleData = [
   
   {
     schoolName: "Winchester College",
-    schoolLocation: "Winchester, South-East",
+    schoolDescription: [`Winchester College is one of the oldest and most prestigious independent schools in England, founded in 1382 by William of Wykeham. Located in Winchester, Hampshire, the school has a long-standing reputation for academic excellence, with a rigorous curriculum that fosters deep intellectual curiosity and independent thinking. Many students go on to study at top universities, including Oxford and Cambridge.`,`Traditionally a boys' boarding school, Winchester College now welcomes girls into the sixth form. The school offers a rich extracurricular program, excelling in sports, music, drama, and leadership activities. Its distinctive tutorial-style teaching, known as "Div," encourages students to explore subjects beyond exam syllabuses. With a historic campus, modern facilities, and a strong emphasis on character development and service, Winchester College provides a unique and inspiring environment that prepares students for future success.`],
+    studentNumbers: 726,
+    faithSchool: "Church of England",
+    schoolEmail: 'information@wincoll.ac.uk',//
+    schoolPhoneNumber: '+44 (0)1962 621 100',//
+    latitude: 51.05854282570295,//51.05854282570295, -1.3126016585590796
+    longitude: -1.3126016585590796,//
+    schoolLocation: "Winchester, Hampshire, South-East",
     stages: ["secondary", "sixth form"],
-    schoolType: ["boarding"],
-    coeducation: "boys-only",
-    totalSchoolFees: 45900,
+    schoolType: ["day","boarding"],
+    coeducation: "boys (some girls)",
+    totalSchoolFees: [44400, 60000],
     scholarships: {
       scholarshipsAvailable: true,
-      scholarshipsDetail: "Academic scholarships offered for top-performing candidates.",
-      percentageOfFees: 30,
+      scholarshipsDetail: [`Music and Sports Scholarships and the Warden's Sixth Form Awards are available to any candidate who shows exceptional talent or ability in their chosen field. The short films below give a snapshot of what is involved in being a Music or Sports Scholar at the College.`,`Sport and Music Award applications for 13+ entry are made in Year 8, with deadlines for applications in October and November respectively.`,`Sport and Music Award applications for 16+ entry are made at the same time as applications to the school.`,`Unlike Bursaries, Music and Sports Scholarships do not automatically carry a remission on school fees`],
+      percentageOfFees: "no fee remission",
     },
     schoolImage: "/images/Winchester-College.jpeg",
     documentId: 57483920,
     ranking: 3,
     Bursaries: {
       BursariesAvailable: true,
-      BursariesDetail: "Financial assistance available based on means-testing.",
-      percentageOfFees: 50,
+      BursariesDetail: [`William of Wykeham established Winchester College to provide an education for those with the intellectual spark and curiosity to take advantage of everything the school had to offer, and the drive and determination to give something back - regardless of their financial position. That is what we continue to look for in our applicants.`,`Winchester has one of the most generous bursary programmes in the country with over 140 pupils receiving financial support – 20% of the pupil body. We remain committed to tackling inequality of access and each year welcome pupils from a diversity of cultural, and socio-economic backgrounds.`,`Thanks to the generosity of donors there are three additional means-tested bursaries that are available to help with the school fees.`,`Bursaries: (*) Golf Bursary - Available to academically able and talented golfers, whose parents need financial assistance to meet the fee, (*) Keniston-Cooper Maths Bursary - Available to Sixth Form students from UK state school who intend to study Further Maths at A-Level, (*) Northern Ireland Bursary - Available to students from Northern Ireland, (*) The Wykeham Award - The Wykeham Award is a means-tested bursary for pupils who join the school in the Sixth Form and who are currently studying at a UK state secondary school.`,`Average Bursary reward is 72%`],
+      percentageOfFees: [0, 100],
+    },
+    feesScheme: {
+      feesSchemeAvailability: true,
+      feesSchemeDetails: [`Once an offer letter has been received, confirming your child's place at the school, a lump sum may be paid in advance of your child’s entry, covering up to five years of fees for the school, and providing a discount on the full fees. Contact the Finance Team for more information.`],
+    },
+    forceScheme: {
+      forceSchemeAvailable: false,
+      forcesSchemeDescription: null,
+      percentageOfFees: null,
+    },
+    siblingsDiscount: {
+      siblingsDiscountAvailable: false,
+      siblingsDiscountDetails: null,
+      percentageOfFees: null,
     },
     established: 1382,
     enquireUrl: "https://winchestercollege.org/admissions",
   },
   {
     schoolName: "Charterhouse",
-    schoolLocation: "Godalming, South-East",
+    schoolDescription: [`Charterhouse is a prestigious independent co-educational boarding and day school located in Godalming, Surrey. Founded in 1611, it has a long tradition of academic excellence, with students consistently achieving outstanding results and progressing to top universities, including Oxford, Cambridge, and leading global institutions. The school fosters intellectual curiosity, critical thinking, and a passion for lifelong learning.`, `Beyond academics, Charterhouse offers exceptional opportunities in sports, music, drama, and a diverse range of extracurricular activities, encouraging leadership, creativity, and personal development. The school’s historic architecture blends seamlessly with state-of-the-art facilities, providing an inspiring learning environment. With a strong emphasis on character building, pastoral care, and a close-knit community, Charterhouse nurtures well-rounded, confident individuals, preparing them for success in higher education and beyond.`],
+    studentNumbers: 950,
+    faithSchool: "Christian",
+    schoolEmail: 'reception@charterhouse.org.uk',
+    schoolPhoneNumber: '+44 (0)1483 291 500',
+    latitude: 51.196772582390864,//51.196772582390864, -0.6219583738937733
+    longitude: -0.6219583738937733,//
+    schoolLocation: "Godalming, Surrey, South-East",
     stages: ["secondary", "sixth form"],
     schoolType: ["boarding"],
-    coeducation: "co-ed",
-    totalSchoolFees: 43410,
+    coeducation: "Co-Educational",
+    totalSchoolFees: [45018, 56418],
     scholarships: {
-      scholarshipsAvailable: false,
-      scholarshipsDetail: "N/A",
-      percentageOfFees: "N/A",
+      scholarshipsAvailable: true,
+      scholarshipsDetail: [`Scholarship awards recognise and reward pupils who demonstrate excellence and outstanding potential in their chosen field. Scholarships are offered at 13+ and 16+ entry.`,`13+ Scholarships: Art & Textiles, Drama, Dance, Performing Arts, Design Engineering, Music and Sport`,`16+ Scholarships: Academic, Music, Drama, Art & Design and Sport`],
+      percentageOfFees: "no fee remission",
     },
     schoolImage: "/images/Charterhouse.jpg",
     documentId: 64820394,
     ranking: 4,
     Bursaries: {
       BursariesAvailable: true,
-      BursariesDetail: "Bursaries available for students from underprivileged backgrounds.",
-      percentageOfFees: 50,
+      BursariesDetail: [`Charterhouse is able to offer a number of bursaries each year for pupils entering either Year 9 or Year 12, with preference given to those who gain a Scholarship or an Award (not including Exhibitions), who would benefit from a Charterhouse education, but whose parents are unable to afford the fees.`,`All bursaries are means-tested and are subject to funds being available. The award is reviewed annually for changes in parents’ financial circumstances and may be adjusted as a result. Awards may cover up to 100% of the school fee. Eligibility for financial assistance is based on both parents’ income and assets using a standard formula widely used within the independent sector, and may include a home visit by Bursary Administration Ltd (BAL), the School’s agent.`],
+      percentageOfFees: [0, 100],
+    },
+    feesScheme: {
+      feesSchemeAvailability: false,
+      feesSchemeDetails: null,
+    },
+    forceScheme: {
+      forceSchemeAvailable: false,
+      forcesSchemeDescription: null,
+      percentageOfFees: null,
+    },
+    siblingsDiscount: {
+      siblingsDiscountAvailable: false,
+      siblingsDiscountDetails: null,
+      percentageOfFees: null,
     },
     established: 1611,
     enquireUrl: "https://charterhouse.org.uk/admissions",
   },
   {
     schoolName: "Rugby School",
-    schoolLocation: "Rugby, Midlands",
+    schoolDescription: [`Rugby School is a prestigious independent co-educational boarding and day school in Warwickshire, England. Founded in 1567, it is one of the oldest and most historic schools in the UK, best known as the birthplace of rugby football. The school has a strong academic reputation, with students consistently achieving excellent results and progressing to top universities, including Oxford and Cambridge.`,`Rugby School places great emphasis on holistic education, fostering intellectual curiosity, leadership, and personal development. Beyond academics, it offers outstanding opportunities in sports, music, drama, and a wide range of extracurricular activities. The school's distinctive "Whole Person" philosophy ensures that students develop resilience, creativity, and social responsibility. With a rich heritage, modern facilities, and a strong sense of community, Rugby School provides an inspiring and supportive environment, preparing students for success in their future careers and lives.`],
+    studentNumbers: 865,
+    faithSchool: "Church of England",
+    schoolEmail: 'visits@rugbyschool.net',
+    schoolPhoneNumber: '+44 (0) 1788 556 216',
+    latitude: 52.37047983657904,//52.37047983657904, -1.2615547739388124
+    longitude: -1.2615547739388124,//
+    schoolLocation: "Rugby, Warwickshire, Midlands",
     stages: ["secondary", "sixth form"],
     schoolType: ["boarding", "day"],
-    coeducation: "co-ed",
-    totalSchoolFees: 44520,
+    coeducation: "Co-Educational",
+    totalSchoolFees: [34914, 55056],
     scholarships: {
       scholarshipsAvailable: true,
-      scholarshipsDetail: "Sports scholarships available for talented athletes.",
-      percentageOfFees: 20,
+      scholarshipsDetail: [`Rugby School offers a range of Scholarship Awards which allow awardees to access extraordinary opportunities, enrichment and support through Scholars’ Programmes.`,`Scholarships available at 13+ and 16+: Academic, Art, Computing, Design and Technology, Performing Arts, Music and Sport `],
+      percentageOfFees: "no fee remission",
     },
     schoolImage: "/images/Rugby.jpeg",
     documentId: 74839283,
     ranking: 5,
     Bursaries: {
       BursariesAvailable: true,
-      BursariesDetail: "Means-tested bursaries for students with financial needs.",
-      percentageOfFees: "???",
+      BursariesDetail: [`If candidates are successful in being awarded a scholarship, fee assistance can be obtained up to the value of 100%, by completing a means-tested bursary application. Exceptional awards are also available at the Head Master’s discretion, where we identify exceptional potentia;.`,`Arnold Foundation Award: he Arnold Foundation enables Rugby School to offer fully funded places to talented and deserving young people with the most to gain from Rugby School and Bilton Grange, and whose families could not otherwise consider a boarding school education. When launched in 2003, it was a revolutionary programme. Today, it is a source of immense pride and an intrinsic part of the Rugby School ethos. More than 185 young people have already benefited from the Rugby experience as a result of the School’s support from the Arnold Foundation, amplifying the School’s positive impact and enriching the lives of all our community. With your support, it will provide opportunities for many more in years to come.`,`Foundation Awards are made to widen access to a Rugby School education for local children. Children who are likely to thrive at Rugby School both in our academic and our co-curricular life, who live within 20 miles of Rugby School and are applying for entry as a Day student and whose parents are assessed as being eligible for means-tested bursary support towards fees may be considered for Foundation Awards.`],
+      percentageOfFees: [0, 100],
+    },
+    feesScheme: {
+      feesSchemeAvailability: false,
+      feesSchemeDetails: null,
+    },
+    forceScheme: {
+      forceSchemeAvailable: false,
+      forcesSchemeDescription: null,
+      percentageOfFees: null,
+    },
+    siblingsDiscount: {
+      siblingsDiscountAvailable: true,
+      siblingsDiscountDetails: [`5% discount on net termly fees for a third child at Rugby or Bilton Grange. 7.5% discount on net fees for fourth (and subsequent) child at Rugby or Bilton Grange.`],
+      percentageOfFees: [5, 7.5],
     },
     established: 1567,
     enquireUrl: "https://rugbyschool.net/admissions",
   },
   {
     schoolName: "Cheltenham College",
-    schoolLocation: "Cheltenham, South-West",
+    schoolDescription: [`Cheltenham College is a distinguished independent co-educational boarding and day school in Gloucestershire, England. Founded in 1841, the school is known for its strong academic reputation, with students regularly achieving excellent results and progressing to top universities, including Oxford and Cambridge. The curriculum is designed to foster intellectual curiosity, critical thinking, and a lifelong love of learning.`,`Beyond academics, Cheltenham College offers a vibrant extracurricular program, excelling in sports, music, drama, and leadership opportunities. The school has a strong military tradition and is home to one of the oldest Combined Cadet Forces in the country. With a supportive pastoral system and a close-knit community, Cheltenham College provides an enriching and inspiring environment that nurtures well-rounded, confident, and resilient individuals, preparing them for success in both their professional and personal lives.`],
+    studentNumbers: 740,
+    faithSchool: "Church of England",
+    schoolEmail: 'info@cheltenhamcollege.org',//
+    schoolPhoneNumber: '+44 01242 265 600/+44 01242 265 639',//
+    latitude: 51.89197668881975,//51.89197668881975, -2.0763886451320688
+    longitude: -2.0763886451320688,//
+    schoolLocation: "Cheltenham, Gloucestershire, South-West",
     stages: ["secondary", "sixth form"],
     schoolType: ["boarding", "day"],
-    coeducation: "co-ed",
-    totalSchoolFees: 41000,
+    coeducation: "Co-Educational",
+    totalSchoolFees: [12312, 42963], 
     scholarships: {
       scholarshipsAvailable: true,
-      scholarshipsDetail: "One of the main vehicles for such encouragement is the offer of College Awards in the form of Scholarships and Exhibitions, awarded at Third Form (Year 9) entry and Sixth Form (Year 12) entry. Scholarships are awarded for outstanding performance and ability in a chosen field and Exhibitions for excellent talent and potential. Scholars are presented with a cerise tie and Exhibitioners are presented with a black and cerise tie, so they are visible throughout College. All awards are entirely merit-based and are based on an exam, audition or other appropriate assessment. Pupils can apply for more than one award if they wish. ",
+      scholarshipsDetail: [`One of the main vehicles for such encouragement is the offer of College Awards in the form of Scholarships and Exhibitions, awarded at Third Form (Year 9) entry and Sixth Form (Year 12) entry. Scholarships are awarded for outstanding performance and ability in a chosen field and Exhibitions for excellent talent and potential. Scholars are presented with a cerise tie and Exhibitioners are presented with a black and cerise tie, so they are visible throughout College. All awards are entirely merit-based and are based on an exam, audition or other appropriate assessment. Pupils can apply for more than one award if they wish.`,`Types are: Sport, Art, Music/Vocal/Organist, Drama and Academic`],
       percentageOfFees: "???",
     },
-    schoolImage: null,
+    schoolImage: "/images/cheltenhamCollege.jpg",
     documentId: 10293847,
     ranking: 8,
     Bursaries: {
-      BursariesAvailable: false,
-      BursariesDetail: null,
+      BursariesAvailable: true,
+      BursariesDetail: [`Cheltenham College is committed to widening access to independent education. To support this commitment, we offer bursaries. Bursaries are potentially available from Year 6 onwards and are not limited to pupils who show exceptional talent – any child who meets our baseline entrance requirements can apply.`,`Our bursaries are means-tested and so dependant on financial circumstances.  A bursary can be applied for alongside a scholarship (or scholarships) if you wish. Bursary applications for the September entry need to be received into College by 31 January of the same year. Applications received after this date will not be considered.`],
+      percentageOfFees: null,
+    },
+    feesScheme: {
+      feesSchemeAvailability: false,
+      feesSchemeDetails: null,
+    },
+    forceScheme: {
+      forceSchemeAvailable: true,
+      forcesSchemeDescription: [`Cheltenham College supports the Continuity of Education Allowance (CEA) from the Military of Defence. From January 2025, Cheltenham College will be offering the Military discounts for Military families who have children boarding at Cheltenham College and are in receipt of CEA . These discounts can be combined with a means-tested bursary.`,`Cheltenham College also offers a 15% discount to day and boarding families serving within the Foreign Commonwealth and Development Office who are in receipt of the FCDO support.`],
+      percentageOfFees: [15, 30],
+    },
+    siblingsDiscount: {
+      siblingsDiscountAvailable: false,
+      siblingsDiscountDetails: null,
       percentageOfFees: null,
     },
     established: 1841,
     enquireUrl: "https://cheltenhamcollege.org/admissions",
   },
   {
-    schoolName: "King's College School",
-    schoolLocation: "Wimbledon, London",
+    schoolName: "King's College School Wimbledon",
+    schoolDescription: [`King’s College School, Wimbledon, is a prestigious independent day school for boys aged 7-18 and girls in the sixth form, located in southwest London. Founded in 1829 as the junior department of King’s College London, the school is renowned for its academic excellence, consistently ranking among the top schools in the UK, with many students progressing to Oxford, Cambridge, and other leading universities worldwide.`,`Beyond academics, King’s Wimbledon offers exceptional opportunities in sports, music, drama, and a vast array of extracurricular activities, fostering creativity, leadership, and personal growth. The school places a strong emphasis on character development, intellectual curiosity, and a supportive community. With state-of-the-art facilities and a commitment to innovation in education, King’s College School provides an inspiring and well-rounded learning environment, preparing students for success in both their academic and personal lives.`],
+    studentNumbers: 1221,
+    faithSchool: "Church of England",
+    schoolEmail: 'reception@kcs.org.uk',
+    schoolPhoneNumber: '+44 (0)20 8255 5300',
+    latitude: 51.421737749416295,//51.421737749416295, -0.22605994134631877
+    longitude: -0.22605994134631877,//
+    schoolLocation: "Wimbledon, London, South-East",
     stages: ["primary", "secondary", "sixth form"],
     schoolType: ["day"],
-    coeducation: "co-ed",
-    totalSchoolFees: 37000,
+    coeducation: " Boys only (co-ed sixth form)",
+    totalSchoolFees: [26679, 31449],
     scholarships: {
-      scholarshipsAvailable: true,
-      scholarshipsDetail: "Scholarships offered in academics and sports.",
-      percentageOfFees: 15,
+      scholarshipsAvailable: false,
+      scholarshipsDetail: null,
+      percentageOfFees: null,
     },
-    schoolImage: null,
+    schoolImage: "/images/kingsCollegeWimbledon.jpg",
     documentId: 83792018,
     ranking: 9,
     Bursaries: {
-      BursariesAvailable: false,
-      BursariesDetail: "N/A",
-      percentageOfFees: "N/A",
+      BursariesAvailable: true,
+      BursariesDetail: [`We are committed to ensuring bright pupils from all backgrounds can access the outstanding education available at King’s. We offer means-tested bursaries of up to 100% discount on tuition fees at 11+ (year 7), 13+ (year 9) and sixth form entry. A bursary award may also include provision for extras such as school trips and uniform.`,`s with all other applicants, pupils hoping to benefit from financial assistance must first gain a place at King’s. On application at 11+, 13+ and 16+ those who wish to apply for financial assistance must indicate this when they are registering their child for the academic assessment. The Admissions team will then send a link to a confidential financial assessment form designed to establish the level of financial support required. The school works with an independent, third party, Bursary Assessment Associates, who then review and assess all applications for financial assistance. This may include an online meeting or home visit which, by necessity, will be at short notice. Bursary Assessment Associates will liaise with you directly to make arrangements.`,`Assessments of eligibility for financial assistance are conducted independently of the academic selection process. `],
+      percentageOfFees: [0, 100],
+    },
+    feesScheme: {
+      feesSchemeAvailability: false,
+      feesSchemeDetails: null,
+    },
+    forceScheme: {
+      forceSchemeAvailable: false,
+      forcesSchemeDescription: null,
+      percentageOfFees: null,
+    },
+    siblingsDiscount: {
+      siblingsDiscountAvailable: false,
+      siblingsDiscountDetails: null,
+      percentageOfFees: null,
     },
     established: 1829,
     enquireUrl: "https://kcs.org.uk/admissions",
@@ -2223,7 +2328,7 @@ A typical Scholarship at Stowe is worth 5% of the School Fee. `],
   
 ];
   
-export default function SchoolsList({searchTerm, setSubscriptionModalBox, clicks, setClicks}) {
+export default function SchoolsList({searchTerm, setSubscriptionModalBox, clicks, setClicks, schools}) {
 
 
     //const schoolsToShow = schoolsSampleData.filter(school => school.schoolLocation || school.schoolName || school.schoolType)
@@ -2248,7 +2353,7 @@ export default function SchoolsList({searchTerm, setSubscriptionModalBox, clicks
   return (
     <div className="w-full px-6 pt-10 pb-8">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 w-full">
-        {schoolsToShow.map((school, index) => (
+        {/*schoolsToShow*/schools?.map((school, index) => (
           <SchoolCard
             key={school.documentId}
             schoolName={school.schoolName}

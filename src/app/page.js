@@ -15,6 +15,7 @@ import ScrollProgressBar from "./components/scrollbar";
 import PricingPage from "./components/subscriptionContainer";
 import { X } from "lucide-react"; // Install: npm install lucide-react
 import NewsletterSignup from "./components/newsletterSignup";
+import { createClient } from "@supabase/supabase-js";
 
 export default function Home() {
 
@@ -24,6 +25,11 @@ export default function Home() {
   const [ subject, setSubject ] = useState('');
   const [ subscriptionModalBox, setSubscriptionModalBox ] = useState(false);
   const [ clicks, setClicks ] = useState(0);
+
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+    const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+    
+    const supabase = createClient(supabaseUrl, supabaseAnonKey)
 
 
 
@@ -45,13 +51,13 @@ export default function Home() {
     useEffect(() => {
       async function getSchools() {
         const { data, error } = await supabase
-          .from("schools")
+          .from("schoolslatest")
           .select("*");
   
         if (error) {
           console.error("Error fetching data:", error);
         } else {
-          console.log("Data from Supabase:", data); // Ensure this logs correctly
+          console.log("schools from Supabase:", data); // Ensure this logs correctly
           setSchools(data);
         }
       }
@@ -227,26 +233,15 @@ export default function Home() {
     <Hero />
     <LandingPainPoints painPoints={painPoints} />
     <SearchBar2 searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-    <SchoolsList searchTerm={searchTerm} setSubscriptionModalBox={setSubscriptionModalBox} setClicks={setClicks} clicks={clicks} />
+    <SchoolsList schools={schools} searchTerm={searchTerm} setSubscriptionModalBox={setSubscriptionModalBox} setClicks={setClicks} clicks={clicks} />
     <NewsletterSignup />
     {subscriptionModalBox && (
-  <div 
-    className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-[1000] p-4"
-    onClick={handleCloseModal}
-  >
-    
-      
-      <button
-  className="absolute top-3 right-3 text-gray-600 hover:text-gray-900 p-1"
-  onClick={handleCloseModal}
->
-  <X size={24} />
-</button>
+  
 
        
-      <PricingPage />
+      <PricingPage setSubscriptionModalBox={setSubscriptionModalBox} subscriptionModalBox={subscriptionModalBox} />
     
-  </div>
+ 
 )}
 
     { schools && schools.map((school) => (

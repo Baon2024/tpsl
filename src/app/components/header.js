@@ -49,8 +49,8 @@ export default function Header() {
     }
 
     const handleProfileClick = () => {
-      console.log("jwt is:", jwt);
-      if (jwt) {
+      console.log("jwtTSPL is:", jwtTSPL);
+      if (jwtTPSL) {
         router.push('/userPage') // Navigate to userPage if logged in
       } else {
         //alert('You must be logged in to access this page.')
@@ -84,7 +84,7 @@ export default function Header() {
             >
               FAQ
             </Link>
-            {!isSubscribed && (
+            {/*{!isSubscribed && (
               <>
             <button 
               onClick={handleSubscribeClick}  
@@ -97,7 +97,7 @@ export default function Header() {
               Subscribe
             </button>
             </>
-            )}
+            )}*/}
             <button 
               onClick={handleProfileClick} 
               className="p-2 rounded-full hover:bg-gray-200"

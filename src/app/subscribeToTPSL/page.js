@@ -1,5 +1,8 @@
 "use client"
 import { createClient } from "@supabase/supabase-js"
+import { Check } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 
 
 export default function SubscribeToTPSL() {
@@ -86,6 +89,108 @@ export default function SubscribeToTPSL() {
                     border: "none",
                     fontSize: "16px",
                 }}>subscribe</button>
+       
+    <div className="mx-auto max-w-6xl px-4 py-8">
+      <div className="grid gap-6 md:grid-cols-3">
+        {/* Free Tier */}
+        <Card className="flex flex-col">
+          <CardHeader>
+            <CardTitle className="text-2xl">Basic Access</CardTitle>
+            <CardDescription>For new users exploring the platform</CardDescription>
+          </CardHeader>
+          <CardContent className="flex-grow">
+            <div className="mt-4 text-3xl font-bold">Free</div>
+            <div className="mt-6 space-y-4">
+              <div className="flex items-center space-x-3">
+                <Check className="h-5 w-5 text-primary" />
+                <span>Access up to 10 schools</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Check className="h-5 w-5 text-primary" />
+                <span>Compare selected schools</span>
+              </div>
+            </div>
+          </CardContent>
+          <CardFooter>
+            <Button className="w-full" variant="outline">
+              Get Started
+            </Button>
+          </CardFooter>
+        </Card>
+
+        {/* Signed Up Tier */}
+        <Card className="flex flex-col border-primary">
+          <CardHeader>
+            <CardTitle className="text-2xl">Standard Access</CardTitle>
+            <CardDescription>For registered users</CardDescription>
+          </CardHeader>
+          <CardContent className="flex-grow">
+            <div className="mt-4 text-3xl font-bold">Free</div>
+            <div className="mt-6 space-y-4">
+              <div className="flex items-center space-x-3">
+                <Check className="h-5 w-5 text-primary" />
+                <span>Access up to 25 schools</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Check className="h-5 w-5 text-primary" />
+                <span>Save favorite schools</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Check className="h-5 w-5 text-primary" />
+                <span>Enhanced search features</span>
+              </div>
+            </div>
+          </CardContent>
+          <CardFooter>
+            <Button className="w-full">Sign Up</Button>
+          </CardFooter>
+        </Card>
+
+        {/* Premium Tier */}
+        <Card className="flex flex-col relative overflow-hidden">
+          <div className="absolute top-0 right-0 px-3 py-1 bg-primary text-primary-foreground text-sm">Best Value</div>
+          <CardHeader>
+            <CardTitle className="text-2xl">Premium Access</CardTitle>
+            <CardDescription>For unlimited access</CardDescription>
+          </CardHeader>
+          <CardContent className="flex-grow">
+            <div className="mt-4">
+              <span className="text-3xl font-bold" style={{ color: "green" }}>£9.99</span>
+              <span className="text-muted-foreground">/month</span>
+            </div>
+            <div className="mt-6 space-y-4">
+              <div className="flex items-center space-x-3">
+                <Check className="h-5 w-5 text-primary" />
+                <span>Unlimited school access</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Check className="h-5 w-5 text-primary" />
+                <span>Save favorite schools</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Check className="h-5 w-5 text-primary" />
+                <span>Advanced search features</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Check className="h-5 w-5 text-primary" />
+                <span>Premium support</span>
+              </div>
+            </div>
+          </CardContent>
+          <CardFooter>
+          <button disabled={checkWhetherSubscribedHandler()} onClick={subscribeButtonHandler} style={{
+                    backgroundColor: checkWhetherSubscribedHandler() ? "#ccc" : "#007bff",
+                    color: checkWhetherSubscribedHandler() ? "#666" : "#fff",
+                    cursor: checkWhetherSubscribedHandler() ? "not-allowed" : "pointer",
+                    padding: "10px 20px",
+                    borderRadius: "5px",
+                    border: "none",
+                    fontSize: "16px",
+                }}>subscribe</button>
+          </CardFooter>
+        </Card>
+      </div>
+    </div>
         </>
     )
 }

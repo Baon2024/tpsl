@@ -43,6 +43,7 @@ export function SchoolCard({
   //console.log("school within schoolcard is:", school);  
 
   //console.log("stage is:", stages);
+  console.log("schoolImage is:", schoolImage);
   
   const { schoolsToCompare, setSchoolsToCompare } = useSchoolCompare();
   const [isChecked, setIsChecked] = useState(false);
@@ -171,16 +172,16 @@ console.log('Clicked School documentId:', school.documentId);
       //allow users who haven't signed up to see 1- schools, then paywall
       if (storedClicks > 10 && !user) {
         console.log("✅ Redirecting to /subscribeToTPSL");
-        //setSubscriptionModalBox(true); // - marked out whilst adding schools, alternative way
-        router.push('/subscribeToTPSL'); //- just marked out whilst i try different method
+        setSubscriptionModalBox(true); // - marked out whilst adding schools, alternative way
+        //router.push('/subscribeToTPSL'); //- just marked out whilst i try different method
         return; // Stop further execution
       }
 
       //allow those who have signed up but nto subscribed to see more schools - 25, before paywall
       if (storedClicks > 25 && user.subscribed === false) {
         console.log("✅ Redirecting to /subscribeToTPSL");
-        //setSubscriptionModalBox(true); // - marked out whilst adding schools, alternative way
-        router.push('/subscribeToTPSL'); //- just marked out whilst i try different method
+        setSubscriptionModalBox(true); // - marked out whilst adding schools, alternative way
+        //router.push('/subscribeToTPSL'); //- just marked out whilst i try different method
         return; // Stop further execution
       }
     
