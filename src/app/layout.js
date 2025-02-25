@@ -7,10 +7,11 @@ import { SchoolCompareProvider } from "./schoolCompareContext";
 import { useSchoolCompare } from "./schoolCompareContext";
 import { Link } from "lucide-react";
 import { TRACE_OUTPUT_VERSION } from "next/dist/shared/lib/constants";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { Analytics } from "@vercel/analytics/react"
 import { useEffect } from "react";
 import { createClient } from "@supabase/supabase-js";
+
 
 
 const geistSans = localFont({
@@ -96,10 +97,11 @@ export default function RootLayout({ children }) {
 const FixedBottomButton = () => {
 
   const router = useRouter();
+  const pathname = usePathname(); // Get the current URL path
 
   const { schoolsToCompare } = useSchoolCompare();
 
-  if (schoolsToCompare.length === 0) return null;
+  if (schoolsToCompare.length === 0 || pathname.includes('/SchoolsToCompare')) return null;
   //can't use schoolsToCompare in the parent above the SchoolCompareProvider, so have to do this instead
 
   function schoolsToCompareHandler() {

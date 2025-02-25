@@ -12,15 +12,16 @@ import { useState, useEffect } from 'react';
 export default function Header() {
   const pathname = usePathname()
   const router = useRouter();
+  const [ isSubscribed, setIsSubscribed ] = useState(false);
 
 
-  const [jwt, setJwt] = useState(null);
+  const [jwtTPSL, setJwtTPSL] = useState(null);
 
   useEffect(() => {
     // Initial check for JWT
     const checkJwt = () => {
       const storedJwt = localStorage.getItem('jwtTPSL')
-      setJwt(storedJwt)
+      setJwtTPSL(storedJwt)
     }
     checkJwt()
 
@@ -49,7 +50,7 @@ export default function Header() {
     }
 
     const handleProfileClick = () => {
-      console.log("jwtTSPL is:", jwtTSPL);
+      console.log("jwtTSPL is:", jwtTPSL);
       if (jwtTPSL) {
         router.push('/userPage') // Navigate to userPage if logged in
       } else {
@@ -57,11 +58,18 @@ export default function Header() {
         router.push('/logInSignUp') // Navigate to registerSociety if not logged in
       }
     }
+   
+    useEffect(() => {
 
-    const userProfile = JSON.parse(localStorage.getItem('userTPSLProfile'));
-    //console.log("userProfile in header is:", userProfile);
-    const isSubscribed = userProfile?.subscribed;
-    console.log("is subscribed is:", isSubscribed);
+      const userProfile = JSON.parse(localStorage.getItem('userTPSLProfile'));
+      //console.log("userProfile in header is:", userProfile);
+      const isSubscribed = userProfile?.subscribed;
+      console.log("is subscribed is:", isSubscribed);
+      setIsSubscribed(isSubscribed);
+
+
+    },[])
+  
 
 
   return (

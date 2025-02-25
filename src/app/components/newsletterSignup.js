@@ -41,7 +41,7 @@ const supabase = createClient(supabaseUrl, supabaseAnonKey)
 
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-white px-4">
+    <div className="flex flex-col items-center justify-center bg-white px-4">
       <div className="w-full max-w-[400px] space-y-6">
         {/* Header */}
         <div className="text-center space-y-2">
