@@ -32,10 +32,17 @@ export default function SchoolsToCompare() {
 
     async function saveSchoolHandler(selectedSchool) {
       const userData = localStorage.getItem('userTPSL');
+
+      if (!userData) {
+        console.warn("No user data found in localStorage");
+        return;  // Stop execution if no user is logged in
+      }
+
+
       if (userData) {
         //add school to user's school array, with their uid.
         const user = JSON.parse(userData); // Parse the stored user data
-        const userId = user.id;
+        const userId = user?.id;
         console.log("userId in save school function is:", userId);
         console.log("selected school to save is:", selectedSchool);
   
