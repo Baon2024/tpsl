@@ -121,12 +121,20 @@ export default function SubscribeToTPSL() {
 
     useEffect(() => {
 
+      
+
       async function getUserSchools() {
         const userData = localStorage.getItem('userTPSL');
       const user = JSON.parse(userData); // Parse the stored user data
       const userId = user.id;
       console.log("userId in save school function is:", userId);
       //console.log("selected school to save is:", selectedSchool);
+
+      const userProfile = JSON.parse(localStorage.getItem('userTPSLProfile'));
+      console.log("Retrieved profile:", userProfile);
+      console.log("and scholls would be:", userProfile?.schools);
+      //setMySchools(userProfile.schools);
+      setSubscribed(userProfile?.subscribed)
 
       if (!userId) {
         console.error("User ID or selected school is missing.");
@@ -141,20 +149,13 @@ export default function SubscribeToTPSL() {
 
       console.log("Fetched user's schools data:", mySchools.schools);
       setMySchools(mySchools.schools);
+      setTriggerReload();
     }
 
       getUserSchools();
     },[])
 
-    useEffect(() => {
-  
 
-      const userProfile = JSON.parse(localStorage.getItem('userTPSLProfile'));
-      console.log("Retrieved profile:", userProfile);
-      console.log("and scholls would be:", userProfile?.schools);
-      //setMySchools(userProfile.schools);
-      setSubscribed(userProfile?.subscribed)
-    },[triggerReload]);
 
     useEffect(() => {
       console.log("page reloading...")

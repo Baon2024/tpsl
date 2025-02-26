@@ -19,6 +19,7 @@ export async function POST(req, res) {
 
     const successPage = `http://localhost:3000/successPage`;
     const cancelPage = `http://localhost:3000/cancelPage`;
+    const userPage = `http://localhost:3000/userPage`;
 
     try {
 
@@ -39,7 +40,7 @@ export async function POST(req, res) {
         mode: 'subscription',
         customer_email: email, // Ensures user gets receipts and invoices
         metadata: { userId, email }, // ✅ Stores user data for webhook processing
-        success_url: `${successPage}/?success=true&session_id={CHECKOUT_SESSION_ID}`,//add page for this
+        success_url: `${userPage}/?success=true&session_id={CHECKOUT_SESSION_ID}`,//add page for this
         cancel_url: `${cancelPage}?canceled=true`,//add page for this
       });
 
