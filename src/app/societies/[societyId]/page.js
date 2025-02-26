@@ -1,4 +1,5 @@
 'use client'
+
 import { useParams } from 'next/navigation';
 import { schoolsSampleData } from '@/app/components/schoolsList';
 import { Button } from "@/components/ui/button"
@@ -18,14 +19,16 @@ import { useState, useEffect } from "react"
 import { Building2, GraduationCap, Mail, MapPin, Phone } from 'lucide-react'
 import EnquireButton from '@/app/components/enquireButton';
 import { Separator } from "@/components/ui/separator";
-import SchoolMap from '@/app/components/schoolMap';
+//import SchoolMap from '@/app/components/schoolMap';
 import 'leaflet/dist/leaflet.css';
 import { useSchoolCompare } from '@/app/schoolCompareContext';
 import SchoolsToCompare from '@/app/SchoolsToCompare/page';
 import SimpleFeedbackForm from '@/app/components/schoolFeedbackForm';
 import { createClient } from '@supabase/supabase-js';
+//import SchoolMap from "@/app/components/schoolMap";
+import dynamic from 'next/dynamic';
 
-
+const SchoolMap = dynamic(() => import('@/app/components/schoolMap'), { ssr: false });
 
 console.log("these are the schools: ", schoolsSampleData);
 //need a way to retrieve id form url
@@ -37,11 +40,12 @@ export default function societyPage()  {
     const selectedSchoolArray = schoolsSampleData.filter(school => school.documentId === numberSocietyId);
     console.log("This is the selected school:", selectedSchoolArray);
     
+    if (typeof window !== "undefined") {
     const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
     const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
     
     const supabase = createClient(supabaseUrl, supabaseAnonKey)
-    
+    }
 
     const selectedSchool = selectedSchoolArray[0];
 
@@ -180,6 +184,7 @@ useEffect(() => {
   };
 
   async function saveSchoolHandler() {
+    if (typeof window !== "undefined") {
     const userData = localStorage.getItem('userTPSL');
     if (userData) {
       //add school to user's school array, with their uid.
@@ -234,6 +239,7 @@ useEffect(() => {
     } else {
       alert("You need to be a member to use this feature!")
     }
+   }
   }
 
   return (

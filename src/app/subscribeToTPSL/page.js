@@ -74,8 +74,9 @@ export default function SubscribeToTPSL() {
 
           const sessionUrl = session.session.url;
           console.log("sessionUrl you're abiout to be redirect to is:", sessionUrl);
+          if (typeof window != 'unknown') {
           window.location.href = sessionUrl; // Redirect to Stripe Checkout
-        
+          }
     }
 
 

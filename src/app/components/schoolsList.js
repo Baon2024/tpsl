@@ -1266,7 +1266,7 @@ A typical Scholarship at Stowe is worth 5% of the School Fee. `],
     schoolDescription: `Radnor House is a highly regarded independent co-educational day school situated on the banks of the River Thames in Twickenham, London. Founded in 2011, the school is known for its nurturing and inclusive community, where each student is encouraged to excel both academically and personally. Offering a broad and dynamic curriculum, Radnor House emphasizes intellectual curiosity, creativity, and resilience, alongside exceptional opportunities in sports, performing arts, and extracurricular activities. Its modern facilities and picturesque riverside setting provide an inspiring environment for learning. Radnor House is dedicated to fostering confidence, leadership, and a love of learning, preparing students for successful futures.`,
     studentNumbers: 455,
     faithSchool: "Non-Denominational",
-    schoolEmail: "registrar@eatonsquareschools.com", 
+    schoolEmail: "info@radnorhouse.org", 
     schoolPhoneNumber: "+44 (0)20 8891 6264", 
     latitude: 51.44216000131499, // //52.1972419211202, 0.12726669307427999
     longitude: -0.3308083150206847,  //51.44216000131499, -0.3308083150206847
