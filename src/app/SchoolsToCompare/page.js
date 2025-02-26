@@ -216,7 +216,7 @@ export default function SchoolsToCompare() {
               <tr>
                 <td className="sticky left-0 bg-background px-6 py-4 font-medium">Fees (per year)</td>
                 {schoolsToCompare.map((school) => (
-  <td key={school.schoolName} className="px-6 py-4">
+  <td key={school.documentId} className="px-6 py-4">
     {Array.isArray(school.totalSchoolFees) && school.totalSchoolFees.length >= 2 ? (
       <>£{school.totalSchoolFees[0].toLocaleString()} - £{school.totalSchoolFees[1].toLocaleString()}</>
     ) : (
