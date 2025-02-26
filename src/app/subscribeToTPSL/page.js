@@ -1,4 +1,5 @@
 "use client"
+
 import { createClient } from "@supabase/supabase-js"
 import { Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -16,16 +17,20 @@ export default function SubscribeToTPSL() {
 
 
     function checkWhetherSubscribedHandler() {
+      if (typeof window !== "undefined") {
         const userProfile = JSON.parse(localStorage.getItem('userTPSLProfile'));
         return userProfile.subscribed === true; //if userprofile.subscribed is true, then it returns truthy, making disabled true
+      }
     }
 
 
     async function subscribeButtonHandler() {
-
+        
+      if (typeof window !== "undefined") {
         const user = JSON.parse(localStorage.getItem('userTPSL'));
         const userProfile = JSON.parse(localStorage.getItem('userTPSLProfile'));
         console.log("user in subscribeToTPSL is:", user);
+      }
 
         if (userProfile.subscribed === true) {
             return alert("already subscribed!");
