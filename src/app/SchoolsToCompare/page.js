@@ -41,6 +41,7 @@ export default function SchoolsToCompare() {
 
       if (!userData) {
         console.warn("No user data found in localStorage");
+        alert("You need to be signed-up and logged-in in order to save schools!");
         return;  // Stop execution if no user is logged in
       }
 
