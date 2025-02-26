@@ -31,6 +31,12 @@ export default function SchoolsToCompare() {
     }
 
     async function saveSchoolHandler(selectedSchool) {
+      
+      if (typeof window === "undefined") {
+        console.warn("Running on server, skipping localStorage access.");
+        return;
+      }
+    
       const userData = localStorage.getItem('userTPSL');
 
       if (!userData) {
@@ -106,11 +112,18 @@ export default function SchoolsToCompare() {
 
     useEffect(() => {
 
+      if (typeof window === 'undefined') {
+
       const userData = localStorage.getItem('userTPSL');
+
+      if (!userData) {
+        console.warn("No user data found in localStorage");
+        return;  // Stop execution if no user is logged in
+      }
       
         //add school to user's school array, with their uid.
         const user = JSON.parse(userData); // Parse the stored user data
-        const userId = user.id;
+        const userId = user?.id;
         console.log("userId in save school function is:", userId);
         //console.log("selected school to save is:", selectedSchool);
   
@@ -130,7 +143,7 @@ export default function SchoolsToCompare() {
       }
 
       getSchools()
-
+      }
     },[])
 
     useEffect(() => {
