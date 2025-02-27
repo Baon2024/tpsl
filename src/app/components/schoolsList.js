@@ -1614,50 +1614,6 @@ A typical Scholarship at Stowe is worth 5% of the School Fee. `],
     enquireUrl: "https://www.wellington-school.org.uk/senior/admissions/visiting-the-school"
   },
   {
-    schoolName: "Tonbridge School",
-    schoolDescription: `Tonbridge School is a prestigious independent boys’ boarding and day school located in Kent, England. Founded in 1553, it has a long-standing reputation for academic excellence, strong pastoral care, and a commitment to developing well-rounded individuals. The school offers a rigorous and dynamic curriculum, fostering intellectual curiosity, critical thinking, and leadership. Alongside academics, Tonbridge provides outstanding opportunities in sports, music, drama, and extracurricular activities, encouraging personal growth and resilience. Set within a stunning and well-equipped campus, the school nurtures ambition, integrity, and a strong sense of community, preparing students for top universities and successful futures.`,
-    studentNumbers: 801,
-    faithSchool: "Church of England",
-    schoolEmail: "admissions@tonbridge-school.org", 
-    schoolPhoneNumber: "44 (0)1732 365 555", 
-    latitude: 51.19940145111369, // //51.10076709037832, -0.7435842027348746
-    longitude: 0.27609655852540793,  //51.19940145111369, 0.27609655852540793
-    schoolLocation: "Tombridge, Kent, South-East",
-    stages: ["secondary","sixth form"],
-    schoolType: ["day","boarding"],
-    coeducation: "boys",
-    totalSchoolFees: [29610, 59124], //per annual school year
-    scholarships: {
-      scholarshipsAvailable: true,
-      scholarshipsDetail: ["Our Scholarship programme is designed to highlight areas of exceptional talent among our boys, which will be further nurtured and supported over their time here. Tonbridge Scholars are expected to be active in all aspects of School life. All Scholarships are open to boys joining the School in Year 9 only, with the exception of Music and Sport as boys joining in Year 12 can also apply for these. Boys must already be holding an Unconditional Offer for a School place before applying for a scholarship. Boys can apply for multiple awards.","The winning of any Scholarship provides eligibility for means-tested support of up to 100% fee remission, meaning that all financially supported Scholarships are only available to boys residing in the UK. Boys awarded Scholarships who do not require or who are not eligible for financial support, will receive a one off payment of £2000 as recognition of their achievement. This financial award will be deducted from the first term’s fees.","Scholarships: Academic, Art, Design, Sports, Drama, Music"],
-      percentageOfFees: [0,100],
-    },
-    schoolImage: "/images/tonbridge.webp",
-    documentId: 1850456663433331,
-    ranking: 8,
-    Bursaries: {
-      BursariesAvailable: true,
-      BursariesDetail: ["We strongly believe that diversity opens minds. Our aim is to widen access and opportunity to academically able boys, who, regardless of background and financial means would not only benefit, but positively thrive from a Tonbridge education and add significant value to the School. Financial assistance is available following means-testing up to 100% of fees with a package for additional support where necessary. More than 70 Tonbridge boys currently benefit from significant fee reductions and the ambition is to grow that number further.","The level of financial support offered to a boy in receipt of the Foundation Award is means-tested. It should be noted that the level of support received depends not only on family income but also assets, necessary expenses, and liabilities. Eligibility is assessed by the Director of Finance following a review of a confidential financial circumstances form at the beginning of the process. The Foundation Award is available to both Boarders and Day boys, but only for those who are joining Tonbridge at the start of Year 9 and who are in receipt of a Scholarship. Boys will need to be at or near the top of their class in Year 6, exceeding at most levels. A good indicator of academic suitability for Tonbridge is high predicted scores for 11+ (Kent Test) and/or CAT4 exams. They will also need to be eager to learn and join in the many Co-Curricular opportunities that we offer. "],
-      percentageOfFees: [0, 100],
-    },
-    feesScheme: {
-      feesSchemeAvailability: false,
-      feesSchemeDetails: null,
-    },
-    forceScheme: {
-      forceSchemeAvailable: false,
-      forcesSchemeDescription: null,
-      percentageOfFees: null,
-    },
-    siblingsDiscount: {
-      siblingsDiscountAvailable: true,
-      siblingsDiscountDetails: ["A 10% remission of fees is given to the third son (and any subsequent sons) of the same family to attend the School."],
-      percentageOfFees: 10,
-    },
-    established: 1553,
-    enquireUrl: "https://www.tonbridge-school.co.uk/admissions/"
-  },
-  {
     schoolName: "Haberdashers' Eltree Schools",
     schoolDescription: `Haberdashers' Elstree Schools, comprising Haberdashers' Boys' School and Haberdashers' Girls' School, are prestigious independent day schools located in Elstree, Hertfordshire, England. With a shared heritage dating back to 1690, both schools are renowned for their academic excellence, strong pastoral care, and commitment to developing well-rounded individuals. Offering a rigorous and dynamic curriculum, they foster intellectual curiosity, creativity, and leadership, alongside outstanding opportunities in sports, music, drama, and extracurricular activities. Set within a modern and well-equipped campus, the schools provide a supportive and inspiring environment where students develop confidence, resilience, and a lifelong love of learning. With a strong tradition of scholarship and innovation, Haberdashers' Elstree Schools prepare students for top universities and successful futures.`,
     studentNumbers: 2629,
@@ -1926,7 +1882,7 @@ A typical Scholarship at Stowe is worth 5% of the School Fee. `],
     schoolDescription: `Fettes College is a prestigious independent co-educational boarding and day school located in Edinburgh, Scotland. Founded in 1870, the school is renowned for its academic excellence, strong pastoral care, and rich heritage. Offering a rigorous and well-rounded curriculum, Fettes fosters intellectual curiosity, creativity, and leadership, preparing students for top universities worldwide. Beyond academics, the school provides exceptional opportunities in sports, music, drama, and extracurricular activities, encouraging personal growth, resilience, and teamwork. Set within a stunning 90-acre campus with historic architecture and state-of-the-art facilities, Fettes College offers a supportive and inspiring environment where students thrive. With a strong emphasis on academic achievement, character development, and global citizenship, the school equips pupils with the skills and values needed for lifelong success.`,
     studentNumbers: 744,
     faithSchool: "Interdenominational",
-    schoolEmail: " hamisie@downehouse.net", 
+    schoolEmail: "enquiries@fettes.com", 
     schoolPhoneNumber: "+44 01635 200 286", 
     latitude: 51.43765994003928, // //51.10076709037832, -0.7435842027348746
     longitude: -1.2744322199076514,  //51.43765994003928, -1.2744322199076514

@@ -17,7 +17,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { useState, useEffect } from "react"
 import { Building2, GraduationCap, Mail, MapPin, Phone } from 'lucide-react'
-import EnquireButton from '@/app/components/enquireButton';
+//import EnquireButton from '@/app/components/enquireButton';
 import { Separator } from "@/components/ui/separator";
 //import SchoolMap from '@/app/components/schoolMap';
 import 'leaflet/dist/leaflet.css';
@@ -241,6 +241,18 @@ useEffect(() => {
     }
    }
   }
+
+
+  //const EnquireButton = ({ enquireUrl }) => <Button className="w-full mt-4">Contact School</Button>
+  const EnquireButton = ({ enquireUrl }) => (
+    <Button 
+      className="w-full mt-4" 
+      onClick={() => window.open(enquireUrl, "_blank")}
+    >
+      Contact School
+    </Button>
+  );
+
 
   return (
     <div className="min-h-screen bg-gray-50/50 pb-12">
@@ -484,6 +496,7 @@ useEffect(() => {
           <div className="space-y-6 lg:col-span-1">
             <Card className="sticky top-8">
               <CardContent className="p-6">
+              <div className="space-y-4">
                 <div className="flex items-center gap-2">
                   <Building2 className="h-6 w-6" />
                   <h2 className="text-2xl font-bold">Enquire Now</h2>
@@ -493,18 +506,26 @@ useEffect(() => {
                     <EnquireButton enquireUrl={enquireUrl} />
                   </SheetTrigger>
                 </Sheet>
-                {addButton && (
-                <div className="flex items-center gap-2">
-                  <h2 className="text-2xl font-bold">Compare Now</h2>
-                  <button onClick={addSchoolCompareHandler}>Add School</button>
-                  </div>
-                )}
-                {removeButton && (
-                <div className="flex items-center gap-2">
-                  <h2 className="text-2xl font-bold">Compare Now</h2>
-                  <button onClick={removeSchoolCompareHandler}>remove School</button>
-                  </div>
-                )}
+                </div>
+                {(addButton || removeButton) && <Separator className="my-4" />}
+
+{addButton && (
+  <div className="space-y-4">
+    <h2 className="text-2xl font-bold">Compare Now</h2>
+    <Button onClick={addSchoolCompareHandler} variant="outline" className="w-full">
+      Add School
+    </Button>
+  </div>
+)}
+
+{removeButton && (
+  <div className="space-y-4">
+    <h2 className="text-2xl font-bold">Compare Now</h2>
+    <Button onClick={removeSchoolCompareHandler} variant="outline" className="w-full">
+      Remove School
+    </Button>
+  </div>
+)}
               </CardContent>
             </Card>
 
