@@ -16,6 +16,7 @@ import PricingPage from "./components/subscriptionContainer";
 import { X } from "lucide-react"; // Install: npm install lucide-react
 import NewsletterSignup from "./components/newsletterSignup";
 import { createClient } from "@supabase/supabase-js";
+import { useRef } from "react";
 
 export default function Home() {
 
@@ -25,6 +26,7 @@ export default function Home() {
   const [ subject, setSubject ] = useState('');
   const [ subscriptionModalBox, setSubscriptionModalBox ] = useState(false);
   const [ clicks, setClicks ] = useState(0);
+  const schoolsRef = useRef(null);
 
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
     const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
@@ -230,10 +232,12 @@ export default function Home() {
     //and then apply different visual size for highest few, based on index position
   <>
     <ScrollProgressBar />
-    <Hero />
+    <Hero scrollToSchools={() => schoolsRef.current?.scrollIntoView({ behavior: "smooth" })} />
     <LandingPainPoints painPoints={painPoints} />
     <SearchBar2 searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-    <SchoolsList schools={schools} searchTerm={searchTerm} setSubscriptionModalBox={setSubscriptionModalBox} setClicks={setClicks} clicks={clicks} />
+    <div ref={schoolsRef}>
+      <SchoolsList schools={schools} searchTerm={searchTerm} setSubscriptionModalBox={setSubscriptionModalBox} setClicks={setClicks} clicks={clicks} />
+    </div>
     <NewsletterSignup />
     {subscriptionModalBox && (
   
