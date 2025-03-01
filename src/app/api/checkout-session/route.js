@@ -19,7 +19,8 @@ export async function POST(req, res) {
 
     const successPage = `http://localhost:3000/successPage`;
     const cancelPage = `http://localhost:3000/cancelPage`;
-    const userPage = `http://localhost:3000/userPage`;
+    //const userPage = `http://localhost:3000/userPage`;
+    const userPage = 'https://tpsl-i72sq7dpf-joejoeboyes2013-gmailcoms-projects.vercel.app/userPage';
 
     try {
 
