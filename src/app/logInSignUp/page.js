@@ -41,7 +41,7 @@ console.log("Supabase session:", session);
     //use user.id to then update associated user table to create entry with the same id, and null schools and false subscribed
     if (user?.user?.id) {
       // Use the user ID to update the profiles table
-      console.log("user.user.is is:", user?.user?.id);
+      console.log("user.user.id is:", user?.user?.id);
       const { error } = await supabase
           .from('profiles') // Make sure this is the correct table
           .insert([{ id: user.user.id, schools: [], subscribed: false }]); // Set default values
@@ -57,13 +57,23 @@ console.log("Supabase session:", session);
 
   
 
-  function handleAuthResponse(user) {
+  async function handleAuthResponse(user) {
     if (user) {
         console.log("user before setting localStorage is:", user);
         console.log("jwt should be here:", user.session.access_token);
       setMessage(`Welcome, ${user.user.username}!`)
       localStorage.setItem('jwtTPSL', user.session.access_token)
       localStorage.setItem('userTPSL', JSON.stringify(user.user))
+
+      const { data: profile, error: fetchError } = await supabase
+      .from('profiles')
+      .select('*')
+      .eq('id', user.user.id)
+      .maybeSingle(); 
+
+
+      console.log("profile data about to be saved as userTPSLProfile", profile);
+      localStorage.setItem('userTPSLProfile', JSON.stringify(profile));
       router.push('/userPage')
     } else {
       setMessage('Authentication failed. Please try again.')
