@@ -41,6 +41,8 @@ export default function RootLayout({ children }) {
 
   useEffect(() => {
     console.log("localStorage is:", localStorage);
+    console.log("NODE_ENV:", process.env.NODE_ENV);
+
   },[])
 
   useEffect(() => {

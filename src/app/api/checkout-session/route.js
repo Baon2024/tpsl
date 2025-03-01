@@ -15,12 +15,21 @@ export async function POST(req, res) {
     console.log("lookup_key in backend is:", lookup_key);
     console.log("email in backend is:", email);
     console.log("userId in backend is:", userId);
+
+    const BASE_URL =
+  process.env.NODE_ENV === 'production'
+    ? 'https://tpsl-i72sq7dpf-joejoeboyes2013-gmailcoms-projects.vercel.app'
+    : 'http://localhost:3000';
+
+const successPage = `${BASE_URL}/successPage`;
+const cancelPage = `${BASE_URL}/cancelPage`;
+const userPage = `${BASE_URL}/userPage`;
   
 
-    const successPage = `http://localhost:3000/successPage`;
+    /*const successPage = `http://localhost:3000/successPage`;
     const cancelPage = `http://localhost:3000/cancelPage`;
     //const userPage = `http://localhost:3000/userPage`;
-    const userPage = 'https://tpsl-i72sq7dpf-joejoeboyes2013-gmailcoms-projects.vercel.app/userPage';
+    const userPage = 'https://tpsl-i72sq7dpf-joejoeboyes2013-gmailcoms-projects.vercel.app/userPage';*/
 
     try {
 
