@@ -154,6 +154,7 @@ console.log('Clicked School documentId:', school.documentId);
     /*const user = {
       subscribed: false
     }*/
+   //
   
     const checkWhetherHaveAccess = (e) => {
       e.preventDefault(); // Stop default navigation
