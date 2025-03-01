@@ -50,7 +50,7 @@ export async function POST(req) {
     console.log("🔔 Webhook received!");
 
     // ✅ Immediately respond to Stripe
-    const response = NextResponse.json({ received: true }, { status: 200 });
+    //const response = NextResponse.json({ received: true }, { status: 200 });
 
     // ✅ Get raw body as a buffer (fixes "ReadableStream is locked" error)
     const rawBody = await req.arrayBuffer();
@@ -116,11 +116,11 @@ export async function POST(req) {
       
       //probably need to also store sessinId in database, so can be rteievd for managing subscvription
      
-      return response
+      //return response
 
     }
 
-    //return NextResponse.json({ received: true }, { status: 200 }); // ✅ Sends a response
+    return NextResponse.json({ received: true }, { status: 200 }); // ✅ Sends a response
   } catch (error) {
     console.error("❌ Error in webhook:", error);
     return NextResponse.json({ error: "Webhook error" }, { status: 400 });

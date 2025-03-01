@@ -98,7 +98,7 @@ export default function PricingPage({ setSubscriptionModalBox, subscriptionModal
 
     const user = JSON.parse(localStorage.getItem('userTPSL'));
     const userProfile = JSON.parse(localStorage.getItem('userTPSLProfile'));
-    console.log("user in subscribeToTPSL is:", user);
+    console.log("userTPSLProfile in subscribeToTPSL is:", userProfile);
   
     const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
     const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
@@ -108,7 +108,7 @@ export default function PricingPage({ setSubscriptionModalBox, subscriptionModal
     if (userProfile?.subscribed === true) {
         return alert("already subscribed!");
     } 
-    if (!userProfile?.subscribed) {
+    if (!userProfile) {
         router.push('/logInSignUp');
         return
     }
