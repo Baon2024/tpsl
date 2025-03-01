@@ -24,7 +24,8 @@ const stripe = require('stripe')('sk_test_51QNlAaG7WeMIf1DGWcfnC8nYS9rHZVfB55lhS
 //const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY); // Use service role for admin writes
 
 //const stripeWebhookSecret = 'whsec_d841e887e13b7130ce9da8227aafc1a2c38c9289b03f48f955943ed25a67adc6'; 
-const stripeWebhookSecret = 'whsec_ZourYqZ7utrCAscRrjJs3nFHBDtcii29';
+//const stripeWebhookSecret = 'whsec_ZourYqZ7utrCAscRrjJs3nFHBDtcii29';
+const stripeWebhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
 
 
 // ✅ Disable automatic body parsing in Next.js
