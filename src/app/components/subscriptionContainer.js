@@ -71,7 +71,7 @@ const plans = [
 
   function checkWhetherSubscribedHandler() {
     const userProfile = JSON.parse(localStorage.getItem('userTPSLProfile'));
-    return userProfile.subscribed === true; //if userprofile.subscribed is true, then it returns truthy, making disabled true
+    return userProfile?.subscribed === true; //if userprofile.subscribed is true, then it returns truthy, making disabled true
 }
 
 async function subscribeButtonHandler() {
