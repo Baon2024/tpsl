@@ -27,6 +27,9 @@ const stripe = require('stripe')('sk_test_51QNlAaG7WeMIf1DGWcfnC8nYS9rHZVfB55lhS
 //const stripeWebhookSecret = 'whsec_ZourYqZ7utrCAscRrjJs3nFHBDtcii29';
 const stripeWebhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
 
+console.log("Webhook Secret in Vercel:", process.env.STRIPE_WEBHOOK_SECRET);
+
+
 
 // ✅ Disable automatic body parsing in Next.js
 export const config = {
