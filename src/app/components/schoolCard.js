@@ -172,7 +172,7 @@ console.log('Clicked School documentId:', school.documentId);
       //so it was effectively 1 clikc behind the actual limit in terms of curtailing access and showing the paywall
       
       //allow users who haven't signed up to see 1- schools, then paywall
-      if (newClicks > 10 && !user) {
+      if (newClicks > 1 /*10*/  && !user) {
         console.log("✅ Redirecting to /subscribeToTPSL");
         setSubscriptionModalBox(true); // - marked out whilst adding schools, alternative way
         //router.push('/subscribeToTPSL'); //- just marked out whilst i try different method
@@ -180,7 +180,7 @@ console.log('Clicked School documentId:', school.documentId);
       }
 
       //allow those who have signed up but nto subscribed to see more schools - 25, before paywall
-      if (newClicks > 25 && user.subscribed === false) {
+      if (newClicks > 1 /*25*/ && user.subscribed === false) {
         console.log("✅ Redirecting to /subscribeToTPSL");
         setSubscriptionModalBox(true); // - marked out whilst adding schools, alternative way
         //router.push('/subscribeToTPSL'); //- just marked out whilst i try different method
