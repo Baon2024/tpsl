@@ -76,7 +76,7 @@ const plans = [
 
 
 
-export default function PricingPage(setSubscriptionModalBox, subscriptionModalBox) {
+export default function PricingPage({ setSubscriptionModalBox, subscriptionModalBox }) {
 
   const router = useRouter();
 
