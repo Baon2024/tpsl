@@ -18,7 +18,7 @@ export async function POST(req, res) {
 
     const BASE_URL =
   process.env.NODE_ENV === 'production'
-    ? 'https://tpsl-i72sq7dpf-joejoeboyes2013-gmailcoms-projects.vercel.app'
+    ? `https://{${process.env.VERCEL_URL}`
     : 'http://localhost:3000';
 
 const successPage = `${BASE_URL}/successPage`;
