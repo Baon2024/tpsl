@@ -4,7 +4,7 @@ console.log("Loaded env variables:", process.env);  // Log all environment varia
 import { Resend } from "resend";
 
 console.log("Resend API Key:", process.env.RESEND_API_KEY);
-const resend = new Resend('re_YpWnbT4L_PQ8CEmJHfX1qQirn1bHf4MpK');
+const resend = new Resend(process.env.RESEND_API_KEY);
 console.log("resend is:", resend);
 
 
@@ -68,8 +68,8 @@ export async function POST(req) {
 
     console.log("✅ Stripe event:", event.type, "and here's the event:", event);*/
 
-    console.log("🔎 req.body type:", typeof req.body);
-console.log("🔎 req.body:", req.body);
+    console.log("🔎 req.body type:", typeof await req.body);
+console.log("🔎 req.body:", await req.body);
 
 
 
