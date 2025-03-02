@@ -74,7 +74,7 @@ export async function POST(req) {
 
 
 
-
+/*
     // ✅ Read raw body
     //const rawBody = await streamToBuffer(req.body);
     const sig = req.headers.get("stripe-signature");
@@ -86,7 +86,18 @@ export async function POST(req) {
     // ✅ Verify the webhook signature
     const event = stripe.webhooks.constructEvent(rawBody, sig, stripeWebhookSecret);
 
-    console.log("✅ Stripe event:", event.type, event);
+    console.log("✅ Stripe event:", event.type, event);*/
+
+     // ✅ Get raw body as a buffer (Stripe requires exact body)
+     const rawBody = await req.arrayBuffer();
+     const sig = req.headers.get("stripe-signature");
+ 
+     console.log("🔎 Raw body:", Buffer.from(rawBody).toString());
+ 
+     // ✅ Verify Stripe signature
+     const event = stripe.webhooks.constructEvent(rawBody, sig, stripeWebhookSecret);
+ 
+     console.log("✅ Stripe event:", event.type, event);
     
 
     // Process successful checkout
