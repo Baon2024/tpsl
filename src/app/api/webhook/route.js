@@ -68,8 +68,8 @@ export async function POST(req) {
 
     console.log("✅ Stripe event:", event.type, "and here's the event:", event);*/
 
-    console.log("🔎 req.body type:", typeof await req.body);
-console.log("🔎 req.body:", await req.body);
+    //console.log("🔎 req.body type:", typeof await req.body);
+//console.log("🔎 req.body:", await req.body);
 
 
 
@@ -79,8 +79,9 @@ console.log("🔎 req.body:", await req.body);
     //const rawBody = await streamToBuffer(req.body);
     const sig = req.headers.get("stripe-signature");
 
-    console.log("🔎 Raw body:", rawBody.toString());
+    //console.log("🔎 Raw body:", rawBody.toString());
     const rawBody = await streamToBuffer(req.body);
+    console.log("🔎 Raw body:", rawBody.toString());
 
     // ✅ Verify the webhook signature
     const event = stripe.webhooks.constructEvent(rawBody, sig, stripeWebhookSecret);
