@@ -95,10 +95,12 @@ export async function POST(req) {
      console.log("🔎 Raw body:", Buffer.from(rawBody).toString());
  
      // ✅ Verify Stripe signature
-     const event = stripe.webhooks.constructEvent(rawBody, sig, stripeWebhookSecret);
- 
-     console.log("✅ Stripe event:", event.type, event);
-    
+     // ✅ Convert ArrayBuffer to Buffer before passing to Stripe
+const event = stripe.webhooks.constructEvent(
+  Buffer.from(rawBody), 
+  sig, 
+  stripeWebhookSecret
+);
 
     // Process successful checkout
     if (event.type === "checkout.session.completed") {
