@@ -57,7 +57,8 @@ export async function POST(req) {
 
     // ✅ Immediately respond to Stripe
     //const response = NextResponse.json({ received: true }, { status: 200 });
-
+    
+    /*
     // ✅ Get raw body as a buffer (fixes "ReadableStream is locked" error)
     const rawBody = await req.arrayBuffer();
     const sig = req.headers.get("stripe-signature");
@@ -65,7 +66,18 @@ export async function POST(req) {
     // ✅ Verify the webhook signature
     const event = stripe.webhooks.constructEvent(Buffer.from(rawBody), sig, stripeWebhookSecret);
 
-    console.log("✅ Stripe event:", event.type, "and here's the event:", event);
+    console.log("✅ Stripe event:", event.type, "and here's the event:", event);*/
+
+    // ✅ Read raw body
+    const rawBody = await streamToBuffer(req.body);
+    const sig = req.headers.get("stripe-signature");
+
+    console.log("🔎 Raw body:", rawBody.toString());
+
+    // ✅ Verify the webhook signature
+    const event = stripe.webhooks.constructEvent(rawBody, sig, stripeWebhookSecret);
+
+    console.log("✅ Stripe event:", event.type, event);
     
 
     // Process successful checkout
