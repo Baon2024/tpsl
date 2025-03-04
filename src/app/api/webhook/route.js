@@ -27,13 +27,13 @@ const supabase = createClient(supabaseUrl, supabaseAnonKey)
 
 //const stripeWebhookSecret = 'whsec_d841e887e13b7130ce9da8227aafc1a2c38c9289b03f48f955943ed25a67adc6'; 
 //const stripeWebhookSecret = 'whsec_ZourYqZ7utrCAscRrjJs3nFHBDtcii29';
-const STRIPE_WEBHOOK_SECRET = process.env.STRIPE_MODE === 'LIVE' ? process.env.STRIPE_WEBHOOK_SECRET_LIVE : process.env.STRIPE_WEBHOOK_SECRET_TEST
+const STRIPE_WEBHOOK_SECRET = process.env.STRIPE_MODE === 'live' ? process.env.STRIPE_WEBHOOK_SECRET_LIVE : process.env.STRIPE_WEBHOOK_SECRET_TEST
 
 
 //const stripeWebhookSecret = process.env.STRIPE_WEBHOOK_SECRET_TEST;
 
 
-const STRIPE_SECRET_KEY = process.env.STRIPE_MODE === 'LIVE' ? process.env.STRIPE_SECRET_KEY_LIVE : process.env.STRIPE_SECRET_KEY_TEST 
+const STRIPE_SECRET_KEY = process.env.STRIPE_MODE === 'live' ? process.env.STRIPE_SECRET_KEY_LIVE : process.env.STRIPE_SECRET_KEY_TEST 
 
 const stripeWebhookSecret = STRIPE_WEBHOOK_SECRET;
 
