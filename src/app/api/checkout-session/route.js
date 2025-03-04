@@ -3,14 +3,18 @@ import { NextResponse } from 'next/server';
 console.log('Stripe Mode:', process.env.STRIPE_MODE); // Debug log
 //console.log('Stripe API Key:', STRIPE_SECRET_KEY); // Debug log
 
+
+
+
+const STRIPE_SECRET_KEY = process.env.STRIPE_MODE === 'live' ? process.env.STRIPE_SECRET_KEY_LIVE : process.env.STRIPE_SECRET_KEY_TEST 
+
+
 // Ensure that the API key exists
 if (!STRIPE_SECRET_KEY) {
   throw new Error('Stripe API key is missing! Please check your environment variables.');
 }
 
 
-
-const STRIPE_SECRET_KEY = process.env.STRIPE_MODE === 'live' ? process.env.STRIPE_SECRET_KEY_LIVE : process.env.STRIPE_SECRET_KEY_TEST 
 
 console.log('Stripe API Key:', STRIPE_SECRET_KEY); // Debug log
 
