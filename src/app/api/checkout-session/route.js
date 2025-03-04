@@ -1,6 +1,9 @@
 import { NextResponse } from 'next/server';
 
-const stripe = require('stripe')('sk_test_51QNlAaG7WeMIf1DGWcfnC8nYS9rHZVfB55lhSFZ0fNFWjsbkjIpsPYAaeQmK2GyOOJL8FI32LlW926jtwyq4nsuV000FAqeymS');
+
+const STRIPE_SECRET_KEY = process.env.NODE_ENV === 'LIVE' ? process.env.STRIPE_SECRET_KEY_LIVE : process.env.STRIPE_SECRET_KEY_TEST 
+
+const stripe = require('stripe')(STRIPE_SECRET_KEY);
 
 
 
