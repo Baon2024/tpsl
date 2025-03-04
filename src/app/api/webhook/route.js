@@ -31,11 +31,13 @@ const STRIPE_WEBHOOK_SECRET = process.env.NODE_ENV === 'LIVE' ? process.env.STRI
 
 
 //const stripeWebhookSecret = process.env.STRIPE_WEBHOOK_SECRET_TEST;
+
+
+const STRIPE_SECRET_KEY = process.env.NODE_ENV === 'LIVE' ? process.env.STRIPE_SECRET_KEY_LIVE : process.env.STRIPE_SECRET_KEY_TEST 
+
 const stripeWebhookSecret = STRIPE_WEBHOOK_SECRET;
 
 console.log("Webhook Secret in Vercel:", stripeWebhookSecret);
-
-const STRIPE_SECRET_KEY = process.env.NODE_ENV === 'LIVE' ? process.env.STRIPE_SECRET_KEY_LIVE : process.env.STRIPE_SECRET_KEY_TEST 
 
 const stripe = require('stripe')(STRIPE_SECRET_KEY);
 
