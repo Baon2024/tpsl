@@ -16,6 +16,7 @@ export async function POST(req, res) {
     console.log("sessionId in backend is:", sessionId);
       
     const checkoutSession = await stripe.checkout.sessions.retrieve(sessionId);
+    console.log("checkoutSession in manageSubscription endpoint is:", checkoutSession);
 
     // This is the url to which the customer will be redirected when they're done
     // managing their billing with the portal.

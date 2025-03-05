@@ -45,12 +45,12 @@ export default function societyPage()  {
     //that's fine, but may want to change that later
 
     
-    if (typeof window !== "undefined") {
+    //if (typeof window !== "undefined") {
     const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
     const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
     
-    const supabase = createClient(supabaseUrl, supabaseAnonKey)
-    }
+    const supabase = createClient(supabaseUrl, supabaseAnonKey);
+    //}
 
     const selectedSchool = selectedSchoolArray[0];
 
