@@ -240,6 +240,8 @@ useEffect(() => {
         schools: updatedSchools })
       .eq("id", userId)
       .select()
+
+      alert(`${selectedSchool.schoolName} has been added to your schools!`);
         
     } else {
       alert("You need to be a member to use this feature!")
