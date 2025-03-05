@@ -39,6 +39,11 @@ export default function societyPage()  {
     const numberSocietyId = Number(societyId);
     const selectedSchoolArray = schoolsSampleData.filter(school => school.documentId === numberSocietyId);
     console.log("This is the selected school:", selectedSchoolArray);
+
+
+    //okay, so rather than finding selected school from supabase database fo schools, its being selected from sampleSchools in schoolsList
+    //that's fine, but may want to change that later
+
     
     if (typeof window !== "undefined") {
     const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL

@@ -1193,7 +1193,7 @@ A typical Scholarship at Stowe is worth 5% of the School Fee. `],
       percentageOfFees: [10,50],
     },
     schoolImage: "/images/peterborough.jpg",
-    documentId: 1850295324791389,
+    documentId: 1850295324791382,
     ranking: 8,
     Bursaries: {
       BursariesAvailable: true,
@@ -2029,7 +2029,7 @@ A typical Scholarship at Stowe is worth 5% of the School Fee. `],
       percentageOfFees: [0, 10],
     },
     schoolImage: "/images/MillfieldHouse.jpg",
-    documentId: 2124121363533131,
+    documentId: 2124221363433132,
     ranking: 8,
     Bursaries: {
       BursariesAvailable: true,
@@ -2291,7 +2291,7 @@ export default function SchoolsList({searchTerm, setSubscriptionModalBox, clicks
 
     const normalizedSearchTerm = searchTerm.toLowerCase();
 
-    const schoolsToShow = schoolsSampleData.filter((school) => {
+    const schoolsToShow = schools.filter((school) => {
       return (
         school.schoolName.toLowerCase().includes(normalizedSearchTerm) ||
         school.schoolLocation.toLowerCase().includes(normalizedSearchTerm) ||
@@ -2304,12 +2304,13 @@ export default function SchoolsList({searchTerm, setSubscriptionModalBox, clicks
         ) 
       );
     });
-
+   //for the mapping of schools below, and of schoolsToFilter above, i've implenetged it so schools passed down as props (from supabase)
+   //are comapred adn then displayed if they pass the filter
 
   return (
     <div className="w-full px-6 pt-10 pb-8">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 w-full">
-        {/*schoolsToShow*/schools?.map((school, index) => (
+        {schoolsToShow?.map((school, index) => (
           <SchoolCard
             key={school.documentId}
             schoolName={school.schoolName}

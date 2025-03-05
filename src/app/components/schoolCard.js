@@ -187,6 +187,7 @@ console.log('Clicked School documentId:', school.documentId);
         return; // Stop further execution
       }
     
+      console.log("documentId in schoolCard about to be used for URL is:", documentId);
       console.log(`✅ Redirecting to /societies/${documentId}`);
       router.push(`/societies/${documentId}`);
     };
