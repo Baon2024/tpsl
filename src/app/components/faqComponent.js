@@ -5,30 +5,31 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 const faqData = [
   {
-    question: "What is ThePublicSchoolList?",
+    question: "What is findPrivateSchoolScholarshipsBursaries?",
     answer:
-      "ThePublicSchoolList is a directory of public schools (private schools) in the United Kingdom, providing information on the scholarships, bursaries and other forms of fee-support available, in order to provide parents with the knowledge needed to help their children access independent schooling.",
+      "findPrivateSchoolScholarshipsBursaries is a directory of private/public schools in the United Kingdom, providing information on the scholarships, bursaries and other forms of fee-support available, in order to provide parents with the knowledge needed to help their children access independent schooling.",
   },
   {
     question: "How does it work?",
     answer:
-      "To start a new Next.js project, you can use the create-next-app command. Run 'npx create-next-app@latest' in your terminal and follow the prompts to set up your new project.",
+      "Browse our directory of schools to compare the details of each school, by the availability of scholarships, bursaries and other forms of fee-assistance, with the wider school details available.",
   },
   {
-    question: "What is server-side rendering in Next.js?",
+    question: "Can I directly compare schools?",
     answer:
-      "Server-side rendering (SSR) is a feature in Next.js that allows you to pre-render pages on the server. This can improve performance and SEO by sending fully rendered HTML to the client.",
+      "Yes, you can directly compare schools by ticking them in the directory, and clicking the 'compare Schools' button. This allows you to directly compare your selected schools side-by-side.",
   },
   {
-    question: "Can I use CSS modules with Next.js?",
+    question: "What's the difference between free and subscribed?",
     answer:
-      "Yes, Next.js has built-in support for CSS Modules. You can create CSS files with the .module.css extension and import them in your components to use scoped CSS classes.",
+      "Access to the schools directory is divided into three tiers: without signing in, you have access to up to 10 schools. If you sign-up, you can view, save and compare up to 25. If you subscribe, your access is unlimited.",
   },
   {
-    question: "How does routing work in Next.js?",
-    answer:
-      "Next.js uses a file-system based router. You can create routes by adding files to the app directory. For example, app/about/page.js would create a route at /about.",
-  },
+    question: "How much does a subscription cost?",
+    answer: 
+    "A subscription costs £9.99 per month."
+  }
+
 ]
 
 export default function FAQ() {
