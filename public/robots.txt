@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.findprivateschoolscholarshipsbursaries.co.uk
+
+# Sitemaps
+Sitemap: https://www.findprivateschoolscholarshipsbursaries.co.uk/sitemap.xml
