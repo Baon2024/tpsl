@@ -572,7 +572,7 @@ useEffect(() => {
                       </p>
                     </div>
                   )}
-
+                  
                   
 
                 {Bursaries.BursariesAvailable && (

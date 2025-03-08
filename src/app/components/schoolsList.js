@@ -473,7 +473,7 @@ A typical Scholarship at Stowe is worth 5% of the School Fee. `],
     stages: ["secondary", "sixth form"],
     schoolType: ["boarding"],
     coeducation: "boys",
-    totalSchoolFees: 63297,
+    totalSchoolFees: [63297, 63297],
     scholarships: {
       scholarshipsAvailable: true,
       scholarshipsDetail: [`Scholarships differ from bursaries, which are means-tested awards given to help support families who wouldn’t otherwise be able to afford some or all of the school fees. Our scholarships do not carry any automatic fee remission. When a boy applies for a scholarship it is possible for his parents to apply for a means-tested bursary in connection with that scholarship to cover school fees. Please note that we do not offer sports or arts scholarships. Such abilities feature strongly in the majority of our selection processes along with all-round personality and suitability for membership of a boarding community. However, while sporting or artistic ability will be of interest after the selection has been made, these abilities are not a factor in deciding the 13+ King’s Scholarship and Music Awards.`,`Scholarships for entry at 13+: (*) King’s Scholarships: Based on academic ability for boys entering the School at age 13. Around 14 are awarded each year. (*) Rokos Scholarship: Boys who are outstanding academically, who have been educated in the UK state system at primary level and who need financial assistance to attend Eton can be considered for the Rokos Scholarship. Thanks to the generosity of a donor, this award provides means-tested financial support for up to four boys per year to attend Eton. These boys are identified by the School during the Admissions process. Where necessary, the scholarship will cover 100% fees and extras. We will help families identify the most appropriate pathway for their sons in Years 7 and 8. Boys should be registered in the normal way for 13+ entry by 30 June in UK School Year 5. Please contact the Admissions Office if you have any queries. (*) Music Awards: A wide range of scholarships and exhibition awards are designed to recognise and support talented musicians.`,`Scholarships for entry at 16+: (*) Orwell Awards are for boys who have spent Years 9, 10 and 11 in a UK state school. Boys who are receiving substantial financial assistance at a UK independent school that does not have a Sixth Form may also apply. Up to 14 places may be awarded per year; however, this depends on the quality of applications received. (*) MCM Drama Award: The MCM Drama Award may be awarded to a boy applying for the Orwell Award who will make an outstanding contribution to Drama at Eton. (*) Sixth Form Music Award: The Sixth Form Music Award may be awarded to a boy applying for the Orwell Award who is a musical high-flyer. `],
@@ -517,7 +517,7 @@ A typical Scholarship at Stowe is worth 5% of the School Fee. `],
     stages: ["secondary", "sixth form"],
     schoolType: ["boarding"],
     coeducation: "boys",
-    totalSchoolFees: 61584,
+    totalSchoolFees: [61584, 61584],
     scholarships: {
       scholarshipsAvailable: true,
       scholarshipsDetail: [`Boys can be invited to compete for one or more of the following awards: Academic, Sport, Drama, Music, Art and Design and Technology, for entry into either Year 9 or Year 12. Awards are made on an overall assessment, which takes into account: (*) a boy's character and suitability for boarding, (*) his academic ability and potential, (*) the needs of the School, and (*) the field of boys applying.`],
@@ -649,7 +649,7 @@ A typical Scholarship at Stowe is worth 5% of the School Fee. `],
     stages: ["primary", "secondary"],
     schoolType: ["boarding", "day"],
     coeducation: "mixed-sex",
-    totalSchoolFees: 25000,
+    totalSchoolFees: [25000, 25000],
     scholarships: {
       scholarshipsAvailable: true,
       scholarshipsDetail: "for excellence in academics, arts, and sports",
@@ -781,7 +781,7 @@ A typical Scholarship at Stowe is worth 5% of the School Fee. `],
     stages: ["secondary", "sixth form"],
     schoolType: ["boarding"],
     coeducation: "male",
-    totalSchoolFees: 288000,//£9,200 per term, 
+    totalSchoolFees: [288000, 288000],//£9,200 per term, 
     scholarships: {
       scholarshipsAvailable: true,
       scholarshipsDetail: "Awards can be made at 11+, 13+ and 16+ (Years 7, 9, 12). The strongest candidates will be guaranteed funding when they receive their unconditional offer. Some awards are dependent on successfully securing one of our six scholarships (Academic, Art, Drama, Innovation, Music or Sport). The Radley Keys Award is an all-inclusive scholarship for talented and ambitious boys currently studying at a state school in the UK. This programme is purposefully designed to remove barriers, allowing boys to focus on reaching their goals and maximising the opportunities on offer at Radley. A financial award of up to 115% of our fees is available. The Warden’s Award recognises boys of exceptional ability who win one (or more) of our elite scholarships: Academic, Art, Drama, Innovation, Music or Sport. The financial award attached to the scholarship is means-tested and can range from 10% to 100% of our fees. We welcome applications for 13+ (Year 9) entry from candidates",
@@ -815,7 +815,7 @@ A typical Scholarship at Stowe is worth 5% of the School Fee. `],
     stages: ["secondary", "sixth form"],
     schoolType: ["boarding", "day"],
     coeducation: "mixed-sex",
-    totalSchoolFees: 233585,
+    totalSchoolFees: [233585, 233585],
     scholarships: {
       scholarshipsAvailable: true,
       scholarshipsDetail: "We offer honorary academic scholarships to pupils who perform exceptionally well at GCSE. We also offer music scholarships, some of which come with fee remission. For Sixth Form applicants is the Ginetta STEM scholarship, aimed at pupils with a strong interest in a career in design, technology or engineering. Music awards are available at 13+ and 16+ entry. Please note that these awards can be supplemented by means-tested bursaries. Scholarships are available to young instrumentalists and singers who can offer a broad range of skills to the Music School.",
@@ -849,7 +849,7 @@ A typical Scholarship at Stowe is worth 5% of the School Fee. `],
     stages: ["primary","secondary", "sixth form"],
     schoolType: ["boarding", "day"],
     coeducation: "mixed-sex",
-    totalSchoolFees: 442434,
+    totalSchoolFees: [442434, 442434],
     scholarships: {
       scholarshipsAvailable: true,
       scholarshipsDetail: "In line with our charitable status a Gordonstoun scholarship does not come with a remission in fees, however, scholars are prioritised in the allocation of means tested bursaries. Academic and all-round scholarships available. subject specific: Art, Design Technology, Drama, Computing, Music, Sport",
@@ -883,7 +883,7 @@ A typical Scholarship at Stowe is worth 5% of the School Fee. `],
     stages: ["secondary", "sixth form"],
     schoolType: ["boarding", "day"],
     coeducation: "mixed-sex",
-    totalSchoolFees: 142932, //
+    totalSchoolFees: [142932, 142932], //
     scholarships: {
       scholarshipsAvailable: true,
       scholarshipsDetail: "Shrewsbury School has a long tradition, since its founding Charter in 1552, of making generous Scholarship awards recognising outstanding ability. These are an important part of our policy to ensure that the benefits of a Shrewsbury education are accessible to those who do not have the means to pay the full fee. Scholarships fall into various categories - Academic, Music, Art, Drama, Design Technology, Sport and All-Rounder. Awards are made either to pupils under the age of 14 who join the School in the Third Form, or to those entering the School at Sixth Form level. Contact Admissions to discuss available options and arrange a bespoke visit. Alternatively, book one of our forthcoming Open Days.",
@@ -922,7 +922,7 @@ A typical Scholarship at Stowe is worth 5% of the School Fee. `],
     stages: ["secondary", "sixth form"],
     schoolType: ["boarding", "day"],
     coeducation: "mixed-sex",
-    totalSchoolFees: 127080, //
+    totalSchoolFees: [127080, 127080], //
     scholarships: {
       scholarshipsAvailable: true,
       scholarshipsDetail: ["Scholarships at Ampleforth are awarded in recognition of academic ability or particular talent in the disciplines of Art, Design & Technology, Drama, Dance, Music (Instrumental & Choral), and Sport.", "Ampleforth Scholarships are highly prestigious, recognising existing skills and talents, together with potential. Our scholars provide leadership to their peers and in return, we offer dedicated, tailored programmes to nurture and develop their talents. Scholars are expected to demonstrate a strong contribution and leadership in their field of interest. They are also expected to make the most of the many opportunities on offer to further their talents and each scholar is assigned a personal Scholarship Mentor to monitor and support their progress.", "In Years 7 and 8, to encourage junior pupils to further their interests, Academic and Sports Development Awards carry a 10% fee remission, whilst Music, Dance, and Drama Development Awards cover tuition in an instrument, LAMDA, or dance.", "From Year 9 onwards, scholarships are honorary and bring no fee remission (although in the case of Music Scholarships, music tuition is covered). However, scholarships can be extremely helpful in supporting a bursary application as a strong indication of a child likely to flourish at Ampleforth."],
@@ -966,7 +966,7 @@ A typical Scholarship at Stowe is worth 5% of the School Fee. `],
     stages: ["primary", "lower secondary"],
     schoolType: ["boarding", "day"],
     coeducation: "mixed-sex",
-    totalSchoolFees: 212274, //day fees, 3 terms, 9 years - 4 to 13
+    totalSchoolFees: [212274, 212274], //day fees, 3 terms, 9 years - 4 to 13
     scholarships: {
       scholarshipsAvailable: false,
       scholarshipsDetail: null,
@@ -1010,7 +1010,7 @@ A typical Scholarship at Stowe is worth 5% of the School Fee. `],
     stages: ["secondary", "sixth form"],
     schoolType: ["boarding", "day"],
     coeducation: "mixed-sex",
-    totalSchoolFees: 217821, //day fees, 3 terms, 9 years - 4 to 13
+    totalSchoolFees: [217821, 217821], //day fees, 3 terms, 9 years - 4 to 13
     scholarships: {
       scholarshipsAvailable: true,
       scholarshipsDetail: ["Scholarships at The Leys are offered at Year 9 (13+) and Sixth Form (16+). For Year 7, candidates who perform well in our Entrance Tests are invited to attend a series of interviews with senior staff to be considered for a Scholarship.", "The Leys offers a number of Scholarships under the categories of: Academic, Art, Drama, Music and Sport. The number of awards is dependent upon the calibre of the candidates, and their continuation is subject to the pupil maintaining satisfactory standards. They are open to those entering the School as well as to current pupils who will be entering the Sixth Form in the Autumn Term.Scholars are typically awarded a 5% remission on school fees (with the exception of the Choral and Organ Awards). However, the real value is in the support, guidance and opportunities which Scholars receive. "],
@@ -1054,7 +1054,7 @@ A typical Scholarship at Stowe is worth 5% of the School Fee. `],
     stages: ["primary","secondary", "sixth form"],
     schoolType: ["day"],
     coeducation: "mixed-sex",
-    totalSchoolFees: 362973, //61065, 94500, 207408
+    totalSchoolFees: [362973, 362973], //61065, 94500, 207408
     scholarships: {
       scholarshipsAvailable: true,
       scholarshipsDetail: ["In Years 7 and 9, we award music scholarships. Perse pupils in Year 7 and Year 9 will receive an invitation to audition for a music scholarship at the end of the academic year’. Scholarship awards are not means-tested and are one off payments of £500.", " Sixth form academic scholarships are available to both current pupils and external applicants. Current Year 11 pupils are continually assessed during Years 10 and 11 and scholarships are awarded to the top performing students, usually approximately 15 pupils. Perse Sixth Form Scholarships are also open to existing Year 11(who have not been awarded one by continuous assessment) and external applicants (who have reached a satisfactory standard in the entrance tests) and would be awarded as follows: Perse Sixth Form Academic Scholarships via exemplary performance on the Sixth Form entrance tests (usually a maximum of 10 scholarships). Perse Sixth Form Music Scholarships via music auditions (usually a maximum of 4 scholarships). Perse Sixth Form Sports Scholarships via sporting assessments / interviews (usually a maximum of 4 scholarships). Perse Sixth Form Art Scholarships via art portfolio / interview (usually a maximum of 2 scholarships). Perse Sixth Form Drama Scholarship via drama audition (usually a maximum of 2 scholarships). Dr Perse Scholarships for school service. Dr Perse Scholarships will be awarded (via application) to students who either at The Perse or in their current school have made a major contribution to the extracurricular (breadth and balance) and pastoral (valuing one another and the environment) life of the / their school (usually a maximum of 10 scholarships)."],
@@ -1098,7 +1098,7 @@ A typical Scholarship at Stowe is worth 5% of the School Fee. `],
     stages: ["primary","secondary", "sixth form"],
     schoolType: ["day","boarding"],
     coeducation: "mixed-sex",
-    totalSchoolFees: 170318, //61065, 94500, 207408
+    totalSchoolFees: [170318, 170318], //61065, 94500, 207408
     scholarships: {
       scholarshipsAvailable: true,
       scholarshipsDetail: ["Scholarships are also awarded following an application process for the following: Academic Scholarships for entry into Year 9, Year 9 specialist Scholarships for Music, Art, Drama, STEM and Sport, Sixth Form Scholarships (on entry into Year 12) are open to existing pupils or to candidates from other schools following their GCSEs. Please note: most scholarship financial related awards are subsumed by any Choral Awards. Governors are particularly appreciative if parents whose child has been selected for a scholarship are willing to surrender some or all of any financial benefit to another pupil who needs assistance. Their own child would still retain the status of scholar. All scholarships expire at the end of Year 11 (a fresh application to enter into Year 12 is required). Parents of eligible scholarship applicants are contacted by letter to invite applications. The letter provides clear timelines within the application and assessment process.","All scholarships are reviewed annually."],
@@ -1142,7 +1142,7 @@ A typical Scholarship at Stowe is worth 5% of the School Fee. `],
     stages: ["primary","secondary", "sixth form"],
     schoolType: ["day","boarding"],
     coeducation: "mixed-sex",
-    totalSchoolFees: 159820, //61065, 94500, 207408
+    totalSchoolFees: [159820, 159820], //61065, 94500, 207408
     scholarships: {
       scholarshipsAvailable: true,
       scholarshipsDetail: ["Scholarships are available for candidates showing evidenced talent in, and commitment to, Academic subjects, Art & Design, Design & Technology, Languages, Performing Arts, and Sport.","Scholarships can be worth up to a maximum of 20% of school fees.","If you would like more information on our Scholarship Programme and whether your child is eligible, please contact our Admissions Team."],
@@ -1494,7 +1494,7 @@ A typical Scholarship at Stowe is worth 5% of the School Fee. `],
     stages: ["primary", "prep","secondary","sixth form"],
     schoolType: ["day","boarding"],
     coeducation: "mixed-sex",
-    totalSchoolFees: 29094, //per annual school year
+    totalSchoolFees: [29094, 29094], //per annual school year
     scholarships: {
       scholarshipsAvailable: true,
       scholarshipsDetail: ["Academic Scholarships are awarded to those boys who perform exceptionally well and score the highest grades in their examination and interview. For entry to Years 7 and Year 9 (late entry) all boys who sit the entrance examinations are automatically considered for an academic scholarship.","The pupils who join us through the Year 9 deferred entry route will sit the entrance examinations when they are in Year 6 and will have the opportunity to apply for Academic, Music, Art, and sports scholarships when they are in Year 8.  Parents will be sent full information and the applications form in the summer term when their son is in Year 7.","Scholarships may be held by day boys and boarders and will be continued until the holder leaves the College, subject to satisfactory progress and conduct. Scholarships are not means-tested. Scholarships range in value from 10% to one third of tuition fees."],
@@ -1538,7 +1538,7 @@ A typical Scholarship at Stowe is worth 5% of the School Fee. `],
     stages: ["primary", "prep","secondary","sixth form"],
     schoolType: ["day"],
     coeducation: "boys",
-    totalSchoolFees: 29610, //per annual school year
+    totalSchoolFees: [29610, 29610], //per annual school year
     scholarships: {
       scholarshipsAvailable: true,
       scholarshipsDetail: ["Merchant Taylors’ School runs a Scholarship Programme to recognise and reward talent and potential across a variety of fields. Scholarships are awarded on merit, irrespective of means and are available to pupils entering Year 7 and the Sixth Form. Scholars are expected to work hard and make a positive contribution to the life of the school throughout their time at Merchant Taylors’.","Open to all, Academic Scholarships are offered based on a pupil’s performance at the entrance exams and interview. Candidates who have performed exceptionally well will be invited back for a scholarship assessment day. Successful pupils are rewarded with a reduction in their school fees.","Practical Scholarships recognise outstanding ability and potential in a particular field. Art; Drama; Design, Engineering and Technology; Music and Sports scholarships are available to boys joining us in Year 7. These scholarships need to be applied for once you have registered your son. The deadline for Practical Scholarships is 30th September of the year preceding entry (when your son is in Year 6). "],
@@ -1978,7 +1978,7 @@ A typical Scholarship at Stowe is worth 5% of the School Fee. `],
     stages: ["secondary","sixth form"],
     schoolType: ["boarding"],
     coeducation: "co-educational",
-    totalSchoolFees: 59142, //per annual school year
+    totalSchoolFees: [59142, 59142], //per annual school year
     scholarships: {
       scholarshipsAvailable: true,
       scholarshipsDetail: ["In order to obtain a scholarship, it is necessary to gain a place at the College through the Entry Assessment process.","Scholarships are available for: Academic, Art, Design Technology, Drama and Music. With the large number of candidates applying each year for sport, the College offers Sport Awards for the duration of a pupil’s first year, after which a number will be offered scholarships.","Scholarships are honorary and carry no reduction in fees but they provide access to the relevant scholarship programme. ","Our Directors’ Awards are awarded to a small number of pupils joining the College in the Shell and Lower Sixth at the discretion of the Director of Music or the Director of Sport. They are awarded in recognition of outstanding excellence in Music or Sport to children who are perceived to be able to have a substantial impact on the life of the College. They carry a fee reduction of up to 20%. Successful candidates will be: exceptionally talented in Music or Sport, role models in their expert area and expected to encourage positive behaviours and ambition in those around them, able to meet or exceed the College’s academic standards, and committed to participating fully in all aspects of life in a full boarding school."],
