@@ -18,6 +18,7 @@ import NewsletterSignup from "./components/newsletterSignup";
 import { createClient } from "@supabase/supabase-js";
 import { useRef } from "react";
 
+
 export default function Home() {
 
   const [ schools, setSchools ] = useState([]);
@@ -232,7 +233,7 @@ export default function Home() {
     //and then apply different visual size for highest few, based on index position
   <>
     <ScrollProgressBar />
-    <Hero scrollToSchools={() => schoolsRef.current?.scrollIntoView({ behavior: "smooth" })} />
+    <Hero scrollToSchools={() => schoolsRef.current?.scrollIntoView({ behavior: "smooth" })} searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
     <LandingPainPoints painPoints={painPoints} />
     <SearchBar2 searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
     <div ref={schoolsRef}>

@@ -1,7 +1,8 @@
 "use client"
 import { useState, useEffect } from "react";
+import { Search } from 'lucide-react';
 
-export default function Hero({ scrollToSchools }) { 
+export default function Hero({ scrollToSchools, searchTerm, setSearchTerm }) { 
 
 
 
@@ -25,6 +26,11 @@ export default function Hero({ scrollToSchools }) {
   }, []);
 
   console.log(images[currentImage]);
+
+  const handleChange = (e) => {
+    setSearchTerm(e.target.value);
+    // You can add any additional logic here that should run on each change
+  };
 
   return (
     <div className="relative isolate px-6 pt-14 lg:px-8">
@@ -57,6 +63,25 @@ export default function Hero({ scrollToSchools }) {
           <p className="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl">
             All public & private school bursaries, scholarships, sibling discounts, fee payment discounts & more brought together for the first time
           </p>
+          <div className="relative max-w-md mx-auto">
+      <input
+        type="text"
+        value={searchTerm}
+        onChange={handleChange}
+        placeholder="Search by anything you can think of"
+        className="w-full py-2 pl-10 pr-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+      />
+      <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+      <button
+              onClick={() => {
+                // Handle scroll functionality
+                scrollToSchools();
+              }}
+              className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
+              Go
+            </button>
+    </div>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <button
               onClick={() => {

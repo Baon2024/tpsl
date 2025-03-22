@@ -11,6 +11,7 @@ import { useRouter, usePathname } from "next/navigation";
 import { Analytics } from "@vercel/analytics/react"
 import { useEffect } from "react";
 import { createClient } from "@supabase/supabase-js";
+import Script from "next/script";
 
 
 
@@ -79,19 +80,28 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <SchoolCompareProvider>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        {/* ✅ Google Analytics should be inside <body> but executed after page load */}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-B4L382L83W"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-B4L382L83W');
+          `}
+        </Script>
+
+        <SchoolCompareProvider>
           <Header />
           <main>{children}</main>
-          
-            <FixedBottomButton />
+          <FixedBottomButton />
           <Analytics />
-       
+        </SchoolCompareProvider>
       </body>
-      </SchoolCompareProvider>
     </html>
   );
 }
