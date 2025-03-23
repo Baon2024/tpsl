@@ -22,6 +22,38 @@ export default function SubscribeToTPSL() {
     
     const supabase = createClient(supabaseUrl, supabaseAnonKey)
 
+    useEffect(() => {
+      const user = localStorage.getItem('userTPSL');
+      console.log("user in layout.js function is:", user);
+      if (user) {
+        async function setUserProfile() {
+          const userData = localStorage.getItem('userTPSL');
+        const user = JSON.parse(userData); // Parse the stored user data
+        const userId = user.id;
+        console.log("userId in save school function is:", userId);
+        //console.log("selected school to save is:", selectedSchool);
+  
+        if (!userId) {
+          console.error("User ID or selected school is missing.");
+          return;
+        }
+  
+        const { data: profile, error: fetchError } = await supabase
+        .from('profiles')
+        .select('*')
+        .eq('id', userId)
+        .maybeSingle();
+  
+        console.log("Fetched user's schools data:", profile);
+        localStorage.setItem('userTPSLProfile', JSON.stringify(profile));
+      }
+  
+        setUserProfile();
+      }
+    },[])
+
+
+
     function handleLogOut() {
         if (typeof window !== 'undefined') {
           localStorage.removeItem('jwtTPSL');
