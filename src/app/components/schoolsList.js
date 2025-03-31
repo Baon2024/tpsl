@@ -2293,6 +2293,14 @@ export default function SchoolsList({searchTerm, setSubscriptionModalBox, clicks
     const normalizedSearchTerm = searchTerm.toLowerCase();
 
     const schoolsToShow = schools.filter((school) => {
+      
+      if (normalizedSearchTerm === "bursaries" || normalizedSearchTerm.startsWith("b") || normalizedSearchTerm.startsWith("bu") || normalizedSearchTerm.startsWith("bur") || normalizedSearchTerm.startsWith("burs") || normalizedSearchTerm.startsWith("bursa") || normalizedSearchTerm.startsWith("bursar") || normalizedSearchTerm.startsWith("bursari") || normalizedSearchTerm.startsWith("bursarie")) {
+        return school.Bursaries?.BursariesAvailable === true;
+      }
+
+
+      //make schoolsList SSR, so its already here on load?? then move clicks/setClicks down to schoolCard child 
+
       return (
         school.schoolName.toLowerCase().includes(normalizedSearchTerm) ||
         school.schoolLocation.toLowerCase().includes(normalizedSearchTerm) ||
