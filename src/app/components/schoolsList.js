@@ -2288,6 +2288,7 @@ export default function SchoolsList({searchTerm, setSubscriptionModalBox, clicks
 
 
     //const schoolsToShow = schoolsSampleData.filter(school => school.schoolLocation || school.schoolName || school.schoolType)
+    //const [ clicks, setClicks ] = useState(0);
 
     const normalizedSearchTerm = searchTerm.toLowerCase();
 

@@ -6,6 +6,7 @@ const SchoolCompareContext = createContext();
 
 export function SchoolCompareProvider({ children }) {
   const [schoolsToCompare, setSchoolsToCompare] = useState([]);
+  const [ subscriptionModalBox, setSubscriptionModalBox ] = useState(false);
 
   useEffect(() => {
     console.log("SchoolCompareProvider mounted");
@@ -13,7 +14,7 @@ export function SchoolCompareProvider({ children }) {
   
 
   return (
-    <SchoolCompareContext.Provider value={{ schoolsToCompare, setSchoolsToCompare }}>
+    <SchoolCompareContext.Provider value={{ schoolsToCompare, setSchoolsToCompare, subscriptionModalBox, setSubscriptionModalBox }}>
       {children}
     </SchoolCompareContext.Provider>
   );

@@ -17,17 +17,18 @@ import { X } from "lucide-react"; // Install: npm install lucide-react
 import NewsletterSignup from "./components/newsletterSignup";
 import { createClient } from "@supabase/supabase-js";
 import { useRef } from "react";
+import ClientSubscriptionHandler from "./components/clientSR";
 
 
 export default function Home() {
 
-  const [ schools, setSchools ] = useState([]);
-  const [ modalBox, setModalBox ] = useState(false);
-  const [ message, setMessage ] = useState('');
-  const [ subject, setSubject ] = useState('');
-  const [ subscriptionModalBox, setSubscriptionModalBox ] = useState(false);
-  const [ clicks, setClicks ] = useState(0);
-  const schoolsRef = useRef(null);
+  const [ schools, setSchools ] = useState([]); //can easily move this to child component or to getServerProps
+  const [ modalBox, setModalBox ] = useState(false); //can easily move to child component - i think??
+  const [ message, setMessage ] = useState(''); //can easily move to child component
+  const [ subject, setSubject ] = useState('');//can easily move to child component
+  const [ subscriptionModalBox, setSubscriptionModalBox ] = useState(false); //DONE
+  const [ clicks, setClicks ] = useState(0); //can easily move to child component
+  const schoolsRef = useRef(null); //not sure how to adapt this for SSR?
 
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
     const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
@@ -110,7 +111,7 @@ export default function Home() {
     { id: '6', title: 'Item 6', description: 'This is the sixth item' },
   ]
 
-  const [ societies, addSocieties ] = useState([]);
+  
 
   function handleCloseModal() {
     setSubscriptionModalBox(false);
@@ -240,14 +241,15 @@ export default function Home() {
       <SchoolsList schools={schools} searchTerm={searchTerm} setSubscriptionModalBox={setSubscriptionModalBox} setClicks={setClicks} clicks={clicks} />
     </div>
     <NewsletterSignup />
-    {subscriptionModalBox && (
+    {/*{subscriptionModalBox && (
   
 
        
       <PricingPage setSubscriptionModalBox={setSubscriptionModalBox} subscriptionModalBox={subscriptionModalBox} />
     
  
-)}
+)}*/}
+    <ClientSubscriptionHandler />
 
     { schools && schools.map((school) => (
       <p>{school.name}</p>
