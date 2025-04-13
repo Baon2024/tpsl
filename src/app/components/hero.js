@@ -1,14 +1,17 @@
 "use client"
 import { useState, useEffect } from "react";
 import { Search } from 'lucide-react';
+import { useSearchTerm } from "../schoolCompareContext";
 
-export default function Hero({ scrollToSchools, searchTerm, setSearchTerm }) { 
+export default function Hero({ scrollToSchools/*, searchTerm, setSearchTerm*/ }) { 
 
 
 
 
 
   const [currentImage, setCurrentImage] = useState(0);
+
+  const { searchTerm, setSearchTerm } = useSearchTerm();
 
   // Array of images for background rotation
   const images = [

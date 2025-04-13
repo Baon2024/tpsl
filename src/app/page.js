@@ -1,39 +1,57 @@
-'use client'
+//'use client'
 import Image from "next/image";
 import LandingPainPoints from "./components/landingPainPoints";
 import Hero from "./components/hero";
 import ItemCardList from "./components/itemCardList";
-import { useState, useEffect } from "react";
+//import { useState, useEffect } from "react";
 import SearchBar from "./components/searchBar";
 import SearchBar2 from "./components/searchBar2";
 import SchoolCard from "./components/schoolCard";
 import SchoolsList from "./components/schoolsList";
-import supabase from "@/lib/supabase";
+//import supabase from "@/lib/supabase";
 import EmptyContainer from "./components/emptyContainer";
 //import { useRouter } from "next/router";
 import ScrollProgressBar from "./components/scrollbar";
 import PricingPage from "./components/subscriptionContainer";
 import { X } from "lucide-react"; // Install: npm install lucide-react
 import NewsletterSignup from "./components/newsletterSignup";
-import { createClient } from "@supabase/supabase-js";
-import { useRef } from "react";
+//import { createClient } from "@supabase/supabase-js";
+//import { useRef } from "react";
+import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
 import ClientSubscriptionHandler from "./components/clientSR";
+import { cookies } from 'next/headers';
 
 
-export default function Home() {
 
-  const [ schools, setSchools ] = useState([]); //can easily move this to child component or to getServerProps
-  const [ modalBox, setModalBox ] = useState(false); //can easily move to child component - i think??
-  const [ message, setMessage ] = useState(''); //can easily move to child component
-  const [ subject, setSubject ] = useState('');//can easily move to child component
-  const [ subscriptionModalBox, setSubscriptionModalBox ] = useState(false); //DONE
-  const [ clicks, setClicks ] = useState(0); //can easily move to child component
-  const schoolsRef = useRef(null); //not sure how to adapt this for SSR?
 
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+
+
+
+export default async function Home() {
+
+  //const [ schools, setSchools ] = useState([]); //can easily move this to child component or to getServerProps - DONE
+  //const [ modalBox, setModalBox ] = useState(false); //can easily move to child component - i think??
+  //const [ message, setMessage ] = useState(''); //can easily move to child component
+  //const [ subject, setSubject ] = useState('');//can easily move to child component
+  //const [ subscriptionModalBox, setSubscriptionModalBox ] = useState(false); //DONE
+  //const [ clicks, setClicks ] = useState(0); //can easily move to child component - DONE
+  //const schoolsRef = useRef(null); //not sure how to adapt this for SSR?
+
+  /*const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
     const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
     
-    const supabase = createClient(supabaseUrl, supabaseAnonKey)
+    const supabase = createClient(supabaseUrl, supabaseAnonKey)*/
+
+    const supabase = createServerComponentClient({ cookies });
+
+    const { data: schools, error } = await supabase
+      .from('schoolslatest')
+      .select('*');
+  
+    if (error) {
+      console.error("Error fetching schools:", error);
+      return <div>Failed to load schools</div>;
+    }
 
 
 
@@ -52,7 +70,7 @@ export default function Home() {
     router.push(`/school/${documentId}`);
   }*/
   
-    useEffect(() => {
+    /*useEffect(() => {
       async function getSchools() {
         const { data, error } = await supabase
           .from("schoolslatest")
@@ -79,10 +97,12 @@ export default function Home() {
 
     useEffect(() => {
       console.log("clicks are:", clicks);
-    },[])
+    },[])*/
   
 
-  const [ searchTerm, setSearchTerm ] = useState('');
+  /*const [ searchTerm, setSearchTerm ] = useState('');*/ //instead of searchTerm/setSearchTerm being set in client here
+  //i'm setting it in useContext hook, and importing to relevant components
+  //that will allow me to make the page.js into SSR
 
   const painPoints = [
     {
@@ -113,9 +133,9 @@ export default function Home() {
 
   
 
-  function handleCloseModal() {
+  /*function handleCloseModal() {
     setSubscriptionModalBox(false);
-  }
+  }*/
 
   //will need to add the useEffect API call to get list of societies here, and then pass down to the right component below
 
@@ -234,12 +254,12 @@ export default function Home() {
     //and then apply different visual size for highest few, based on index position
   <>
     <ScrollProgressBar />
-    <Hero scrollToSchools={() => schoolsRef.current?.scrollIntoView({ behavior: "smooth" })} searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+    <Hero /*scrollToSchools={() => schoolsRef.current?.scrollIntoView({ behavior: "smooth" })}*/ /*searchTerm={searchTerm} setSearchTerm={setSearchTerm}*/ />
     <LandingPainPoints painPoints={painPoints} />
-    <SearchBar2 searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-    <div ref={schoolsRef}>
-      <SchoolsList schools={schools} searchTerm={searchTerm} setSubscriptionModalBox={setSubscriptionModalBox} setClicks={setClicks} clicks={clicks} />
-    </div>
+    <SearchBar2 /*searchTerm={searchTerm} setSearchTerm={setSearchTerm}*/ />
+    {/*<div ref={schoolsRef}>*/}
+      <SchoolsList /*supabase={supabase}*/ schools={schools} /*searchTerm={searchTerm} setSubscriptionModalBox={setSubscriptionModalBox} setClicks={setClicks} clicks={clicks}*/ />
+    {/*</div>*/}
     <NewsletterSignup />
     {/*{subscriptionModalBox && (
   
@@ -249,12 +269,12 @@ export default function Home() {
     
  
 )}*/}
-    <ClientSubscriptionHandler />
+    <ClientSubscriptionHandler /*setSubscriptionModalBox={setSubscriptionModalBox} subscriptionModalBox={subscriptionModalBox}*/ />
 
-    { schools && schools.map((school) => (
+    {/*{ schools && schools.map((school) => (
       <p>{school.name}</p>
-    ))}
-    <EmptyContainer modalBox={modalBox} setModalBox={setModalBox} message={message} setMessage={setMessage} subject={subject} setSubject={setSubject} />
+    ))}*/}
+    <EmptyContainer /*modalBox={modalBox} setModalBox={setModalBox} message={message} setMessage={setMessage} subject={subject} setSubject={setSubject}*/ />
   </>
   );
 }

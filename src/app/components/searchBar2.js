@@ -1,11 +1,15 @@
+"use client"
 import React from 'react';
 import { Search } from 'lucide-react';
+import { useSearchTerm } from '../schoolCompareContext';
 
-const SearchBar2 = ({ searchTerm, setSearchTerm }) => {
+const SearchBar2 = ({ /*searchTerm, setSearchTerm*/ }) => {
   const handleChange = (e) => {
     setSearchTerm(e.target.value);
     // You can add any additional logic here that should run on each change
   };
+
+  const { searchTerm, setSearchTerm } = useSearchTerm();
 
   return (
     <div className="relative max-w-md mx-auto">

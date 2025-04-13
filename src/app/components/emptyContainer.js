@@ -1,3 +1,4 @@
+"use client"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -11,13 +12,16 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
+import { useState, useEffect } from "react"
 
 
 
 
-export default function EmptyContainer({modalBox, message, setMessage, subject, setSubject, setModalBox}) { 
+export default function EmptyContainer({/*modalBox, message, setMessage, subject, setSubject, setModalBox*/}) { 
 
-
+  const [ modalBox, setModalBox ] = useState(false); //can easily move to child component - i think??
+  const [ message, setMessage ] = useState(''); //can easily move to child component
+  const [ subject, setSubject ] = useState('');//can easily move to child component
     
 
     function modalBoxHandler() {

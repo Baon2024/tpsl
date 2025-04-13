@@ -1,12 +1,14 @@
 "use client"; 
 import { useState, useEffect, useRef } from "react";
 import PricingPage from "./subscriptionContainer";
-import { useSchoolCompare } from "../schoolCompareContext";
+import { useSchoolCompare, useSubscriptionModalBox } from "../schoolCompareContext";
 
-export default function ClientSubscriptionHandler({ subscriptionModalBox, setSubscriptionModalBox}) {
+export default function ClientSubscriptionHandler({ /*subscriptionModalBox, setSubscriptionModalBox*/}) {
   //const { subscriptionModalBox, setSubscriptionModalBox } = useSchoolCompare();
   const [clicks, setClicks] = useState(0);
   const schoolsRef = useRef(null);
+
+  const { subscriptionModalBox, setSubscriptionModalBox } = useSubscriptionModalBox();
 
   useEffect(() => {
     const clicksToSet = localStorage.getItem("clicks");

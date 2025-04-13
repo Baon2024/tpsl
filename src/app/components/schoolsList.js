@@ -1,5 +1,8 @@
 'use client'
+import { useClicks, useSearchTerm, useSubscriptionModalBox } from "../schoolCompareContext";
 import { SchoolCard } from "./schoolCard"
+import { useState, useEffect } from "react";
+import { createClient } from "@supabase/supabase-js";
 //import 'public/images/eton.jpeg';
 
 const schoolsSampleData = [
@@ -2284,19 +2287,69 @@ A typical Scholarship at Stowe is worth 5% of the School Fee. `],
   
 ];
   
-export default function SchoolsList({searchTerm, setSubscriptionModalBox, clicks, setClicks, schools}) {
+export default function SchoolsList({ /*supabase searchTerm, setSubscriptionModalBox, clicks, setClicks, */ schools}) {
 
 
     //const schoolsToShow = schoolsSampleData.filter(school => school.schoolLocation || school.schoolName || school.schoolType)
     //const [ clicks, setClicks ] = useState(0);
+    //const [ schools, setSchools ] = useState([]);
 
-    const normalizedSearchTerm = searchTerm.toLowerCase();
+    const { searchTerm } = useSearchTerm() //searchTerm is being set and acccessed in the UseContext, so page.js can be SSR
+    console.log("searchTerm from useContext value is:", searchTerm)
+
+    const { setSubscriptionModalBox } = useSubscriptionModalBox();
+
+    const { clicks, setClicks } = useClicks();
+
+    const normalizedSearchTerm = searchTerm?.toLowerCase();
+
+    /*const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+    const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+    
+    const supabase = createClient(supabaseUrl, supabaseAnonKey)
+
+    useEffect(() => {
+      async function getSchools() {
+        const { data, error } = await supabase
+          .from("schoolslatest")
+          .select("*");
+  
+        if (error) {
+          console.error("Error fetching data:", error);
+        } else {
+          console.log("schools from Supabase:", data); // Ensure this logs correctly
+          setSchools(data);
+        }
+      }
+  
+      getSchools(); // Call the function
+    }, []); // Empty dependency array ensures this runs only on mount*/
+
+    useEffect(() => {
+      const clicksToSet = localStorage.getItem('clicks');
+      console.log("clicksToSet from localStorage is:", clicksToSet);
+      if (clicksToSet) {
+        setClicks(clicksToSet);
+      }
+    },[])
+
+    useEffect(() => {
+      console.log("clicks are:", clicks);
+    },[])
+
+    useEffect(() => {
+      console.log("Child mounted: schoolsList component");
+    }, []);
+
 
     const schoolsToShow = schools.filter((school) => {
       
       if (normalizedSearchTerm === "bursaries" || normalizedSearchTerm.startsWith("b") || normalizedSearchTerm.startsWith("bu") || normalizedSearchTerm.startsWith("bur") || normalizedSearchTerm.startsWith("burs") || normalizedSearchTerm.startsWith("bursa") || normalizedSearchTerm.startsWith("bursar") || normalizedSearchTerm.startsWith("bursari") || normalizedSearchTerm.startsWith("bursarie")) {
         return school.Bursaries?.BursariesAvailable === true;
       }
+
+      
+      //do the same for scholarships, feesscheme, forcescheemes, and siblingsdiscount
 
 
       //make schoolsList SSR, so its already here on load?? then move clicks/setClicks down to schoolCard child 
@@ -2345,6 +2398,7 @@ export default function SchoolsList({searchTerm, setSubscriptionModalBox, clicks
             /*onClickHandler={onClickHandler}*/ 
           />
         ))}
+        {/* if schools doesn't exist, need to display loading spinner */}
       </div>
     </div>
   )
