@@ -2348,6 +2348,10 @@ export default function SchoolsList({ /*supabase searchTerm, setSubscriptionModa
         return school.Bursaries?.BursariesAvailable === true;
       }
 
+      if (normalizedSearchTerm === "scholarships" || normalizedSearchTerm.startsWith("s") || normalizedSearchTerm.startsWith("sc") || normalizedSearchTerm.startsWith("sch") || normalizedSearchTerm.startsWith("scho") || normalizedSearchTerm.startsWith("schol") || normalizedSearchTerm.startsWith("schola") || normalizedSearchTerm.startsWith("scholar") || normalizedSearchTerm.startsWith("scholars" || normalizedSearchTerm.startsWith("scholarsh") || normalizedSearchTerm.startsWith("scholarshi") || normalizedSearchTerm.startsWith("scholarship"))) {
+        return school.scholarships?.scholarshipsAvailable === true;
+      }
+
       
       //do the same for scholarships, feesscheme, forcescheemes, and siblingsdiscount
 
