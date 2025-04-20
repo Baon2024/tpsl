@@ -289,7 +289,7 @@ console.log('Clicked School documentId:', school.documentId);
                   className="flex items-center gap-0.5 bg-white/20 text-white text-xs py-0.5"
                 >
                   <GraduationCap className="w-2 h-2" />
-                  feesScheme
+                  fees scheme
                 </Badge>
               )}
   
@@ -299,7 +299,7 @@ console.log('Clicked School documentId:', school.documentId);
                   className="flex items-center gap-0.5 bg-white/20 text-white text-xs py-0.5"
                 >
                   <GraduationCap className="w-2 h-2" />
-                  forceScheme
+                  forces scheme
                 </Badge>
               )}
             </div>
